@@ -136,6 +136,9 @@ function validate(source) {
       if (!isObject(territory.preview) || !['iframe', 'image'].includes(territory.preview.type)) fail(`${at}.preview.type`, 'iframe ou image attendu');
       if (!isPreviewUrl(territory.preview?.url)) fail(`${at}.preview.url`, 'URL absolue ou chemin racine attendu');
     }
+    if (territory.featuredAssets != null && (!Array.isArray(territory.featuredAssets) || territory.featuredAssets.some((id) => !ID_PATTERN.test(id || '')))) {
+      fail(`${at}.featuredAssets`, 'tableau d’identifiants attendu');
+    }
   });
 
   const assetIds = new Set();
@@ -175,6 +178,19 @@ function validate(source) {
     });
   });
 
+  source.territories.forEach((territory, territoryIndex) => {
+    const featuredIds = new Set();
+    (territory.featuredAssets || []).forEach((assetId, featuredIndex) => {
+      const asset = source.assets.find((item) => item.id === assetId);
+      const at = `territories[${territoryIndex}].featuredAssets[${featuredIndex}]`;
+      if (featuredIds.has(assetId)) fail(at, `actif répété : ${assetId}`);
+      featuredIds.add(assetId);
+      if (!asset) fail(at, `actif inconnu : ${assetId}`);
+      else if (asset.territory !== territory.id) fail(at, `l’actif appartient au territoire ${asset.territory}`);
+      else if (!PUBLIC_STATUSES.has(asset.status)) fail(at, `l’actif n’est pas public : ${asset.status}`);
+    });
+  });
+
   return errors;
 }
 
@@ -194,6 +210,7 @@ function compile(source) {
     siteUrl: territory.siteUrl || null,
     previewUrl: territory.preview?.type === 'iframe' ? territory.preview.url : null,
     previewImage: territory.preview?.type === 'image' ? territory.preview.url : null,
+    featuredAssets: territory.featuredAssets || [],
     assets: [],
     relations: []
   }));

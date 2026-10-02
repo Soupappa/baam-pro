@@ -2,7 +2,7 @@
   "meta": {
     "schemaVersion": 1,
     "source": "data/registry.source.json",
-    "sourceHash": "3319845ac2a65a1add028713accd77feef07dc8c4381ec152449d5121f7e068e",
+    "sourceHash": "b28013425e1607425d82cbbf53be4486ba7be059e01d5c70bf9ef9c2a6ef5646",
     "compiledAt": "2026-10-02",
     "relationVocabulary": [
       "part-of",
@@ -17,7 +17,7 @@
     ],
     "counts": {
       "territories": 9,
-      "assets": 29
+      "assets": 31
     }
   },
   "nodes": [
@@ -43,7 +43,7 @@
       "id": "editions",
       "kind": "territory",
       "title": "Éditions",
-      "url": "http://127.0.0.1:8084/"
+      "url": "https://lutileetlagreable.netlify.app/"
     },
     {
       "id": "ideas",
@@ -154,22 +154,32 @@
     {
       "id": "lutile-et-lagreable",
       "kind": "asset",
-      "title": "L'Utile et l'Agréable",
+      "title": "Le Roman",
       "territory": "editions",
-      "type": "Feuilleton",
+      "type": "Présentation",
       "status": "public",
-      "updatedAt": "2026-10-01",
-      "url": "http://127.0.0.1:8084/"
+      "updatedAt": "2026-10-02",
+      "url": "https://lutileetlagreable.netlify.app/roman"
     },
     {
-      "id": "dieu-ecoute",
+      "id": "monde-sous-respirateur",
       "kind": "asset",
-      "title": "Le dieu de l'écoute",
+      "title": "Le monde sous respirateur",
       "territory": "editions",
-      "type": "Épisode 10",
+      "type": "Épisode 01",
+      "status": "public",
+      "updatedAt": "2026-10-01",
+      "url": "https://lutileetlagreable.netlify.app/feuilleton/01-le-monde-sous-respirateur"
+    },
+    {
+      "id": "probleme-avec-toi",
+      "kind": "asset",
+      "title": "On a un problème avec toi, gros",
+      "territory": "editions",
+      "type": "Épisode 02",
       "status": "public",
       "updatedAt": "2026-09-30",
-      "url": "http://127.0.0.1:8084/feuilleton/10-le-dieu-de-l-ecoute"
+      "url": "https://lutileetlagreable.netlify.app/feuilleton/02-on-a-un-probleme-avec-toi-gros"
     },
     {
       "id": "point-plus-bas",
@@ -179,7 +189,17 @@
       "type": "Épisode 03",
       "status": "public",
       "updatedAt": "2026-09-29",
-      "url": "http://127.0.0.1:8084/feuilleton/03-le-point-le-plus-bas"
+      "url": "https://lutileetlagreable.netlify.app/feuilleton/03-le-point-le-plus-bas"
+    },
+    {
+      "id": "patric-k-horn",
+      "kind": "asset",
+      "title": "Patric K Horn",
+      "territory": "editions",
+      "type": "Auteur",
+      "status": "public",
+      "updatedAt": "2026-09-28",
+      "url": "https://lutileetlagreable.netlify.app/auteur"
     },
     {
       "id": "cargos",
@@ -502,7 +522,13 @@
     {
       "from": "lutile-et-lagreable",
       "type": "contains",
-      "to": "dieu-ecoute",
+      "to": "monde-sous-respirateur",
+      "generated": true
+    },
+    {
+      "from": "lutile-et-lagreable",
+      "type": "contains",
+      "to": "probleme-avec-toi",
       "generated": true
     },
     {
@@ -512,13 +538,31 @@
       "generated": true
     },
     {
-      "from": "dieu-ecoute",
+      "from": "lutile-et-lagreable",
+      "type": "related-to",
+      "to": "patric-k-horn",
+      "generated": true
+    },
+    {
+      "from": "monde-sous-respirateur",
       "type": "part-of",
       "to": "editions",
       "generated": true
     },
     {
-      "from": "dieu-ecoute",
+      "from": "monde-sous-respirateur",
+      "type": "part-of",
+      "to": "lutile-et-lagreable",
+      "generated": false
+    },
+    {
+      "from": "probleme-avec-toi",
+      "type": "part-of",
+      "to": "editions",
+      "generated": true
+    },
+    {
+      "from": "probleme-avec-toi",
       "type": "part-of",
       "to": "lutile-et-lagreable",
       "generated": false
@@ -532,6 +576,18 @@
     {
       "from": "point-plus-bas",
       "type": "part-of",
+      "to": "lutile-et-lagreable",
+      "generated": false
+    },
+    {
+      "from": "patric-k-horn",
+      "type": "part-of",
+      "to": "editions",
+      "generated": true
+    },
+    {
+      "from": "patric-k-horn",
+      "type": "related-to",
       "to": "lutile-et-lagreable",
       "generated": false
     },

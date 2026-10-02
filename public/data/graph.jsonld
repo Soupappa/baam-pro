@@ -18,7 +18,7 @@
           "@id": "https://lab.baam.pro/"
         },
         {
-          "@id": "http://127.0.0.1:8084/"
+          "@id": "https://lutileetlagreable.netlify.app/"
         },
         {
           "@id": "https://baam.pro/#territory-ideas"
@@ -84,22 +84,28 @@
       ]
     },
     {
-      "@id": "http://127.0.0.1:8084/",
+      "@id": "https://lutileetlagreable.netlify.app/",
       "@type": "CollectionPage",
       "name": "Éditions",
-      "url": "http://127.0.0.1:8084/",
+      "url": "https://lutileetlagreable.netlify.app/",
       "isPartOf": {
         "@id": "https://baam.pro/"
       },
       "hasPart": [
         {
-          "@id": "http://127.0.0.1:8084/"
+          "@id": "https://lutileetlagreable.netlify.app/roman"
         },
         {
-          "@id": "http://127.0.0.1:8084/feuilleton/10-le-dieu-de-l-ecoute"
+          "@id": "https://lutileetlagreable.netlify.app/feuilleton/01-le-monde-sous-respirateur"
         },
         {
-          "@id": "http://127.0.0.1:8084/feuilleton/03-le-point-le-plus-bas"
+          "@id": "https://lutileetlagreable.netlify.app/feuilleton/02-on-a-un-probleme-avec-toi-gros"
+        },
+        {
+          "@id": "https://lutileetlagreable.netlify.app/feuilleton/03-le-point-le-plus-bas"
+        },
+        {
+          "@id": "https://lutileetlagreable.netlify.app/auteur"
         }
       ]
     },
@@ -271,7 +277,7 @@
       ],
       "baam:used-by": [
         {
-          "@id": "http://127.0.0.1:8084/"
+          "@id": "https://lutileetlagreable.netlify.app/roman"
         }
       ]
     },
@@ -311,14 +317,14 @@
       "url": "https://suite-premiere.lab.baam.pro/"
     },
     {
-      "@id": "http://127.0.0.1:8084/",
+      "@id": "https://lutileetlagreable.netlify.app/roman",
       "@type": "CreativeWork",
-      "name": "L'Utile et l'Agréable",
-      "dateModified": "2026-10-01",
+      "name": "Le Roman",
+      "dateModified": "2026-10-02",
       "isPartOf": {
-        "@id": "http://127.0.0.1:8084/"
+        "@id": "https://lutileetlagreable.netlify.app/"
       },
-      "url": "http://127.0.0.1:8084/",
+      "url": "https://lutileetlagreable.netlify.app/roman",
       "baam:uses": [
         {
           "@id": "https://baam.pro/id/deux-reseaux-vivants"
@@ -326,40 +332,78 @@
       ],
       "baam:contains": [
         {
-          "@id": "http://127.0.0.1:8084/feuilleton/10-le-dieu-de-l-ecoute"
+          "@id": "https://lutileetlagreable.netlify.app/feuilleton/01-le-monde-sous-respirateur"
         },
         {
-          "@id": "http://127.0.0.1:8084/feuilleton/03-le-point-le-plus-bas"
+          "@id": "https://lutileetlagreable.netlify.app/feuilleton/02-on-a-un-probleme-avec-toi-gros"
+        },
+        {
+          "@id": "https://lutileetlagreable.netlify.app/feuilleton/03-le-point-le-plus-bas"
+        }
+      ],
+      "baam:related-to": [
+        {
+          "@id": "https://lutileetlagreable.netlify.app/auteur"
         }
       ]
     },
     {
-      "@id": "http://127.0.0.1:8084/feuilleton/10-le-dieu-de-l-ecoute",
+      "@id": "https://lutileetlagreable.netlify.app/feuilleton/01-le-monde-sous-respirateur",
       "@type": "CreativeWork",
-      "name": "Le dieu de l'écoute",
-      "dateModified": "2026-09-30",
+      "name": "Le monde sous respirateur",
+      "dateModified": "2026-10-01",
       "isPartOf": {
-        "@id": "http://127.0.0.1:8084/"
+        "@id": "https://lutileetlagreable.netlify.app/"
       },
-      "url": "http://127.0.0.1:8084/feuilleton/10-le-dieu-de-l-ecoute",
+      "url": "https://lutileetlagreable.netlify.app/feuilleton/01-le-monde-sous-respirateur",
       "baam:part-of": [
         {
-          "@id": "http://127.0.0.1:8084/"
+          "@id": "https://lutileetlagreable.netlify.app/roman"
         }
       ]
     },
     {
-      "@id": "http://127.0.0.1:8084/feuilleton/03-le-point-le-plus-bas",
+      "@id": "https://lutileetlagreable.netlify.app/feuilleton/02-on-a-un-probleme-avec-toi-gros",
+      "@type": "CreativeWork",
+      "name": "On a un problème avec toi, gros",
+      "dateModified": "2026-09-30",
+      "isPartOf": {
+        "@id": "https://lutileetlagreable.netlify.app/"
+      },
+      "url": "https://lutileetlagreable.netlify.app/feuilleton/02-on-a-un-probleme-avec-toi-gros",
+      "baam:part-of": [
+        {
+          "@id": "https://lutileetlagreable.netlify.app/roman"
+        }
+      ]
+    },
+    {
+      "@id": "https://lutileetlagreable.netlify.app/feuilleton/03-le-point-le-plus-bas",
       "@type": "CreativeWork",
       "name": "Le point le plus bas",
       "dateModified": "2026-09-29",
       "isPartOf": {
-        "@id": "http://127.0.0.1:8084/"
+        "@id": "https://lutileetlagreable.netlify.app/"
       },
-      "url": "http://127.0.0.1:8084/feuilleton/03-le-point-le-plus-bas",
+      "url": "https://lutileetlagreable.netlify.app/feuilleton/03-le-point-le-plus-bas",
       "baam:part-of": [
         {
-          "@id": "http://127.0.0.1:8084/"
+          "@id": "https://lutileetlagreable.netlify.app/roman"
+        }
+      ]
+    },
+    {
+      "@id": "https://lutileetlagreable.netlify.app/auteur",
+      "@type": "CreativeWork",
+      "name": "Patric K Horn",
+      "dateModified": "2026-09-28",
+      "isPartOf": {
+        "@id": "https://lutileetlagreable.netlify.app/"
+      },
+      "url": "https://lutileetlagreable.netlify.app/auteur",
+      "baam:related-to": [
+        {
+          "@id": "https://lutileetlagreable.netlify.app/roman"
         }
       ]
     },

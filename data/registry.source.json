@@ -14,7 +14,8 @@
       "color": "#00d95f",
       "description": ["Création d’animations vectorielles — variations infinies sans appel IA", "Déformation sensorielle · BAAM Engine · logos ©"],
       "siteUrl": "https://studio.baam.pro/",
-      "preview": { "type": "iframe", "url": "https://studio.baam.pro/" }
+      "preview": { "type": "iframe", "url": "https://studio.baam.pro/" },
+      "featuredAssets": ["pendules-chaotiques", "champ-oscillant", "fink-doublefold"]
     },
     {
       "id": "lab",
@@ -27,8 +28,9 @@
       "name": "Éditions",
       "color": "#ff762e",
       "description": ["Livres, feuilletons et objets éditoriaux augmentés", "Lire librement · garder · soutenir"],
-      "siteUrl": "http://127.0.0.1:8084/",
-      "preview": { "type": "iframe", "url": "http://127.0.0.1:8084/?intro=final" }
+      "siteUrl": "https://lutileetlagreable.netlify.app/",
+      "preview": { "type": "iframe", "url": "https://lutileetlagreable.netlify.app/?intro=final" },
+      "featuredAssets": ["lutile-et-lagreable", "monde-sous-respirateur", "probleme-avec-toi", "point-plus-bas", "patric-k-horn"]
     },
     {
       "id": "ideas",
@@ -72,27 +74,26 @@
   "assets": [
     {
       "id": "pendules-chaotiques", "territory": "studio", "title": "Pendules chaotiques", "type": "Board", "status": "public", "updatedAt": "2026-10-01",
-      "url": "https://studio.baam.pro/b/board-pendules",
-      "preview": { "type": "svg", "url": "https://studio.baam.pro/assets/svg/double_pendules_baam_mapped_v1.svg" }
+      "url": "https://studio.baam.pro/b/board-pendules"
     },
     {
       "id": "champ-oscillant", "territory": "studio", "title": "Champ oscillant", "type": "Board", "status": "public", "updatedAt": "2026-09-30",
-      "url": "https://studio.baam.pro/b/oscillant",
-      "preview": { "type": "svg", "url": "https://studio.baam.pro/assets/svg/champ_oscillant_baam_mapped_full.svg" }
+      "url": "https://studio.baam.pro/b/oscillant"
     },
     {
       "id": "fink-doublefold", "territory": "studio", "title": "FINK Doublefold", "type": "Board", "status": "public", "updatedAt": "2026-09-29",
-      "url": "https://studio.baam.pro/b/fink-burning-doublefold-v4",
-      "preview": { "type": "svg", "url": "https://studio.baam.pro/assets/svg/FINK_double_peau_brulante_baam_mapped_v8_extreme.svg" }
+      "url": "https://studio.baam.pro/b/fink-burning-doublefold-v4"
     },
     {
       "id": "deux-reseaux-vivants", "territory": "studio", "title": "Deux réseaux vivants", "type": "Animation", "status": "preview", "updatedAt": "2026-09-28",
       "relations": [{ "type": "derived-from", "targetId": "reseaux-multi-echelles" }]
     },
 
-    { "id": "lutile-et-lagreable", "territory": "editions", "title": "L'Utile et l'Agréable", "type": "Feuilleton", "status": "public", "updatedAt": "2026-10-01", "url": "http://127.0.0.1:8084/", "relations": [{ "type": "uses", "targetId": "deux-reseaux-vivants" }] },
-    { "id": "dieu-ecoute", "territory": "editions", "title": "Le dieu de l'écoute", "type": "Épisode 10", "status": "public", "updatedAt": "2026-09-30", "url": "http://127.0.0.1:8084/feuilleton/10-le-dieu-de-l-ecoute", "relations": [{ "type": "part-of", "targetId": "lutile-et-lagreable" }] },
-    { "id": "point-plus-bas", "territory": "editions", "title": "Le point le plus bas", "type": "Épisode 03", "status": "public", "updatedAt": "2026-09-29", "url": "http://127.0.0.1:8084/feuilleton/03-le-point-le-plus-bas", "relations": [{ "type": "part-of", "targetId": "lutile-et-lagreable" }] },
+    { "id": "lutile-et-lagreable", "territory": "editions", "title": "Le Roman", "type": "Présentation", "status": "public", "updatedAt": "2026-10-02", "url": "https://lutileetlagreable.netlify.app/roman", "relations": [{ "type": "uses", "targetId": "deux-reseaux-vivants" }] },
+    { "id": "monde-sous-respirateur", "territory": "editions", "title": "Le monde sous respirateur", "type": "Épisode 01", "status": "public", "updatedAt": "2026-10-01", "url": "https://lutileetlagreable.netlify.app/feuilleton/01-le-monde-sous-respirateur", "relations": [{ "type": "part-of", "targetId": "lutile-et-lagreable" }] },
+    { "id": "probleme-avec-toi", "territory": "editions", "title": "On a un problème avec toi, gros", "type": "Épisode 02", "status": "public", "updatedAt": "2026-09-30", "url": "https://lutileetlagreable.netlify.app/feuilleton/02-on-a-un-probleme-avec-toi-gros", "relations": [{ "type": "part-of", "targetId": "lutile-et-lagreable" }] },
+    { "id": "point-plus-bas", "territory": "editions", "title": "Le point le plus bas", "type": "Épisode 03", "status": "public", "updatedAt": "2026-09-29", "url": "https://lutileetlagreable.netlify.app/feuilleton/03-le-point-le-plus-bas", "relations": [{ "type": "part-of", "targetId": "lutile-et-lagreable" }] },
+    { "id": "patric-k-horn", "territory": "editions", "title": "Patric K Horn", "type": "Auteur", "status": "public", "updatedAt": "2026-09-28", "url": "https://lutileetlagreable.netlify.app/auteur", "relations": [{ "type": "related-to", "targetId": "lutile-et-lagreable" }] },
 
     { "id": "cargos", "territory": "ideas", "title": "Cargos", "type": "Série", "status": "preview", "updatedAt": "2026-10-01", "relations": [{ "type": "uses", "targetId": "atlas-coca" }] },
     { "id": "atlas-coca", "territory": "ideas", "title": "Atlas DB Coca", "type": "Atlas SVG", "status": "preview", "updatedAt": "2026-09-30" },

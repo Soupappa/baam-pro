@@ -2,7 +2,7 @@
   "meta": {
     "schemaVersion": 1,
     "source": "data/registry.source.json",
-    "sourceHash": "3319845ac2a65a1add028713accd77feef07dc8c4381ec152449d5121f7e068e",
+    "sourceHash": "b28013425e1607425d82cbbf53be4486ba7be059e01d5c70bf9ef9c2a6ef5646",
     "compiledAt": "2026-10-02",
     "relationVocabulary": [
       "part-of",
@@ -17,7 +17,7 @@
     ],
     "counts": {
       "territories": 9,
-      "assets": 29
+      "assets": 31
     }
   },
   "root": {
@@ -38,6 +38,11 @@
       "siteUrl": "https://studio.baam.pro/",
       "previewUrl": "https://studio.baam.pro/",
       "previewImage": null,
+      "featuredAssets": [
+        "pendules-chaotiques",
+        "champ-oscillant",
+        "fink-doublefold"
+      ],
       "assets": [
         "pendules-chaotiques",
         "champ-oscillant",
@@ -63,6 +68,7 @@
       "siteUrl": "https://lab.baam.pro/",
       "previewUrl": "https://lab.baam.pro/",
       "previewImage": null,
+      "featuredAssets": [],
       "assets": [
         "r-time",
         "pixel-bloom",
@@ -78,13 +84,22 @@
         "Livres, feuilletons et objets éditoriaux augmentés",
         "Lire librement · garder · soutenir"
       ],
-      "siteUrl": "http://127.0.0.1:8084/",
-      "previewUrl": "http://127.0.0.1:8084/?intro=final",
+      "siteUrl": "https://lutileetlagreable.netlify.app/",
+      "previewUrl": "https://lutileetlagreable.netlify.app/?intro=final",
       "previewImage": null,
+      "featuredAssets": [
+        "lutile-et-lagreable",
+        "monde-sous-respirateur",
+        "probleme-avec-toi",
+        "point-plus-bas",
+        "patric-k-horn"
+      ],
       "assets": [
         "lutile-et-lagreable",
-        "dieu-ecoute",
-        "point-plus-bas"
+        "monde-sous-respirateur",
+        "probleme-avec-toi",
+        "point-plus-bas",
+        "patric-k-horn"
       ],
       "relations": []
     },
@@ -99,6 +114,7 @@
       "siteUrl": null,
       "previewUrl": null,
       "previewImage": null,
+      "featuredAssets": [],
       "assets": [
         "cargos",
         "atlas-coca",
@@ -117,6 +133,7 @@
       "siteUrl": "https://research.baam.pro/",
       "previewUrl": null,
       "previewImage": "/assets/research-preview.png",
+      "featuredAssets": [],
       "assets": [
         "zeus-series",
         "negative-crystals",
@@ -136,6 +153,7 @@
       "siteUrl": null,
       "previewUrl": null,
       "previewImage": null,
+      "featuredAssets": [],
       "assets": [
         "implementation-ia",
         "cartographies-actives",
@@ -154,6 +172,7 @@
       "siteUrl": null,
       "previewUrl": null,
       "previewImage": null,
+      "featuredAssets": [],
       "assets": [
         "atelier-svg",
         "clipforge",
@@ -172,6 +191,7 @@
       "siteUrl": null,
       "previewUrl": null,
       "previewImage": null,
+      "featuredAssets": [],
       "assets": [
         "r-time-game",
         "asymmetric-wars",
@@ -190,6 +210,7 @@
       "siteUrl": null,
       "previewUrl": null,
       "previewImage": null,
+      "featuredAssets": [],
       "assets": [
         "normarchi",
         "archicarto",
@@ -215,11 +236,8 @@
       "updatedAt": "2026-10-01",
       "tags": [],
       "url": "https://studio.baam.pro/b/board-pendules",
-      "visual": "https://studio.baam.pro/assets/svg/double_pendules_baam_mapped_v1.svg",
-      "preview": {
-        "type": "svg",
-        "url": "https://studio.baam.pro/assets/svg/double_pendules_baam_mapped_v1.svg"
-      },
+      "visual": null,
+      "preview": null,
       "relations": []
     },
     {
@@ -232,11 +250,8 @@
       "updatedAt": "2026-09-30",
       "tags": [],
       "url": "https://studio.baam.pro/b/oscillant",
-      "visual": "https://studio.baam.pro/assets/svg/champ_oscillant_baam_mapped_full.svg",
-      "preview": {
-        "type": "svg",
-        "url": "https://studio.baam.pro/assets/svg/champ_oscillant_baam_mapped_full.svg"
-      },
+      "visual": null,
+      "preview": null,
       "relations": []
     },
     {
@@ -249,11 +264,8 @@
       "updatedAt": "2026-09-29",
       "tags": [],
       "url": "https://studio.baam.pro/b/fink-burning-doublefold-v4",
-      "visual": "https://studio.baam.pro/assets/svg/FINK_double_peau_brulante_baam_mapped_v8_extreme.svg",
-      "preview": {
-        "type": "svg",
-        "url": "https://studio.baam.pro/assets/svg/FINK_double_peau_brulante_baam_mapped_v8_extreme.svg"
-      },
+      "visual": null,
+      "preview": null,
       "relations": []
     },
     {
@@ -357,13 +369,13 @@
     {
       "id": "lutile-et-lagreable",
       "territory": "editions",
-      "title": "L'Utile et l'Agréable",
+      "title": "Le Roman",
       "summary": null,
-      "type": "Feuilleton",
+      "type": "Présentation",
       "status": "public",
-      "updatedAt": "2026-10-01",
+      "updatedAt": "2026-10-02",
       "tags": [],
-      "url": "http://127.0.0.1:8084/",
+      "url": "https://lutileetlagreable.netlify.app/roman",
       "visual": null,
       "preview": null,
       "relations": [
@@ -374,26 +386,56 @@
         },
         {
           "type": "contains",
-          "target": "dieu-ecoute",
+          "target": "monde-sous-respirateur",
+          "generated": true
+        },
+        {
+          "type": "contains",
+          "target": "probleme-avec-toi",
           "generated": true
         },
         {
           "type": "contains",
           "target": "point-plus-bas",
           "generated": true
+        },
+        {
+          "type": "related-to",
+          "target": "patric-k-horn",
+          "generated": true
         }
       ]
     },
     {
-      "id": "dieu-ecoute",
+      "id": "monde-sous-respirateur",
       "territory": "editions",
-      "title": "Le dieu de l'écoute",
+      "title": "Le monde sous respirateur",
       "summary": null,
-      "type": "Épisode 10",
+      "type": "Épisode 01",
+      "status": "public",
+      "updatedAt": "2026-10-01",
+      "tags": [],
+      "url": "https://lutileetlagreable.netlify.app/feuilleton/01-le-monde-sous-respirateur",
+      "visual": null,
+      "preview": null,
+      "relations": [
+        {
+          "type": "part-of",
+          "target": "lutile-et-lagreable",
+          "generated": false
+        }
+      ]
+    },
+    {
+      "id": "probleme-avec-toi",
+      "territory": "editions",
+      "title": "On a un problème avec toi, gros",
+      "summary": null,
+      "type": "Épisode 02",
       "status": "public",
       "updatedAt": "2026-09-30",
       "tags": [],
-      "url": "http://127.0.0.1:8084/feuilleton/10-le-dieu-de-l-ecoute",
+      "url": "https://lutileetlagreable.netlify.app/feuilleton/02-on-a-un-probleme-avec-toi-gros",
       "visual": null,
       "preview": null,
       "relations": [
@@ -413,12 +455,32 @@
       "status": "public",
       "updatedAt": "2026-09-29",
       "tags": [],
-      "url": "http://127.0.0.1:8084/feuilleton/03-le-point-le-plus-bas",
+      "url": "https://lutileetlagreable.netlify.app/feuilleton/03-le-point-le-plus-bas",
       "visual": null,
       "preview": null,
       "relations": [
         {
           "type": "part-of",
+          "target": "lutile-et-lagreable",
+          "generated": false
+        }
+      ]
+    },
+    {
+      "id": "patric-k-horn",
+      "territory": "editions",
+      "title": "Patric K Horn",
+      "summary": null,
+      "type": "Auteur",
+      "status": "public",
+      "updatedAt": "2026-09-28",
+      "tags": [],
+      "url": "https://lutileetlagreable.netlify.app/auteur",
+      "visual": null,
+      "preview": null,
+      "relations": [
+        {
+          "type": "related-to",
           "target": "lutile-et-lagreable",
           "generated": false
         }

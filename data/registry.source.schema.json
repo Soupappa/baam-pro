@@ -7,7 +7,19 @@
   "properties": {
     "version": { "const": 1 },
     "root": { "type": "object", "required": ["id", "name", "url"] },
-    "territories": { "type": "array" },
+    "territories": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "featuredAssets": {
+            "type": "array",
+            "uniqueItems": true,
+            "items": { "type": "string", "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$" }
+          }
+        }
+      }
+    },
     "assets": { "type": "array" }
   }
 }

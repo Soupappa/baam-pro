@@ -47,6 +47,18 @@
 
   setTheme(document.documentElement.classList.contains('theme-noir'), false);
   themeButton.addEventListener('click', () => setTheme(!document.documentElement.classList.contains('theme-noir')));
+  themeButton.addEventListener('pointermove', (event) => {
+    if (event.pointerType === 'touch') return;
+    const rect = themeButton.getBoundingClientRect();
+    const x = ((event.clientX - rect.left) / rect.width - 0.5) * 2;
+    const y = ((event.clientY - rect.top) / rect.height - 0.5) * 2;
+    themeButton.style.setProperty('--orb-x', `${x * 8}px`);
+    themeButton.style.setProperty('--orb-y', `${y * 8}px`);
+  });
+  themeButton.addEventListener('pointerleave', () => {
+    themeButton.style.setProperty('--orb-x', '0px');
+    themeButton.style.setProperty('--orb-y', '0px');
+  });
 
   function patternSvg(id) {
     const patterns = {
@@ -91,7 +103,8 @@
   }
 
   function expandedContent(territory) {
-    const latest = territory.assets.slice(0, 3).map((id) => assets.get(id)).filter(Boolean);
+    const selection = territory.featuredAssets?.length ? territory.featuredAssets : territory.assets.slice(0, 3);
+    const latest = selection.map((id) => assets.get(id)).filter(Boolean);
     const preview = territory.previewImage
       ? `<div class="site-preview preview-${territory.id} has-image-preview">
           <img class="site-preview-image" src="${territory.previewImage}" alt="Aperçu de ${territory.name}" />
@@ -110,13 +123,56 @@
     return `
       <div class="card-content">
         ${preview}
-        <div class="production-rail" aria-label="Dernières productions de ${territory.name}">
-          <div class="production-grid">${latest.map((asset) => productionCard(asset, territory)).join('')}</div>
+        <div class="production-rail" data-production-carousel aria-label="Focus de ${territory.name}">
+          <div class="production-track">${latest.map((asset) => productionCard(asset, territory)).join('')}</div>
         </div>
       </div>`;
   }
 
+  const carouselTimers = new Set();
+
+  function clearProductionCarousels() {
+    carouselTimers.forEach((timer) => clearInterval(timer));
+    carouselTimers.clear();
+  }
+
+  function bindProductionCarousels(grid) {
+    const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
+    grid.querySelectorAll('[data-production-carousel]').forEach((rail) => {
+      const track = rail.querySelector('.production-track');
+      if (!track || track.children.length < 2) return;
+      let animating = false;
+      let timer = null;
+
+      const advance = () => {
+        if (animating || document.hidden || rail.matches(':hover') || rail.matches(':focus-within')) return;
+        const first = track.firstElementChild;
+        if (!first) return;
+        const gap = parseFloat(getComputedStyle(track).gap) || 10;
+        const distance = first.getBoundingClientRect().width + gap;
+        animating = true;
+        track.style.transition = 'transform 720ms cubic-bezier(.16, 1, .3, 1)';
+        track.style.transform = `translate3d(${-distance}px, 0, 0)`;
+      };
+
+      track.addEventListener('transitionend', (event) => {
+        if (!animating || event.propertyName !== 'transform') return;
+        track.append(track.firstElementChild);
+        track.style.transition = 'none';
+        track.style.transform = 'translate3d(0, 0, 0)';
+        track.getBoundingClientRect();
+        animating = false;
+      });
+
+      if (!reducedMotion) {
+        timer = setInterval(advance, 4600);
+        carouselTimers.add(timer);
+      }
+    });
+  }
+
   function renderCards() {
+    clearProductionCarousels();
     const grid = document.querySelector('#territory-grid');
     grid.classList.toggle('has-open', openCards.size > 0);
     const ordered = orderedTerritories();
@@ -140,6 +196,7 @@
       button.addEventListener('click', () => toggleCard(button.dataset.toggleCard));
     });
     bindLivePatterns(grid);
+    bindProductionCarousels(grid);
   }
 
   function patternEngine(object) {

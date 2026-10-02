@@ -61,6 +61,8 @@ button { border: 0; }
 
 .topbar-actions { display: flex; align-items: stretch; gap: 8px; }
 .theme-toggle {
+  --orb-x: 0px;
+  --orb-y: 0px;
   width: 44px;
   height: 44px;
   padding: 0;
@@ -77,10 +79,12 @@ button { border: 0; }
   height: 17px;
   border-radius: 50%;
   background: var(--ink);
-  transition: transform 260ms cubic-bezier(.16, 1, .3, 1), box-shadow 220ms ease;
+  transform: translate3d(var(--orb-x), var(--orb-y), 0) scale(1);
+  transition: transform 150ms cubic-bezier(.16, 1, .3, 1), background 220ms ease, box-shadow 220ms ease;
+  will-change: transform;
 }
-.theme-toggle:hover span { transform: scale(1.22); }
-.theme-noir .theme-toggle span { box-shadow: inset 8px 0 0 var(--paper); }
+.theme-toggle:hover span { transform: translate3d(var(--orb-x), var(--orb-y), 0) scale(1.12); }
+.theme-noir .theme-toggle span { background: #00d95f; box-shadow: 0 0 14px rgba(0,217,95,.32); }
 .contact-card { position: relative; }
 .contact-button, .view-switch { height: 44px; border: 1px solid var(--line); }
 .contact-button {
@@ -558,9 +562,18 @@ button { border: 0; }
 .preview-placeholder-kicker { font: 800 .67rem/1 ui-monospace, SFMono-Regular, Consolas, monospace; letter-spacing: .16em; }
 .site-preview.is-placeholder strong { font: 900 clamp(3.6rem, 9vw, 8rem)/.8 Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; }
 
-.production-rail { overflow: hidden; }
-.production-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; }
+.production-rail {
+  overflow: hidden;
+  cursor: ew-resize;
+}
+.production-track {
+  display: flex;
+  gap: 10px;
+  transform: translate3d(0, 0, 0);
+  will-change: transform;
+}
 .production-card {
+  flex: 0 0 42%;
   min-height: 185px;
   position: relative;
   overflow: hidden;
@@ -717,8 +730,8 @@ button { border: 0; }
   .card-description { max-width: 95%; margin-top: 10px; font-size: .64rem; }
   .card-content { padding: 0 10px 10px; gap: 6px; }
   .site-preview { min-height: 255px; }
-  .production-grid { gap: 6px; }
-  .production-card { min-height: 130px; }
+  .production-track { gap: 6px; }
+  .production-card { flex-basis: 82%; min-height: 150px; }
   .production-title { padding: 34px 8px 8px; font-size: .72rem; }
   .graph-view, .map-shell { min-height: calc(100vh - 72px); }
   #network-map { height: calc(100vh - 72px); min-height: 620px; }
