@@ -2,8 +2,8 @@
   "meta": {
     "schemaVersion": 1,
     "source": "data/registry.source.json",
-    "sourceHash": "7c4c704325b54bd350de2b4ac47bf772f80e05c43eaea29ccf76de8d25c74df3",
-    "compiledAt": "2026-10-01",
+    "sourceHash": "3319845ac2a65a1add028713accd77feef07dc8c4381ec152449d5121f7e068e",
+    "compiledAt": "2026-10-02",
     "relationVocabulary": [
       "part-of",
       "derived-from",
@@ -64,9 +64,9 @@
       "previewUrl": "https://lab.baam.pro/",
       "previewImage": null,
       "assets": [
+        "r-time",
         "pixel-bloom",
-        "suite-premiere",
-        "r-time"
+        "suite-premiere"
       ],
       "relations": []
     },
@@ -282,22 +282,54 @@
       ]
     },
     {
+      "id": "r-time",
+      "territory": "lab",
+      "title": "R-Time",
+      "summary": "Un laboratoire de physique relativiste interactif, du temps retardé aux géodésiques de Schwarzschild.",
+      "type": "simulation-interactive",
+      "status": "public",
+      "updatedAt": "2026-10-02",
+      "tags": [
+        "relativité",
+        "temps",
+        "simulation",
+        "three.js",
+        "glsl"
+      ],
+      "url": "https://r-time.lab.baam.pro/",
+      "visual": null,
+      "preview": {
+        "type": "iframe",
+        "url": "https://r-time.lab.baam.pro/"
+      },
+      "relations": [
+        {
+          "type": "related-to",
+          "target": "r-time-game",
+          "generated": true
+        }
+      ]
+    },
+    {
       "id": "pixel-bloom",
       "territory": "lab",
       "title": "Pixel Bloom",
       "summary": "Une simulation de vie artificielle où des règles simples d’attraction et de répulsion font émerger des organismes de particules.",
       "type": "artificial-life-simulation",
       "status": "preview",
-      "updatedAt": "2026-08-29",
+      "updatedAt": "2026-10-02",
       "tags": [
         "vie artificielle",
         "particules",
         "émergence",
         "canvas"
       ],
-      "url": null,
+      "url": "https://pixel-bloom.lab.baam.pro/",
       "visual": null,
-      "preview": null,
+      "preview": {
+        "type": "iframe",
+        "url": "https://pixel-bloom.lab.baam.pro/"
+      },
       "relations": []
     },
     {
@@ -307,43 +339,20 @@
       "summary": "Un laboratoire visuel pour explorer le crible récursif, les interférences et les figures cachées dans les nombres premiers.",
       "type": "mathematical-visualization",
       "status": "preview",
-      "updatedAt": "2026-08-29",
+      "updatedAt": "2026-10-02",
       "tags": [
         "nombres premiers",
         "crible",
         "visualisation",
         "mathématiques"
       ],
-      "url": null,
+      "url": "https://suite-premiere.lab.baam.pro/",
       "visual": null,
-      "preview": null,
+      "preview": {
+        "type": "iframe",
+        "url": "https://suite-premiere.lab.baam.pro/"
+      },
       "relations": []
-    },
-    {
-      "id": "r-time",
-      "territory": "lab",
-      "title": "R-Time",
-      "summary": "Un laboratoire de physique relativiste interactif, du temps retardé aux géodésiques de Schwarzschild.",
-      "type": "simulation-interactive",
-      "status": "public",
-      "updatedAt": "2026-07-11",
-      "tags": [
-        "relativité",
-        "temps",
-        "simulation",
-        "three.js",
-        "glsl"
-      ],
-      "url": "https://r-time-simulator.netlify.app/",
-      "visual": null,
-      "preview": null,
-      "relations": [
-        {
-          "type": "related-to",
-          "target": "r-time-game",
-          "generated": true
-        }
-      ]
     },
     {
       "id": "lutile-et-lagreable",

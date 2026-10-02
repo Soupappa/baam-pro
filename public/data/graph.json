@@ -2,8 +2,8 @@
   "meta": {
     "schemaVersion": 1,
     "source": "data/registry.source.json",
-    "sourceHash": "7c4c704325b54bd350de2b4ac47bf772f80e05c43eaea29ccf76de8d25c74df3",
-    "compiledAt": "2026-10-01",
+    "sourceHash": "3319845ac2a65a1add028713accd77feef07dc8c4381ec152449d5121f7e068e",
+    "compiledAt": "2026-10-02",
     "relationVocabulary": [
       "part-of",
       "derived-from",
@@ -122,14 +122,24 @@
       "url": null
     },
     {
+      "id": "r-time",
+      "kind": "asset",
+      "title": "R-Time",
+      "territory": "lab",
+      "type": "simulation-interactive",
+      "status": "public",
+      "updatedAt": "2026-10-02",
+      "url": "https://r-time.lab.baam.pro/"
+    },
+    {
       "id": "pixel-bloom",
       "kind": "asset",
       "title": "Pixel Bloom",
       "territory": "lab",
       "type": "artificial-life-simulation",
       "status": "preview",
-      "updatedAt": "2026-08-29",
-      "url": null
+      "updatedAt": "2026-10-02",
+      "url": "https://pixel-bloom.lab.baam.pro/"
     },
     {
       "id": "suite-premiere",
@@ -138,18 +148,8 @@
       "territory": "lab",
       "type": "mathematical-visualization",
       "status": "preview",
-      "updatedAt": "2026-08-29",
-      "url": null
-    },
-    {
-      "id": "r-time",
-      "kind": "asset",
-      "title": "R-Time",
-      "territory": "lab",
-      "type": "simulation-interactive",
-      "status": "public",
-      "updatedAt": "2026-07-11",
-      "url": "https://r-time-simulator.netlify.app/"
+      "updatedAt": "2026-10-02",
+      "url": "https://suite-premiere.lab.baam.pro/"
     },
     {
       "id": "lutile-et-lagreable",
@@ -464,18 +464,6 @@
       "generated": true
     },
     {
-      "from": "pixel-bloom",
-      "type": "part-of",
-      "to": "lab",
-      "generated": true
-    },
-    {
-      "from": "suite-premiere",
-      "type": "part-of",
-      "to": "lab",
-      "generated": true
-    },
-    {
       "from": "r-time",
       "type": "part-of",
       "to": "lab",
@@ -485,6 +473,18 @@
       "from": "r-time",
       "type": "related-to",
       "to": "r-time-game",
+      "generated": true
+    },
+    {
+      "from": "pixel-bloom",
+      "type": "part-of",
+      "to": "lab",
+      "generated": true
+    },
+    {
+      "from": "suite-premiere",
+      "type": "part-of",
+      "to": "lab",
       "generated": true
     },
     {

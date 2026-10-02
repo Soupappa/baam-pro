@@ -73,13 +73,13 @@
       },
       "hasPart": [
         {
-          "@id": "https://baam.pro/id/pixel-bloom"
+          "@id": "https://r-time.lab.baam.pro/"
         },
         {
-          "@id": "https://baam.pro/id/suite-premiere"
+          "@id": "https://pixel-bloom.lab.baam.pro/"
         },
         {
-          "@id": "https://r-time-simulator.netlify.app/"
+          "@id": "https://suite-premiere.lab.baam.pro/"
         }
       ]
     },
@@ -276,37 +276,39 @@
       ]
     },
     {
-      "@id": "https://baam.pro/id/pixel-bloom",
-      "@type": "CreativeWork",
-      "name": "Pixel Bloom",
-      "dateModified": "2026-08-29",
-      "isPartOf": {
-        "@id": "https://lab.baam.pro/"
-      }
-    },
-    {
-      "@id": "https://baam.pro/id/suite-premiere",
-      "@type": "CreativeWork",
-      "name": "Suite Première",
-      "dateModified": "2026-08-29",
-      "isPartOf": {
-        "@id": "https://lab.baam.pro/"
-      }
-    },
-    {
-      "@id": "https://r-time-simulator.netlify.app/",
+      "@id": "https://r-time.lab.baam.pro/",
       "@type": "CreativeWork",
       "name": "R-Time",
-      "dateModified": "2026-07-11",
+      "dateModified": "2026-10-02",
       "isPartOf": {
         "@id": "https://lab.baam.pro/"
       },
-      "url": "https://r-time-simulator.netlify.app/",
+      "url": "https://r-time.lab.baam.pro/",
       "baam:related-to": [
         {
           "@id": "https://baam.pro/id/r-time-game"
         }
       ]
+    },
+    {
+      "@id": "https://pixel-bloom.lab.baam.pro/",
+      "@type": "CreativeWork",
+      "name": "Pixel Bloom",
+      "dateModified": "2026-10-02",
+      "isPartOf": {
+        "@id": "https://lab.baam.pro/"
+      },
+      "url": "https://pixel-bloom.lab.baam.pro/"
+    },
+    {
+      "@id": "https://suite-premiere.lab.baam.pro/",
+      "@type": "CreativeWork",
+      "name": "Suite Première",
+      "dateModified": "2026-10-02",
+      "isPartOf": {
+        "@id": "https://lab.baam.pro/"
+      },
+      "url": "https://suite-premiere.lab.baam.pro/"
     },
     {
       "@id": "http://127.0.0.1:8084/",
@@ -542,7 +544,7 @@
       },
       "baam:related-to": [
         {
-          "@id": "https://r-time-simulator.netlify.app/"
+          "@id": "https://r-time.lab.baam.pro/"
         }
       ]
     },
