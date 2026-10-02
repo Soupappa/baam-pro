@@ -2,7 +2,7 @@
   "meta": {
     "schemaVersion": 1,
     "source": "data/registry.source.json",
-    "sourceHash": "b28013425e1607425d82cbbf53be4486ba7be059e01d5c70bf9ef9c2a6ef5646",
+    "sourceHash": "005c068346136b5d520c46484431c1b9854c84c37229df7daee817072889b5c8",
     "compiledAt": "2026-10-02",
     "relationVocabulary": [
       "part-of",
@@ -17,7 +17,7 @@
     ],
     "counts": {
       "territories": 9,
-      "assets": 31
+      "assets": 32
     }
   },
   "root": {
@@ -188,14 +188,15 @@
         "Jeux, simulations et règles pour penser autrement",
         "Stratégie · émergence · systèmes"
       ],
-      "siteUrl": null,
-      "previewUrl": null,
+      "siteUrl": "https://games.baam.pro/",
+      "previewUrl": "https://games.baam.pro/",
       "previewImage": null,
       "featuredAssets": [],
       "assets": [
-        "r-time-game",
         "asymmetric-wars",
-        "doctrine-engine"
+        "doctrine-engine",
+        "ninja-worms",
+        "spider-vs-ants"
       ],
       "relations": []
     },
@@ -314,13 +315,7 @@
         "type": "iframe",
         "url": "https://r-time.lab.baam.pro/"
       },
-      "relations": [
-        {
-          "type": "related-to",
-          "target": "r-time-game",
-          "generated": true
-        }
-      ]
+      "relations": []
     },
     {
       "id": "pixel-bloom",
@@ -732,52 +727,104 @@
       ]
     },
     {
-      "id": "r-time-game",
+      "id": "asymmetric-wars",
       "territory": "games",
-      "title": "R-Time",
-      "summary": null,
-      "type": "Simulation",
+      "title": "Asymmetric Wars",
+      "summary": "Une guerre en temps réel entre une coalition technologiquement supérieure et un régime lent, résilient, impossible à lire avec les mêmes règles.",
+      "type": "game",
       "status": "preview",
-      "updatedAt": "2026-10-01",
-      "tags": [],
+      "updatedAt": "2026-10-02",
+      "tags": [
+        "stratégie",
+        "asymétrie",
+        "temps réel",
+        "doctrine"
+      ],
       "url": null,
       "visual": null,
       "preview": null,
       "relations": [
         {
           "type": "related-to",
-          "target": "r-time",
-          "generated": false
+          "target": "doctrine-engine",
+          "generated": true
         }
       ]
-    },
-    {
-      "id": "asymmetric-wars",
-      "territory": "games",
-      "title": "Asymmetric Wars",
-      "summary": null,
-      "type": "Jeu",
-      "status": "preview",
-      "updatedAt": "2026-09-30",
-      "tags": [],
-      "url": null,
-      "visual": null,
-      "preview": null,
-      "relations": []
     },
     {
       "id": "doctrine-engine",
       "territory": "games",
       "title": "Doctrine Engine",
-      "summary": null,
-      "type": "Jeu / moteur",
+      "summary": "Deux intelligences artificielles inventent leurs unités, affrontent leurs doctrines et évoluent sous une même contrainte de budget.",
+      "type": "game-engine",
       "status": "preview",
-      "updatedAt": "2026-09-29",
-      "tags": [],
+      "updatedAt": "2026-10-02",
+      "tags": [
+        "IA",
+        "évolution",
+        "tactique",
+        "simulation"
+      ],
       "url": null,
       "visual": null,
       "preview": null,
-      "relations": []
+      "relations": [
+        {
+          "type": "related-to",
+          "target": "asymmetric-wars",
+          "generated": false
+        }
+      ]
+    },
+    {
+      "id": "ninja-worms",
+      "territory": "games",
+      "title": "Ninja Worms",
+      "summary": "Un worms-like nerveux : dix secondes pour viser, bondir, lancer le grappin et faire exploser un terrain qui ne se remet jamais vraiment.",
+      "type": "game",
+      "status": "preview",
+      "updatedAt": "2026-10-02",
+      "tags": [
+        "arcade",
+        "grappin",
+        "terrain destructible",
+        "multijoueur"
+      ],
+      "url": null,
+      "visual": null,
+      "preview": null,
+      "relations": [
+        {
+          "type": "related-to",
+          "target": "spider-vs-ants",
+          "generated": false
+        }
+      ]
+    },
+    {
+      "id": "spider-vs-ants",
+      "territory": "games",
+      "title": "Spider vs Ants",
+      "summary": "Un jeu de plateau familial où dix espèces d'insectes se disputent le terrain, les ressources et le droit de ne pas finir dans la toile.",
+      "type": "board-game",
+      "status": "preview",
+      "updatedAt": "2026-10-02",
+      "tags": [
+        "plateau",
+        "insectes",
+        "2–4 joueurs",
+        "stratégie familiale"
+      ],
+      "url": null,
+      "visual": null,
+      "preview": null,
+      "relations": [
+        {
+          "type": "related-to",
+          "target": "ninja-worms",
+          "generated": true
+        }
+      ]
     },
     {
       "id": "normarchi",

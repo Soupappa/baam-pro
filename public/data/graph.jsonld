@@ -33,7 +33,7 @@
           "@id": "https://baam.pro/#territory-tools"
         },
         {
-          "@id": "https://baam.pro/#territory-games"
+          "@id": "https://games.baam.pro/"
         },
         {
           "@id": "https://baam.pro/#territory-apps"
@@ -193,22 +193,25 @@
       ]
     },
     {
-      "@id": "https://baam.pro/#territory-games",
+      "@id": "https://games.baam.pro/",
       "@type": "CollectionPage",
       "name": "Games",
-      "url": null,
+      "url": "https://games.baam.pro/",
       "isPartOf": {
         "@id": "https://baam.pro/"
       },
       "hasPart": [
         {
-          "@id": "https://baam.pro/id/r-time-game"
-        },
-        {
           "@id": "https://baam.pro/id/asymmetric-wars"
         },
         {
           "@id": "https://baam.pro/id/doctrine-engine"
+        },
+        {
+          "@id": "https://baam.pro/id/ninja-worms"
+        },
+        {
+          "@id": "https://baam.pro/id/spider-vs-ants"
         }
       ]
     },
@@ -289,12 +292,7 @@
       "isPartOf": {
         "@id": "https://lab.baam.pro/"
       },
-      "url": "https://r-time.lab.baam.pro/",
-      "baam:related-to": [
-        {
-          "@id": "https://baam.pro/id/r-time-game"
-        }
-      ]
+      "url": "https://r-time.lab.baam.pro/"
     },
     {
       "@id": "https://pixel-bloom.lab.baam.pro/",
@@ -579,36 +577,60 @@
       ]
     },
     {
-      "@id": "https://baam.pro/id/r-time-game",
-      "@type": "CreativeWork",
-      "name": "R-Time",
-      "dateModified": "2026-10-01",
-      "isPartOf": {
-        "@id": "https://baam.pro/#territory-games"
-      },
-      "baam:related-to": [
-        {
-          "@id": "https://r-time.lab.baam.pro/"
-        }
-      ]
-    },
-    {
       "@id": "https://baam.pro/id/asymmetric-wars",
       "@type": "CreativeWork",
       "name": "Asymmetric Wars",
-      "dateModified": "2026-09-30",
+      "dateModified": "2026-10-02",
       "isPartOf": {
-        "@id": "https://baam.pro/#territory-games"
-      }
+        "@id": "https://games.baam.pro/"
+      },
+      "baam:related-to": [
+        {
+          "@id": "https://baam.pro/id/doctrine-engine"
+        }
+      ]
     },
     {
       "@id": "https://baam.pro/id/doctrine-engine",
       "@type": "CreativeWork",
       "name": "Doctrine Engine",
-      "dateModified": "2026-09-29",
+      "dateModified": "2026-10-02",
       "isPartOf": {
-        "@id": "https://baam.pro/#territory-games"
-      }
+        "@id": "https://games.baam.pro/"
+      },
+      "baam:related-to": [
+        {
+          "@id": "https://baam.pro/id/asymmetric-wars"
+        }
+      ]
+    },
+    {
+      "@id": "https://baam.pro/id/ninja-worms",
+      "@type": "CreativeWork",
+      "name": "Ninja Worms",
+      "dateModified": "2026-10-02",
+      "isPartOf": {
+        "@id": "https://games.baam.pro/"
+      },
+      "baam:related-to": [
+        {
+          "@id": "https://baam.pro/id/spider-vs-ants"
+        }
+      ]
+    },
+    {
+      "@id": "https://baam.pro/id/spider-vs-ants",
+      "@type": "CreativeWork",
+      "name": "Spider vs Ants",
+      "dateModified": "2026-10-02",
+      "isPartOf": {
+        "@id": "https://games.baam.pro/"
+      },
+      "baam:related-to": [
+        {
+          "@id": "https://baam.pro/id/ninja-worms"
+        }
+      ]
     },
     {
       "@id": "https://baam.pro/id/normarchi",

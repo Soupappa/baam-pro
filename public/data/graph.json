@@ -2,7 +2,7 @@
   "meta": {
     "schemaVersion": 1,
     "source": "data/registry.source.json",
-    "sourceHash": "b28013425e1607425d82cbbf53be4486ba7be059e01d5c70bf9ef9c2a6ef5646",
+    "sourceHash": "005c068346136b5d520c46484431c1b9854c84c37229df7daee817072889b5c8",
     "compiledAt": "2026-10-02",
     "relationVocabulary": [
       "part-of",
@@ -17,7 +17,7 @@
     ],
     "counts": {
       "territories": 9,
-      "assets": 31
+      "assets": 32
     }
   },
   "nodes": [
@@ -73,7 +73,7 @@
       "id": "games",
       "kind": "territory",
       "title": "Games",
-      "url": null
+      "url": "https://games.baam.pro/"
     },
     {
       "id": "apps",
@@ -332,23 +332,13 @@
       "url": null
     },
     {
-      "id": "r-time-game",
-      "kind": "asset",
-      "title": "R-Time",
-      "territory": "games",
-      "type": "Simulation",
-      "status": "preview",
-      "updatedAt": "2026-10-01",
-      "url": null
-    },
-    {
       "id": "asymmetric-wars",
       "kind": "asset",
       "title": "Asymmetric Wars",
       "territory": "games",
-      "type": "Jeu",
+      "type": "game",
       "status": "preview",
-      "updatedAt": "2026-09-30",
+      "updatedAt": "2026-10-02",
       "url": null
     },
     {
@@ -356,9 +346,29 @@
       "kind": "asset",
       "title": "Doctrine Engine",
       "territory": "games",
-      "type": "Jeu / moteur",
+      "type": "game-engine",
       "status": "preview",
-      "updatedAt": "2026-09-29",
+      "updatedAt": "2026-10-02",
+      "url": null
+    },
+    {
+      "id": "ninja-worms",
+      "kind": "asset",
+      "title": "Ninja Worms",
+      "territory": "games",
+      "type": "game",
+      "status": "preview",
+      "updatedAt": "2026-10-02",
+      "url": null
+    },
+    {
+      "id": "spider-vs-ants",
+      "kind": "asset",
+      "title": "Spider vs Ants",
+      "territory": "games",
+      "type": "board-game",
+      "status": "preview",
+      "updatedAt": "2026-10-02",
       "url": null
     },
     {
@@ -487,12 +497,6 @@
       "from": "r-time",
       "type": "part-of",
       "to": "lab",
-      "generated": true
-    },
-    {
-      "from": "r-time",
-      "type": "related-to",
-      "to": "r-time-game",
       "generated": true
     },
     {
@@ -736,27 +740,51 @@
       "generated": true
     },
     {
-      "from": "r-time-game",
-      "type": "part-of",
-      "to": "games",
-      "generated": true
-    },
-    {
-      "from": "r-time-game",
-      "type": "related-to",
-      "to": "r-time",
-      "generated": false
-    },
-    {
       "from": "asymmetric-wars",
       "type": "part-of",
       "to": "games",
       "generated": true
     },
     {
+      "from": "asymmetric-wars",
+      "type": "related-to",
+      "to": "doctrine-engine",
+      "generated": true
+    },
+    {
       "from": "doctrine-engine",
       "type": "part-of",
       "to": "games",
+      "generated": true
+    },
+    {
+      "from": "doctrine-engine",
+      "type": "related-to",
+      "to": "asymmetric-wars",
+      "generated": false
+    },
+    {
+      "from": "ninja-worms",
+      "type": "part-of",
+      "to": "games",
+      "generated": true
+    },
+    {
+      "from": "ninja-worms",
+      "type": "related-to",
+      "to": "spider-vs-ants",
+      "generated": false
+    },
+    {
+      "from": "spider-vs-ants",
+      "type": "part-of",
+      "to": "games",
+      "generated": true
+    },
+    {
+      "from": "spider-vs-ants",
+      "type": "related-to",
+      "to": "ninja-worms",
       "generated": true
     },
     {
