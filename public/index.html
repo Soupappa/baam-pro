@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="BAAM.pro — créations, recherches, outils et éditions reliés." />
+    <meta name="theme-color" content="#080808" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
+    <script>
+      try { if (localStorage.getItem('baam.pro.theme') === 'noir') document.documentElement.classList.add('theme-noir'); } catch {}
+    </script>
+    <link rel="stylesheet" href="/styles.css" />
+    <title>BAAM.pro</title>
+  </head>
+  <body>
+    <div class="grain" aria-hidden="true"></div>
+
+    <header class="topbar">
+      <a class="brand" href="/">BAAM<span>.</span>PRO</a>
+      <div class="topbar-actions">
+        <button class="theme-toggle" type="button" aria-label="Passer en mode noir" aria-pressed="false">
+          <span aria-hidden="true"></span>
+        </button>
+        <div class="contact-card">
+          <button class="contact-button" type="button" aria-expanded="false" aria-controls="contact-panel">Contact</button>
+          <aside class="contact-panel" id="contact-panel" hidden>
+            <div class="contact-preview">
+              <div class="contact-preview-fallback" aria-hidden="true">
+                <strong>ANTOINE</strong><span>.BAAM.PRO</span>
+              </div>
+              <iframe class="contact-preview-frame" data-src="https://antoine.baam.pro/" title="Aperçu de antoine.baam.pro" loading="lazy"></iframe>
+              <a class="contact-preview-link" href="https://antoine.baam.pro/" target="_blank" rel="noreferrer" aria-label="Ouvrir antoine.baam.pro"></a>
+            </div>
+            <div class="contact-panel-footer">
+              <a href="https://antoine.baam.pro/" target="_blank" rel="noreferrer">ANTOINE.BAAM.PRO ↗</a>
+              <a href="mailto:antoine.cornubert@gmail.com">ÉCRIRE ↗</a>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section id="cards-view" class="view is-active" aria-label="Territoires BAAM">
+        <div id="territory-grid" class="territory-grid"></div>
+      </section>
+
+      <section id="graph-view" class="view graph-view" aria-label="Graphe BAAM" hidden>
+        <div class="map-shell">
+          <svg id="network-map" viewBox="0 0 1200 720" role="img" aria-label="Graphe interactif des territoires et productions BAAM">
+            <defs>
+              <filter id="soft-glow" x="-80%" y="-80%" width="260%" height="260%">
+                <feGaussianBlur stdDeviation="5" result="blur" />
+                <feMerge><feMergeNode in="blur" /><feMergeNode in="SourceGraphic" /></feMerge>
+              </filter>
+            </defs>
+            <g id="map-pan-layer"><g id="map-root"></g></g>
+          </svg>
+          <div class="map-controls" aria-label="Contrôles de la carte">
+            <button type="button" id="zoom-in" aria-label="Agrandir">+</button>
+            <button type="button" id="zoom-out" aria-label="Réduire">−</button>
+            <button type="button" id="zoom-reset" aria-label="Recentrer">◎</button>
+          </div>
+          <aside id="asset-inspector" class="asset-inspector" aria-live="polite" hidden></aside>
+        </div>
+      </section>
+    </main>
+
+    <script src="/app.js"></script>
+  </body>
+</html>
+

@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://baam.pro/schema/registry-source-v1.json",
+  "title": "BAAM registry source",
+  "type": "object",
+  "required": ["version", "root", "territories", "assets"],
+  "properties": {
+    "version": { "const": 1 },
+    "root": { "type": "object", "required": ["id", "name", "url"] },
+    "territories": { "type": "array" },
+    "assets": { "type": "array" }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "version": 1,
+  "root": { "id": "baam-test", "name": "BAAM Test", "url": "https://baam.pro/" },
+  "territories": [
+    {
+      "id": "demo",
+      "name": "Demo",
+      "color": "#00d95f",
+      "description": ["Première ligne", "Deuxième ligne"]
+    }
+  ],
+  "assets": [
+    {
+      "id": "actif-test",
+      "territory": "demo",
+      "title": "Actif test",
+      "type": "Test",
+      "status": "public",
+      "updatedAt": "2026-10-01",
+      "url": "https://baam.pro/test",
+      "relations": [{ "type": "feeds", "targetId": "demo" }]
+    }
+  ]
+}

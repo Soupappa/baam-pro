@@ -1,0 +1,745 @@
+<svg viewBox="0 0 240 200"
+     xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink">
+
+  <defs>
+    
+    <mask id="m0" maskUnits="userSpaceOnUse">
+      <rect x="0" y="0" width="240" height="200" fill="black"/>
+      <circle id="c0" cx="120" cy="60" r="28" fill="white"/>
+    </mask>
+    
+    <mask id="m1" maskUnits="userSpaceOnUse">
+      <rect x="0" y="0" width="240" height="200" fill="black"/>
+      <circle id="c1" cx="120" cy="60" r="28" fill="white"/>
+    </mask>
+    
+    <mask id="m2" maskUnits="userSpaceOnUse">
+      <rect x="0" y="0" width="240" height="200" fill="black"/>
+      <circle id="c2" cx="120" cy="60" r="28" fill="white"/>
+    </mask>
+    
+    <mask id="m3" maskUnits="userSpaceOnUse">
+      <rect x="0" y="0" width="240" height="200" fill="black"/>
+      <circle id="c3" cx="120" cy="60" r="28" fill="white"/>
+    </mask>
+    
+    <mask id="m4" maskUnits="userSpaceOnUse">
+      <rect x="0" y="0" width="240" height="200" fill="black"/>
+      <circle id="c4" cx="120" cy="60" r="28" fill="white"/>
+    </mask>
+    
+    <mask id="m5" maskUnits="userSpaceOnUse">
+      <rect x="0" y="0" width="240" height="200" fill="black"/>
+      <circle id="c5" cx="120" cy="60" r="28" fill="white"/>
+    </mask>
+    
+    <mask id="m6" maskUnits="userSpaceOnUse">
+      <rect x="0" y="0" width="240" height="200" fill="black"/>
+      <circle id="c6" cx="120" cy="60" r="28" fill="white"/>
+    </mask>
+    
+    <mask id="m7" maskUnits="userSpaceOnUse">
+      <rect x="0" y="0" width="240" height="200" fill="black"/>
+      <circle id="c7" cx="120" cy="60" r="28" fill="white"/>
+    </mask>
+    
+    <mask id="m8" maskUnits="userSpaceOnUse">
+      <rect x="0" y="0" width="240" height="200" fill="black"/>
+      <circle id="c8" cx="120" cy="60" r="28" fill="white"/>
+    </mask>
+    
+    <mask id="m9" maskUnits="userSpaceOnUse">
+      <rect x="0" y="0" width="240" height="200" fill="black"/>
+      <circle id="c9" cx="120" cy="60" r="28" fill="white"/>
+    </mask>
+    
+    <mask id="m10" maskUnits="userSpaceOnUse">
+      <rect x="0" y="0" width="240" height="200" fill="black"/>
+      <circle id="c10" cx="120" cy="60" r="28" fill="white"/>
+    </mask>
+    
+    <mask id="m11" maskUnits="userSpaceOnUse">
+      <rect x="0" y="0" width="240" height="200" fill="black"/>
+      <circle id="c11" cx="120" cy="60" r="28" fill="white"/>
+    </mask>
+    
+    <mask id="m12" maskUnits="userSpaceOnUse">
+      <rect x="0" y="0" width="240" height="200" fill="black"/>
+      <circle id="c12" cx="120" cy="60" r="28" fill="white"/>
+    </mask>
+    
+    <mask id="m13" maskUnits="userSpaceOnUse">
+      <rect x="0" y="0" width="240" height="200" fill="black"/>
+      <circle id="c13" cx="120" cy="60" r="28" fill="white"/>
+    </mask>
+    
+    <mask id="m14" maskUnits="userSpaceOnUse">
+      <rect x="0" y="0" width="240" height="200" fill="black"/>
+      <circle id="c14" cx="120" cy="60" r="28" fill="white"/>
+    </mask>
+    
+    <mask id="m15" maskUnits="userSpaceOnUse">
+      <rect x="0" y="0" width="240" height="200" fill="black"/>
+      <circle id="c15" cx="120" cy="60" r="28" fill="white"/>
+    </mask>
+    
+    <mask id="m16" maskUnits="userSpaceOnUse">
+      <rect x="0" y="0" width="240" height="200" fill="black"/>
+      <circle id="c16" cx="120" cy="60" r="28" fill="white"/>
+    </mask>
+    
+    <mask id="m17" maskUnits="userSpaceOnUse">
+      <rect x="0" y="0" width="240" height="200" fill="black"/>
+      <circle id="c17" cx="120" cy="60" r="28" fill="white"/>
+    </mask>
+    
+    <mask id="m18" maskUnits="userSpaceOnUse">
+      <rect x="0" y="0" width="240" height="200" fill="black"/>
+      <circle id="c18" cx="120" cy="60" r="28" fill="white"/>
+    </mask>
+    
+    <mask id="m19" maskUnits="userSpaceOnUse">
+      <rect x="0" y="0" width="240" height="200" fill="black"/>
+      <circle id="c19" cx="120" cy="60" r="28" fill="white"/>
+    </mask>
+    
+    <mask id="m20" maskUnits="userSpaceOnUse">
+      <rect x="0" y="0" width="240" height="200" fill="black"/>
+      <circle id="c20" cx="120" cy="60" r="28" fill="white"/>
+    </mask>
+    
+    <mask id="m21" maskUnits="userSpaceOnUse">
+      <rect x="0" y="0" width="240" height="200" fill="black"/>
+      <circle id="c21" cx="120" cy="60" r="28" fill="white"/>
+    </mask>
+    
+  </defs>
+
+  <path id="base"
+        d="M20 60 C 70 60 90 60 120 60 C 150 60 170 60 190 60 C 205 60 215 60 220 60"
+        fill="none"
+        stroke="#000000"
+        stroke-width="2.2"
+        stroke-linecap="round"
+        stroke-linejoin="round">
+    <animate attributeName="d"
+             dur="34s"
+             repeatCount="indefinite"
+             calcMode="spline"
+             keyTimes="0;0.12;0.24;0.36;0.48;0.6;0.72;0.84;1.0"
+             keySplines="0.42 0 0.58 1 0.42 0 0.58 1 0.42 0 0.58 1 0.42 0 0.58 1 0.42 0 0.58 1 0.42 0 0.58 1 0.42 0 0.58 1 0.42 0 0.58 1"
+             values="
+             M20 60 C 70 60 90 60 120 60 C 150 60 170 60 190 60 C 205 60 215 60 220 60;
+             M20 60 C 68 58 92 64 120 56 C 148 50 170 62 190 60 C 206 58 214 60 220 62;
+             M20 60 C 70 54 94 70 120 58 C 146 46 170 58 190 64 C 206 66 214 60 220 60;
+             M20 60 C 74 62 94 52 120 66 C 146 74 170 56 190 58 C 206 56 214 64 220 60;
+             M20 60 C 72 68 96 54 120 52 C 146 50 170 70 190 62 C 206 58 214 62 220 60;
+             M20 60 C 66 60 92 58 120 70 C 148 82 174 60 190 56 C 206 54 214 58 220 60;
+             M20 60 C 70 52 96 56 120 50 C 146 44 170 52 190 68 C 206 74 214 62 220 60;
+             M20 60 C 76 56 94 62 120 56 C 148 50 170 60 190 60 C 205 60 215 60 220 60;
+             M20 60 C 70 60 90 60 120 60 C 150 60 170 60 190 60 C 205 60 215 60 220 60
+             "/>
+  </path>
+
+  
+    <animate xlink:href="#c0" attributeName="cx"
+             dur="26.0s" repeatCount="indefinite"
+             values="70;120;170;140;100;160;120"/>
+    <animate xlink:href="#c0" attributeName="cy"
+             dur="30.0s" repeatCount="indefinite"
+             values="60;52;68;56;64;60"/>
+    <animate xlink:href="#c0" attributeName="r"
+             dur="24.0s" repeatCount="indefinite"
+             values="18;34;22;38;26;30;18"/>
+    
+    <animate xlink:href="#c1" attributeName="cx"
+             dur="26.7s" repeatCount="indefinite"
+             values="70;120;170;140;100;160;120"/>
+    <animate xlink:href="#c1" attributeName="cy"
+             dur="30.6s" repeatCount="indefinite"
+             values="60;52;68;56;64;60"/>
+    <animate xlink:href="#c1" attributeName="r"
+             dur="24.5s" repeatCount="indefinite"
+             values="18;34;22;38;26;30;18"/>
+    
+    <animate xlink:href="#c2" attributeName="cx"
+             dur="27.4s" repeatCount="indefinite"
+             values="70;120;170;140;100;160;120"/>
+    <animate xlink:href="#c2" attributeName="cy"
+             dur="31.2s" repeatCount="indefinite"
+             values="60;52;68;56;64;60"/>
+    <animate xlink:href="#c2" attributeName="r"
+             dur="25.0s" repeatCount="indefinite"
+             values="18;34;22;38;26;30;18"/>
+    
+    <animate xlink:href="#c3" attributeName="cx"
+             dur="28.1s" repeatCount="indefinite"
+             values="70;120;170;140;100;160;120"/>
+    <animate xlink:href="#c3" attributeName="cy"
+             dur="31.8s" repeatCount="indefinite"
+             values="60;52;68;56;64;60"/>
+    <animate xlink:href="#c3" attributeName="r"
+             dur="25.5s" repeatCount="indefinite"
+             values="18;34;22;38;26;30;18"/>
+    
+    <animate xlink:href="#c4" attributeName="cx"
+             dur="28.8s" repeatCount="indefinite"
+             values="70;120;170;140;100;160;120"/>
+    <animate xlink:href="#c4" attributeName="cy"
+             dur="32.4s" repeatCount="indefinite"
+             values="60;52;68;56;64;60"/>
+    <animate xlink:href="#c4" attributeName="r"
+             dur="26.0s" repeatCount="indefinite"
+             values="18;34;22;38;26;30;18"/>
+    
+    <animate xlink:href="#c5" attributeName="cx"
+             dur="29.5s" repeatCount="indefinite"
+             values="70;120;170;140;100;160;120"/>
+    <animate xlink:href="#c5" attributeName="cy"
+             dur="33.0s" repeatCount="indefinite"
+             values="60;52;68;56;64;60"/>
+    <animate xlink:href="#c5" attributeName="r"
+             dur="26.5s" repeatCount="indefinite"
+             values="18;34;22;38;26;30;18"/>
+    
+    <animate xlink:href="#c6" attributeName="cx"
+             dur="30.2s" repeatCount="indefinite"
+             values="70;120;170;140;100;160;120"/>
+    <animate xlink:href="#c6" attributeName="cy"
+             dur="33.6s" repeatCount="indefinite"
+             values="60;52;68;56;64;60"/>
+    <animate xlink:href="#c6" attributeName="r"
+             dur="27.0s" repeatCount="indefinite"
+             values="18;34;22;38;26;30;18"/>
+    
+    <animate xlink:href="#c7" attributeName="cx"
+             dur="30.9s" repeatCount="indefinite"
+             values="70;120;170;140;100;160;120"/>
+    <animate xlink:href="#c7" attributeName="cy"
+             dur="34.2s" repeatCount="indefinite"
+             values="60;52;68;56;64;60"/>
+    <animate xlink:href="#c7" attributeName="r"
+             dur="27.5s" repeatCount="indefinite"
+             values="18;34;22;38;26;30;18"/>
+    
+    <animate xlink:href="#c8" attributeName="cx"
+             dur="31.6s" repeatCount="indefinite"
+             values="70;120;170;140;100;160;120"/>
+    <animate xlink:href="#c8" attributeName="cy"
+             dur="34.8s" repeatCount="indefinite"
+             values="60;52;68;56;64;60"/>
+    <animate xlink:href="#c8" attributeName="r"
+             dur="28.0s" repeatCount="indefinite"
+             values="18;34;22;38;26;30;18"/>
+    
+    <animate xlink:href="#c9" attributeName="cx"
+             dur="32.3s" repeatCount="indefinite"
+             values="70;120;170;140;100;160;120"/>
+    <animate xlink:href="#c9" attributeName="cy"
+             dur="35.4s" repeatCount="indefinite"
+             values="60;52;68;56;64;60"/>
+    <animate xlink:href="#c9" attributeName="r"
+             dur="28.5s" repeatCount="indefinite"
+             values="18;34;22;38;26;30;18"/>
+    
+    <animate xlink:href="#c10" attributeName="cx"
+             dur="33.0s" repeatCount="indefinite"
+             values="70;120;170;140;100;160;120"/>
+    <animate xlink:href="#c10" attributeName="cy"
+             dur="36.0s" repeatCount="indefinite"
+             values="60;52;68;56;64;60"/>
+    <animate xlink:href="#c10" attributeName="r"
+             dur="29.0s" repeatCount="indefinite"
+             values="18;34;22;38;26;30;18"/>
+    
+    <animate xlink:href="#c11" attributeName="cx"
+             dur="33.7s" repeatCount="indefinite"
+             values="70;120;170;140;100;160;120"/>
+    <animate xlink:href="#c11" attributeName="cy"
+             dur="36.6s" repeatCount="indefinite"
+             values="60;52;68;56;64;60"/>
+    <animate xlink:href="#c11" attributeName="r"
+             dur="29.5s" repeatCount="indefinite"
+             values="18;34;22;38;26;30;18"/>
+    
+    <animate xlink:href="#c12" attributeName="cx"
+             dur="34.4s" repeatCount="indefinite"
+             values="70;120;170;140;100;160;120"/>
+    <animate xlink:href="#c12" attributeName="cy"
+             dur="37.2s" repeatCount="indefinite"
+             values="60;52;68;56;64;60"/>
+    <animate xlink:href="#c12" attributeName="r"
+             dur="30.0s" repeatCount="indefinite"
+             values="18;34;22;38;26;30;18"/>
+    
+    <animate xlink:href="#c13" attributeName="cx"
+             dur="35.1s" repeatCount="indefinite"
+             values="70;120;170;140;100;160;120"/>
+    <animate xlink:href="#c13" attributeName="cy"
+             dur="37.8s" repeatCount="indefinite"
+             values="60;52;68;56;64;60"/>
+    <animate xlink:href="#c13" attributeName="r"
+             dur="30.5s" repeatCount="indefinite"
+             values="18;34;22;38;26;30;18"/>
+    
+    <animate xlink:href="#c14" attributeName="cx"
+             dur="35.8s" repeatCount="indefinite"
+             values="70;120;170;140;100;160;120"/>
+    <animate xlink:href="#c14" attributeName="cy"
+             dur="38.4s" repeatCount="indefinite"
+             values="60;52;68;56;64;60"/>
+    <animate xlink:href="#c14" attributeName="r"
+             dur="31.0s" repeatCount="indefinite"
+             values="18;34;22;38;26;30;18"/>
+    
+    <animate xlink:href="#c15" attributeName="cx"
+             dur="36.5s" repeatCount="indefinite"
+             values="70;120;170;140;100;160;120"/>
+    <animate xlink:href="#c15" attributeName="cy"
+             dur="39.0s" repeatCount="indefinite"
+             values="60;52;68;56;64;60"/>
+    <animate xlink:href="#c15" attributeName="r"
+             dur="31.5s" repeatCount="indefinite"
+             values="18;34;22;38;26;30;18"/>
+    
+    <animate xlink:href="#c16" attributeName="cx"
+             dur="37.2s" repeatCount="indefinite"
+             values="70;120;170;140;100;160;120"/>
+    <animate xlink:href="#c16" attributeName="cy"
+             dur="39.6s" repeatCount="indefinite"
+             values="60;52;68;56;64;60"/>
+    <animate xlink:href="#c16" attributeName="r"
+             dur="32.0s" repeatCount="indefinite"
+             values="18;34;22;38;26;30;18"/>
+    
+    <animate xlink:href="#c17" attributeName="cx"
+             dur="37.9s" repeatCount="indefinite"
+             values="70;120;170;140;100;160;120"/>
+    <animate xlink:href="#c17" attributeName="cy"
+             dur="40.2s" repeatCount="indefinite"
+             values="60;52;68;56;64;60"/>
+    <animate xlink:href="#c17" attributeName="r"
+             dur="32.5s" repeatCount="indefinite"
+             values="18;34;22;38;26;30;18"/>
+    
+    <animate xlink:href="#c18" attributeName="cx"
+             dur="38.6s" repeatCount="indefinite"
+             values="70;120;170;140;100;160;120"/>
+    <animate xlink:href="#c18" attributeName="cy"
+             dur="40.8s" repeatCount="indefinite"
+             values="60;52;68;56;64;60"/>
+    <animate xlink:href="#c18" attributeName="r"
+             dur="33.0s" repeatCount="indefinite"
+             values="18;34;22;38;26;30;18"/>
+    
+    <animate xlink:href="#c19" attributeName="cx"
+             dur="39.3s" repeatCount="indefinite"
+             values="70;120;170;140;100;160;120"/>
+    <animate xlink:href="#c19" attributeName="cy"
+             dur="41.4s" repeatCount="indefinite"
+             values="60;52;68;56;64;60"/>
+    <animate xlink:href="#c19" attributeName="r"
+             dur="33.5s" repeatCount="indefinite"
+             values="18;34;22;38;26;30;18"/>
+    
+    <animate xlink:href="#c20" attributeName="cx"
+             dur="40.0s" repeatCount="indefinite"
+             values="70;120;170;140;100;160;120"/>
+    <animate xlink:href="#c20" attributeName="cy"
+             dur="42.0s" repeatCount="indefinite"
+             values="60;52;68;56;64;60"/>
+    <animate xlink:href="#c20" attributeName="r"
+             dur="34.0s" repeatCount="indefinite"
+             values="18;34;22;38;26;30;18"/>
+    
+    <animate xlink:href="#c21" attributeName="cx"
+             dur="40.7s" repeatCount="indefinite"
+             values="70;120;170;140;100;160;120"/>
+    <animate xlink:href="#c21" attributeName="cy"
+             dur="42.6s" repeatCount="indefinite"
+             values="60;52;68;56;64;60"/>
+    <animate xlink:href="#c21" attributeName="r"
+             dur="34.5s" repeatCount="indefinite"
+             values="18;34;22;38;26;30;18"/>
+    
+
+  <use xlink:href="#base"/>
+
+  
+  <g mask="url(#m0)">
+    <g>
+      <animateTransform attributeName="transform" type="translate"
+                        dur="22s" repeatCount="indefinite"
+                        calcMode="spline"
+                        keyTimes="0;0.5;1"
+                        keySplines="0.42 0 0.58 1;0.42 0 0.58 1"
+                        values="0 6.16; 0 55.44; 0 6.16"/>
+      <use xlink:href="#base"
+           stroke-width="1.36"
+           fill="none"
+           stroke="#000000"
+           stroke-linecap="round"
+           stroke-linejoin="round"/>
+    </g>
+  </g>
+    
+  <g mask="url(#m1)">
+    <g>
+      <animateTransform attributeName="transform" type="translate"
+                        dur="22s" repeatCount="indefinite"
+                        calcMode="spline"
+                        keyTimes="0;0.5;1"
+                        keySplines="0.42 0 0.58 1;0.42 0 0.58 1"
+                        values="0 5.60; 0 50.40; 0 5.60"/>
+      <use xlink:href="#base"
+           stroke-width="1.40"
+           fill="none"
+           stroke="#000000"
+           stroke-linecap="round"
+           stroke-linejoin="round"/>
+    </g>
+  </g>
+    
+  <g mask="url(#m2)">
+    <g>
+      <animateTransform attributeName="transform" type="translate"
+                        dur="22s" repeatCount="indefinite"
+                        calcMode="spline"
+                        keyTimes="0;0.5;1"
+                        keySplines="0.42 0 0.58 1;0.42 0 0.58 1"
+                        values="0 5.04; 0 45.36; 0 5.04"/>
+      <use xlink:href="#base"
+           stroke-width="1.44"
+           fill="none"
+           stroke="#000000"
+           stroke-linecap="round"
+           stroke-linejoin="round"/>
+    </g>
+  </g>
+    
+  <g mask="url(#m3)">
+    <g>
+      <animateTransform attributeName="transform" type="translate"
+                        dur="22s" repeatCount="indefinite"
+                        calcMode="spline"
+                        keyTimes="0;0.5;1"
+                        keySplines="0.42 0 0.58 1;0.42 0 0.58 1"
+                        values="0 4.48; 0 40.32; 0 4.48"/>
+      <use xlink:href="#base"
+           stroke-width="1.48"
+           fill="none"
+           stroke="#000000"
+           stroke-linecap="round"
+           stroke-linejoin="round"/>
+    </g>
+  </g>
+    
+  <g mask="url(#m4)">
+    <g>
+      <animateTransform attributeName="transform" type="translate"
+                        dur="22s" repeatCount="indefinite"
+                        calcMode="spline"
+                        keyTimes="0;0.5;1"
+                        keySplines="0.42 0 0.58 1;0.42 0 0.58 1"
+                        values="0 3.92; 0 35.28; 0 3.92"/>
+      <use xlink:href="#base"
+           stroke-width="1.52"
+           fill="none"
+           stroke="#000000"
+           stroke-linecap="round"
+           stroke-linejoin="round"/>
+    </g>
+  </g>
+    
+  <g mask="url(#m5)">
+    <g>
+      <animateTransform attributeName="transform" type="translate"
+                        dur="22s" repeatCount="indefinite"
+                        calcMode="spline"
+                        keyTimes="0;0.5;1"
+                        keySplines="0.42 0 0.58 1;0.42 0 0.58 1"
+                        values="0 3.36; 0 30.24; 0 3.36"/>
+      <use xlink:href="#base"
+           stroke-width="1.56"
+           fill="none"
+           stroke="#000000"
+           stroke-linecap="round"
+           stroke-linejoin="round"/>
+    </g>
+  </g>
+    
+  <g mask="url(#m6)">
+    <g>
+      <animateTransform attributeName="transform" type="translate"
+                        dur="22s" repeatCount="indefinite"
+                        calcMode="spline"
+                        keyTimes="0;0.5;1"
+                        keySplines="0.42 0 0.58 1;0.42 0 0.58 1"
+                        values="0 2.80; 0 25.20; 0 2.80"/>
+      <use xlink:href="#base"
+           stroke-width="1.60"
+           fill="none"
+           stroke="#000000"
+           stroke-linecap="round"
+           stroke-linejoin="round"/>
+    </g>
+  </g>
+    
+  <g mask="url(#m7)">
+    <g>
+      <animateTransform attributeName="transform" type="translate"
+                        dur="22s" repeatCount="indefinite"
+                        calcMode="spline"
+                        keyTimes="0;0.5;1"
+                        keySplines="0.42 0 0.58 1;0.42 0 0.58 1"
+                        values="0 2.24; 0 20.16; 0 2.24"/>
+      <use xlink:href="#base"
+           stroke-width="1.64"
+           fill="none"
+           stroke="#000000"
+           stroke-linecap="round"
+           stroke-linejoin="round"/>
+    </g>
+  </g>
+    
+  <g mask="url(#m8)">
+    <g>
+      <animateTransform attributeName="transform" type="translate"
+                        dur="22s" repeatCount="indefinite"
+                        calcMode="spline"
+                        keyTimes="0;0.5;1"
+                        keySplines="0.42 0 0.58 1;0.42 0 0.58 1"
+                        values="0 1.68; 0 15.12; 0 1.68"/>
+      <use xlink:href="#base"
+           stroke-width="1.68"
+           fill="none"
+           stroke="#000000"
+           stroke-linecap="round"
+           stroke-linejoin="round"/>
+    </g>
+  </g>
+    
+  <g mask="url(#m9)">
+    <g>
+      <animateTransform attributeName="transform" type="translate"
+                        dur="22s" repeatCount="indefinite"
+                        calcMode="spline"
+                        keyTimes="0;0.5;1"
+                        keySplines="0.42 0 0.58 1;0.42 0 0.58 1"
+                        values="0 1.12; 0 10.08; 0 1.12"/>
+      <use xlink:href="#base"
+           stroke-width="1.72"
+           fill="none"
+           stroke="#000000"
+           stroke-linecap="round"
+           stroke-linejoin="round"/>
+    </g>
+  </g>
+    
+  <g mask="url(#m10)">
+    <g>
+      <animateTransform attributeName="transform" type="translate"
+                        dur="22s" repeatCount="indefinite"
+                        calcMode="spline"
+                        keyTimes="0;0.5;1"
+                        keySplines="0.42 0 0.58 1;0.42 0 0.58 1"
+                        values="0 0.56; 0 5.04; 0 0.56"/>
+      <use xlink:href="#base"
+           stroke-width="1.76"
+           fill="none"
+           stroke="#000000"
+           stroke-linecap="round"
+           stroke-linejoin="round"/>
+    </g>
+  </g>
+    
+  <g mask="url(#m11)">
+    <g>
+      <animateTransform attributeName="transform" type="translate"
+                        dur="22s" repeatCount="indefinite"
+                        calcMode="spline"
+                        keyTimes="0;0.5;1"
+                        keySplines="0.42 0 0.58 1;0.42 0 0.58 1"
+                        values="0 -0.00; 0 -0.00; 0 -0.00"/>
+      <use xlink:href="#base"
+           stroke-width="1.80"
+           fill="none"
+           stroke="#000000"
+           stroke-linecap="round"
+           stroke-linejoin="round"/>
+    </g>
+  </g>
+    
+  <g mask="url(#m12)">
+    <g>
+      <animateTransform attributeName="transform" type="translate"
+                        dur="22s" repeatCount="indefinite"
+                        calcMode="spline"
+                        keyTimes="0;0.5;1"
+                        keySplines="0.42 0 0.58 1;0.42 0 0.58 1"
+                        values="0 -0.56; 0 -5.04; 0 -0.56"/>
+      <use xlink:href="#base"
+           stroke-width="1.76"
+           fill="none"
+           stroke="#000000"
+           stroke-linecap="round"
+           stroke-linejoin="round"/>
+    </g>
+  </g>
+    
+  <g mask="url(#m13)">
+    <g>
+      <animateTransform attributeName="transform" type="translate"
+                        dur="22s" repeatCount="indefinite"
+                        calcMode="spline"
+                        keyTimes="0;0.5;1"
+                        keySplines="0.42 0 0.58 1;0.42 0 0.58 1"
+                        values="0 -1.12; 0 -10.08; 0 -1.12"/>
+      <use xlink:href="#base"
+           stroke-width="1.72"
+           fill="none"
+           stroke="#000000"
+           stroke-linecap="round"
+           stroke-linejoin="round"/>
+    </g>
+  </g>
+    
+  <g mask="url(#m14)">
+    <g>
+      <animateTransform attributeName="transform" type="translate"
+                        dur="22s" repeatCount="indefinite"
+                        calcMode="spline"
+                        keyTimes="0;0.5;1"
+                        keySplines="0.42 0 0.58 1;0.42 0 0.58 1"
+                        values="0 -1.68; 0 -15.12; 0 -1.68"/>
+      <use xlink:href="#base"
+           stroke-width="1.68"
+           fill="none"
+           stroke="#000000"
+           stroke-linecap="round"
+           stroke-linejoin="round"/>
+    </g>
+  </g>
+    
+  <g mask="url(#m15)">
+    <g>
+      <animateTransform attributeName="transform" type="translate"
+                        dur="22s" repeatCount="indefinite"
+                        calcMode="spline"
+                        keyTimes="0;0.5;1"
+                        keySplines="0.42 0 0.58 1;0.42 0 0.58 1"
+                        values="0 -2.24; 0 -20.16; 0 -2.24"/>
+      <use xlink:href="#base"
+           stroke-width="1.64"
+           fill="none"
+           stroke="#000000"
+           stroke-linecap="round"
+           stroke-linejoin="round"/>
+    </g>
+  </g>
+    
+  <g mask="url(#m16)">
+    <g>
+      <animateTransform attributeName="transform" type="translate"
+                        dur="22s" repeatCount="indefinite"
+                        calcMode="spline"
+                        keyTimes="0;0.5;1"
+                        keySplines="0.42 0 0.58 1;0.42 0 0.58 1"
+                        values="0 -2.80; 0 -25.20; 0 -2.80"/>
+      <use xlink:href="#base"
+           stroke-width="1.60"
+           fill="none"
+           stroke="#000000"
+           stroke-linecap="round"
+           stroke-linejoin="round"/>
+    </g>
+  </g>
+    
+  <g mask="url(#m17)">
+    <g>
+      <animateTransform attributeName="transform" type="translate"
+                        dur="22s" repeatCount="indefinite"
+                        calcMode="spline"
+                        keyTimes="0;0.5;1"
+                        keySplines="0.42 0 0.58 1;0.42 0 0.58 1"
+                        values="0 -3.36; 0 -30.24; 0 -3.36"/>
+      <use xlink:href="#base"
+           stroke-width="1.56"
+           fill="none"
+           stroke="#000000"
+           stroke-linecap="round"
+           stroke-linejoin="round"/>
+    </g>
+  </g>
+    
+  <g mask="url(#m18)">
+    <g>
+      <animateTransform attributeName="transform" type="translate"
+                        dur="22s" repeatCount="indefinite"
+                        calcMode="spline"
+                        keyTimes="0;0.5;1"
+                        keySplines="0.42 0 0.58 1;0.42 0 0.58 1"
+                        values="0 -3.92; 0 -35.28; 0 -3.92"/>
+      <use xlink:href="#base"
+           stroke-width="1.52"
+           fill="none"
+           stroke="#000000"
+           stroke-linecap="round"
+           stroke-linejoin="round"/>
+    </g>
+  </g>
+    
+  <g mask="url(#m19)">
+    <g>
+      <animateTransform attributeName="transform" type="translate"
+                        dur="22s" repeatCount="indefinite"
+                        calcMode="spline"
+                        keyTimes="0;0.5;1"
+                        keySplines="0.42 0 0.58 1;0.42 0 0.58 1"
+                        values="0 -4.48; 0 -40.32; 0 -4.48"/>
+      <use xlink:href="#base"
+           stroke-width="1.48"
+           fill="none"
+           stroke="#000000"
+           stroke-linecap="round"
+           stroke-linejoin="round"/>
+    </g>
+  </g>
+    
+  <g mask="url(#m20)">
+    <g>
+      <animateTransform attributeName="transform" type="translate"
+                        dur="22s" repeatCount="indefinite"
+                        calcMode="spline"
+                        keyTimes="0;0.5;1"
+                        keySplines="0.42 0 0.58 1;0.42 0 0.58 1"
+                        values="0 -5.04; 0 -45.36; 0 -5.04"/>
+      <use xlink:href="#base"
+           stroke-width="1.44"
+           fill="none"
+           stroke="#000000"
+           stroke-linecap="round"
+           stroke-linejoin="round"/>
+    </g>
+  </g>
+    
+  <g mask="url(#m21)">
+    <g>
+      <animateTransform attributeName="transform" type="translate"
+                        dur="22s" repeatCount="indefinite"
+                        calcMode="spline"
+                        keyTimes="0;0.5;1"
+                        keySplines="0.42 0 0.58 1;0.42 0 0.58 1"
+                        values="0 -5.60; 0 -50.40; 0 -5.60"/>
+      <use xlink:href="#base"
+           stroke-width="1.40"
+           fill="none"
+           stroke="#000000"
+           stroke-linecap="round"
+           stroke-linejoin="round"/>
+    </g>
+  </g>
+    
+
+</svg>

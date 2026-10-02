@@ -1,0 +1,749 @@
+{
+  "meta": {
+    "schemaVersion": 1,
+    "source": "data/registry.source.json",
+    "sourceHash": "7c4c704325b54bd350de2b4ac47bf772f80e05c43eaea29ccf76de8d25c74df3",
+    "compiledAt": "2026-10-01",
+    "relationVocabulary": [
+      "part-of",
+      "derived-from",
+      "inspired-by",
+      "documents",
+      "demonstrates",
+      "uses",
+      "links-to",
+      "extends",
+      "related-to"
+    ],
+    "counts": {
+      "territories": 9,
+      "assets": 29
+    }
+  },
+  "nodes": [
+    {
+      "id": "baam-pro",
+      "kind": "root",
+      "title": "BAAM.pro",
+      "url": "https://baam.pro/"
+    },
+    {
+      "id": "studio",
+      "kind": "territory",
+      "title": "Studio",
+      "url": "https://studio.baam.pro/"
+    },
+    {
+      "id": "lab",
+      "kind": "territory",
+      "title": "Lab",
+      "url": "https://lab.baam.pro/"
+    },
+    {
+      "id": "editions",
+      "kind": "territory",
+      "title": "Éditions",
+      "url": "http://127.0.0.1:8084/"
+    },
+    {
+      "id": "ideas",
+      "kind": "territory",
+      "title": "Idées",
+      "url": null
+    },
+    {
+      "id": "research",
+      "kind": "territory",
+      "title": "Research",
+      "url": "https://research.baam.pro/"
+    },
+    {
+      "id": "agence",
+      "kind": "territory",
+      "title": "Agence",
+      "url": null
+    },
+    {
+      "id": "tools",
+      "kind": "territory",
+      "title": "Tools",
+      "url": null
+    },
+    {
+      "id": "games",
+      "kind": "territory",
+      "title": "Games",
+      "url": null
+    },
+    {
+      "id": "apps",
+      "kind": "territory",
+      "title": "Apps",
+      "url": null
+    },
+    {
+      "id": "pendules-chaotiques",
+      "kind": "asset",
+      "title": "Pendules chaotiques",
+      "territory": "studio",
+      "type": "Board",
+      "status": "public",
+      "updatedAt": "2026-10-01",
+      "url": "https://studio.baam.pro/b/board-pendules"
+    },
+    {
+      "id": "champ-oscillant",
+      "kind": "asset",
+      "title": "Champ oscillant",
+      "territory": "studio",
+      "type": "Board",
+      "status": "public",
+      "updatedAt": "2026-09-30",
+      "url": "https://studio.baam.pro/b/oscillant"
+    },
+    {
+      "id": "fink-doublefold",
+      "kind": "asset",
+      "title": "FINK Doublefold",
+      "territory": "studio",
+      "type": "Board",
+      "status": "public",
+      "updatedAt": "2026-09-29",
+      "url": "https://studio.baam.pro/b/fink-burning-doublefold-v4"
+    },
+    {
+      "id": "deux-reseaux-vivants",
+      "kind": "asset",
+      "title": "Deux réseaux vivants",
+      "territory": "studio",
+      "type": "Animation",
+      "status": "preview",
+      "updatedAt": "2026-09-28",
+      "url": null
+    },
+    {
+      "id": "pixel-bloom",
+      "kind": "asset",
+      "title": "Pixel Bloom",
+      "territory": "lab",
+      "type": "artificial-life-simulation",
+      "status": "preview",
+      "updatedAt": "2026-08-29",
+      "url": null
+    },
+    {
+      "id": "suite-premiere",
+      "kind": "asset",
+      "title": "Suite Première",
+      "territory": "lab",
+      "type": "mathematical-visualization",
+      "status": "preview",
+      "updatedAt": "2026-08-29",
+      "url": null
+    },
+    {
+      "id": "r-time",
+      "kind": "asset",
+      "title": "R-Time",
+      "territory": "lab",
+      "type": "simulation-interactive",
+      "status": "public",
+      "updatedAt": "2026-07-11",
+      "url": "https://r-time-simulator.netlify.app/"
+    },
+    {
+      "id": "lutile-et-lagreable",
+      "kind": "asset",
+      "title": "L'Utile et l'Agréable",
+      "territory": "editions",
+      "type": "Feuilleton",
+      "status": "public",
+      "updatedAt": "2026-10-01",
+      "url": "http://127.0.0.1:8084/"
+    },
+    {
+      "id": "dieu-ecoute",
+      "kind": "asset",
+      "title": "Le dieu de l'écoute",
+      "territory": "editions",
+      "type": "Épisode 10",
+      "status": "public",
+      "updatedAt": "2026-09-30",
+      "url": "http://127.0.0.1:8084/feuilleton/10-le-dieu-de-l-ecoute"
+    },
+    {
+      "id": "point-plus-bas",
+      "kind": "asset",
+      "title": "Le point le plus bas",
+      "territory": "editions",
+      "type": "Épisode 03",
+      "status": "public",
+      "updatedAt": "2026-09-29",
+      "url": "http://127.0.0.1:8084/feuilleton/03-le-point-le-plus-bas"
+    },
+    {
+      "id": "cargos",
+      "kind": "asset",
+      "title": "Cargos",
+      "territory": "ideas",
+      "type": "Série",
+      "status": "preview",
+      "updatedAt": "2026-10-01",
+      "url": null
+    },
+    {
+      "id": "atlas-coca",
+      "kind": "asset",
+      "title": "Atlas DB Coca",
+      "territory": "ideas",
+      "type": "Atlas SVG",
+      "status": "preview",
+      "updatedAt": "2026-09-30",
+      "url": null
+    },
+    {
+      "id": "emergence-grand-public",
+      "kind": "asset",
+      "title": "L'émergence, sans mode d'emploi",
+      "territory": "ideas",
+      "type": "Article",
+      "status": "preview",
+      "updatedAt": "2026-09-29",
+      "url": null
+    },
+    {
+      "id": "zeus-series",
+      "kind": "asset",
+      "title": "The Zeus Series",
+      "territory": "research",
+      "type": "Research paper",
+      "status": "public",
+      "updatedAt": "2026-10-01",
+      "url": "https://research.baam.pro/articles/serie_zeus_baam_research"
+    },
+    {
+      "id": "negative-crystals",
+      "kind": "asset",
+      "title": "Negative Crystals",
+      "territory": "research",
+      "type": "Research note",
+      "status": "public",
+      "updatedAt": "2026-09-30",
+      "url": "https://research.baam.pro/articles/cristaux_negatifs_baam_research"
+    },
+    {
+      "id": "query-deformation",
+      "kind": "asset",
+      "title": "Query as Deformation",
+      "territory": "research",
+      "type": "Research paper",
+      "status": "public",
+      "updatedAt": "2026-09-29",
+      "url": "https://research.baam.pro/articles/baam_query_deformation"
+    },
+    {
+      "id": "reseaux-multi-echelles",
+      "kind": "asset",
+      "title": "Réseaux multi-échelles",
+      "territory": "research",
+      "type": "Piste",
+      "status": "preview",
+      "updatedAt": "2026-09-28",
+      "url": null
+    },
+    {
+      "id": "implementation-ia",
+      "kind": "asset",
+      "title": "Implémentation IA située",
+      "territory": "agence",
+      "type": "Offre",
+      "status": "preview",
+      "updatedAt": "2026-10-01",
+      "url": null
+    },
+    {
+      "id": "cartographies-actives",
+      "kind": "asset",
+      "title": "Cartographies actives",
+      "territory": "agence",
+      "type": "Capacité",
+      "status": "preview",
+      "updatedAt": "2026-09-30",
+      "url": null
+    },
+    {
+      "id": "agents-metiers",
+      "kind": "asset",
+      "title": "Agents métiers sous garde",
+      "territory": "agence",
+      "type": "Capacité",
+      "status": "preview",
+      "updatedAt": "2026-09-29",
+      "url": null
+    },
+    {
+      "id": "atelier-svg",
+      "kind": "asset",
+      "title": "Atelier Publication SVG",
+      "territory": "tools",
+      "type": "Outil",
+      "status": "preview",
+      "updatedAt": "2026-10-01",
+      "url": null
+    },
+    {
+      "id": "clipforge",
+      "kind": "asset",
+      "title": "ClipForge",
+      "territory": "tools",
+      "type": "Outil",
+      "status": "preview",
+      "updatedAt": "2026-09-30",
+      "url": null
+    },
+    {
+      "id": "carto-projects",
+      "kind": "asset",
+      "title": "CartoProjects",
+      "territory": "tools",
+      "type": "Outil",
+      "status": "preview",
+      "updatedAt": "2026-09-29",
+      "url": null
+    },
+    {
+      "id": "r-time-game",
+      "kind": "asset",
+      "title": "R-Time",
+      "territory": "games",
+      "type": "Simulation",
+      "status": "preview",
+      "updatedAt": "2026-10-01",
+      "url": null
+    },
+    {
+      "id": "asymmetric-wars",
+      "kind": "asset",
+      "title": "Asymmetric Wars",
+      "territory": "games",
+      "type": "Jeu",
+      "status": "preview",
+      "updatedAt": "2026-09-30",
+      "url": null
+    },
+    {
+      "id": "doctrine-engine",
+      "kind": "asset",
+      "title": "Doctrine Engine",
+      "territory": "games",
+      "type": "Jeu / moteur",
+      "status": "preview",
+      "updatedAt": "2026-09-29",
+      "url": null
+    },
+    {
+      "id": "normarchi",
+      "kind": "asset",
+      "title": "NormArchi",
+      "territory": "apps",
+      "type": "App métier",
+      "status": "preview",
+      "updatedAt": "2026-10-01",
+      "url": null
+    },
+    {
+      "id": "archicarto",
+      "kind": "asset",
+      "title": "ArchiCarto",
+      "territory": "apps",
+      "type": "App métier",
+      "status": "preview",
+      "updatedAt": "2026-09-30",
+      "url": null
+    },
+    {
+      "id": "timelinearchitect",
+      "kind": "asset",
+      "title": "TimelineArchitect",
+      "territory": "apps",
+      "type": "App métier",
+      "status": "preview",
+      "updatedAt": "2026-09-29",
+      "url": null
+    }
+  ],
+  "edges": [
+    {
+      "from": "studio",
+      "type": "part-of",
+      "to": "baam-pro",
+      "generated": true
+    },
+    {
+      "from": "lab",
+      "type": "part-of",
+      "to": "baam-pro",
+      "generated": true
+    },
+    {
+      "from": "editions",
+      "type": "part-of",
+      "to": "baam-pro",
+      "generated": true
+    },
+    {
+      "from": "ideas",
+      "type": "part-of",
+      "to": "baam-pro",
+      "generated": true
+    },
+    {
+      "from": "research",
+      "type": "part-of",
+      "to": "baam-pro",
+      "generated": true
+    },
+    {
+      "from": "agence",
+      "type": "part-of",
+      "to": "baam-pro",
+      "generated": true
+    },
+    {
+      "from": "tools",
+      "type": "part-of",
+      "to": "baam-pro",
+      "generated": true
+    },
+    {
+      "from": "games",
+      "type": "part-of",
+      "to": "baam-pro",
+      "generated": true
+    },
+    {
+      "from": "apps",
+      "type": "part-of",
+      "to": "baam-pro",
+      "generated": true
+    },
+    {
+      "from": "pendules-chaotiques",
+      "type": "part-of",
+      "to": "studio",
+      "generated": true
+    },
+    {
+      "from": "champ-oscillant",
+      "type": "part-of",
+      "to": "studio",
+      "generated": true
+    },
+    {
+      "from": "fink-doublefold",
+      "type": "part-of",
+      "to": "studio",
+      "generated": true
+    },
+    {
+      "from": "deux-reseaux-vivants",
+      "type": "part-of",
+      "to": "studio",
+      "generated": true
+    },
+    {
+      "from": "deux-reseaux-vivants",
+      "type": "derived-from",
+      "to": "reseaux-multi-echelles",
+      "generated": false
+    },
+    {
+      "from": "deux-reseaux-vivants",
+      "type": "used-by",
+      "to": "lutile-et-lagreable",
+      "generated": true
+    },
+    {
+      "from": "pixel-bloom",
+      "type": "part-of",
+      "to": "lab",
+      "generated": true
+    },
+    {
+      "from": "suite-premiere",
+      "type": "part-of",
+      "to": "lab",
+      "generated": true
+    },
+    {
+      "from": "r-time",
+      "type": "part-of",
+      "to": "lab",
+      "generated": true
+    },
+    {
+      "from": "r-time",
+      "type": "related-to",
+      "to": "r-time-game",
+      "generated": true
+    },
+    {
+      "from": "lutile-et-lagreable",
+      "type": "part-of",
+      "to": "editions",
+      "generated": true
+    },
+    {
+      "from": "lutile-et-lagreable",
+      "type": "uses",
+      "to": "deux-reseaux-vivants",
+      "generated": false
+    },
+    {
+      "from": "lutile-et-lagreable",
+      "type": "contains",
+      "to": "dieu-ecoute",
+      "generated": true
+    },
+    {
+      "from": "lutile-et-lagreable",
+      "type": "contains",
+      "to": "point-plus-bas",
+      "generated": true
+    },
+    {
+      "from": "dieu-ecoute",
+      "type": "part-of",
+      "to": "editions",
+      "generated": true
+    },
+    {
+      "from": "dieu-ecoute",
+      "type": "part-of",
+      "to": "lutile-et-lagreable",
+      "generated": false
+    },
+    {
+      "from": "point-plus-bas",
+      "type": "part-of",
+      "to": "editions",
+      "generated": true
+    },
+    {
+      "from": "point-plus-bas",
+      "type": "part-of",
+      "to": "lutile-et-lagreable",
+      "generated": false
+    },
+    {
+      "from": "cargos",
+      "type": "part-of",
+      "to": "ideas",
+      "generated": true
+    },
+    {
+      "from": "cargos",
+      "type": "uses",
+      "to": "atlas-coca",
+      "generated": false
+    },
+    {
+      "from": "atlas-coca",
+      "type": "part-of",
+      "to": "ideas",
+      "generated": true
+    },
+    {
+      "from": "atlas-coca",
+      "type": "used-by",
+      "to": "cargos",
+      "generated": true
+    },
+    {
+      "from": "emergence-grand-public",
+      "type": "part-of",
+      "to": "ideas",
+      "generated": true
+    },
+    {
+      "from": "emergence-grand-public",
+      "type": "derived-from",
+      "to": "reseaux-multi-echelles",
+      "generated": false
+    },
+    {
+      "from": "zeus-series",
+      "type": "part-of",
+      "to": "research",
+      "generated": true
+    },
+    {
+      "from": "negative-crystals",
+      "type": "part-of",
+      "to": "research",
+      "generated": true
+    },
+    {
+      "from": "query-deformation",
+      "type": "part-of",
+      "to": "research",
+      "generated": true
+    },
+    {
+      "from": "reseaux-multi-echelles",
+      "type": "part-of",
+      "to": "research",
+      "generated": true
+    },
+    {
+      "from": "reseaux-multi-echelles",
+      "type": "source-of",
+      "to": "deux-reseaux-vivants",
+      "generated": true
+    },
+    {
+      "from": "reseaux-multi-echelles",
+      "type": "source-of",
+      "to": "emergence-grand-public",
+      "generated": true
+    },
+    {
+      "from": "implementation-ia",
+      "type": "part-of",
+      "to": "agence",
+      "generated": true
+    },
+    {
+      "from": "implementation-ia",
+      "type": "uses",
+      "to": "agents-metiers",
+      "generated": false
+    },
+    {
+      "from": "cartographies-actives",
+      "type": "part-of",
+      "to": "agence",
+      "generated": true
+    },
+    {
+      "from": "agents-metiers",
+      "type": "part-of",
+      "to": "agence",
+      "generated": true
+    },
+    {
+      "from": "agents-metiers",
+      "type": "used-by",
+      "to": "implementation-ia",
+      "generated": true
+    },
+    {
+      "from": "agents-metiers",
+      "type": "used-by",
+      "to": "normarchi",
+      "generated": true
+    },
+    {
+      "from": "atelier-svg",
+      "type": "part-of",
+      "to": "tools",
+      "generated": true
+    },
+    {
+      "from": "atelier-svg",
+      "type": "links-to",
+      "to": "studio",
+      "generated": false
+    },
+    {
+      "from": "clipforge",
+      "type": "part-of",
+      "to": "tools",
+      "generated": true
+    },
+    {
+      "from": "carto-projects",
+      "type": "part-of",
+      "to": "tools",
+      "generated": true
+    },
+    {
+      "from": "carto-projects",
+      "type": "links-to",
+      "to": "apps",
+      "generated": false
+    },
+    {
+      "from": "carto-projects",
+      "type": "used-by",
+      "to": "archicarto",
+      "generated": true
+    },
+    {
+      "from": "r-time-game",
+      "type": "part-of",
+      "to": "games",
+      "generated": true
+    },
+    {
+      "from": "r-time-game",
+      "type": "related-to",
+      "to": "r-time",
+      "generated": false
+    },
+    {
+      "from": "asymmetric-wars",
+      "type": "part-of",
+      "to": "games",
+      "generated": true
+    },
+    {
+      "from": "doctrine-engine",
+      "type": "part-of",
+      "to": "games",
+      "generated": true
+    },
+    {
+      "from": "normarchi",
+      "type": "part-of",
+      "to": "apps",
+      "generated": true
+    },
+    {
+      "from": "normarchi",
+      "type": "uses",
+      "to": "agents-metiers",
+      "generated": false
+    },
+    {
+      "from": "archicarto",
+      "type": "part-of",
+      "to": "apps",
+      "generated": true
+    },
+    {
+      "from": "archicarto",
+      "type": "uses",
+      "to": "carto-projects",
+      "generated": false
+    },
+    {
+      "from": "timelinearchitect",
+      "type": "part-of",
+      "to": "apps",
+      "generated": true
+    },
+    {
+      "from": "studio",
+      "type": "linked-from",
+      "to": "atelier-svg",
+      "generated": true
+    },
+    {
+      "from": "apps",
+      "type": "linked-from",
+      "to": "carto-projects",
+      "generated": true
+    }
+  ]
+}

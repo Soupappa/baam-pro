@@ -1,0 +1,122 @@
+{
+  "$schema": "./registry.source.schema.json",
+  "version": 1,
+  "root": {
+    "id": "baam-pro",
+    "name": "BAAM.pro",
+    "url": "https://baam.pro/",
+    "description": "Créations, recherches, outils et éditions reliés."
+  },
+  "territories": [
+    {
+      "id": "studio",
+      "name": "Studio",
+      "color": "#00d95f",
+      "description": ["Création d’animations vectorielles — variations infinies sans appel IA", "Déformation sensorielle · BAAM Engine · logos ©"],
+      "siteUrl": "https://studio.baam.pro/",
+      "preview": { "type": "iframe", "url": "https://studio.baam.pro/" }
+    },
+    {
+      "id": "lab",
+      "name": "Lab",
+      "color": "#f00098",
+      "description": ["Expériences interactives, prototypes et systèmes en train de naître", "Temps · nombres · champs · dérives"]
+    },
+    {
+      "id": "editions",
+      "name": "Éditions",
+      "color": "#ff762e",
+      "description": ["Livres, feuilletons et objets éditoriaux augmentés", "Lire librement · garder · soutenir"],
+      "siteUrl": "http://127.0.0.1:8084/",
+      "preview": { "type": "iframe", "url": "http://127.0.0.1:8084/?intro=final" }
+    },
+    {
+      "id": "ideas",
+      "name": "Idées",
+      "color": "#f0d000",
+      "description": ["La recherche racontée pour séduire, intriguer et transmettre", "Articles · cargos · atlas visuels"]
+    },
+    {
+      "id": "research",
+      "name": "Research",
+      "color": "#244cff",
+      "description": ["Cadres formalisés pour des systèmes génératifs reproductibles", "Protocoles · sources · résultats"],
+      "siteUrl": "https://research.baam.pro/",
+      "preview": { "type": "image", "url": "/assets/research-preview.png" }
+    },
+    {
+      "id": "agence",
+      "name": "Agence",
+      "color": "#00bfd1",
+      "description": ["Implémentation IA située pour transformer les organisations", "Diagnostic · agents métiers · cartographies"]
+    },
+    {
+      "id": "tools",
+      "name": "Tools",
+      "color": "#753cff",
+      "description": ["Outils de fabrication et de publication réutilisables", "SVG · vidéo · automatisation"]
+    },
+    {
+      "id": "games",
+      "name": "Games",
+      "color": "#ff4268",
+      "description": ["Jeux, simulations et règles pour penser autrement", "Stratégie · émergence · systèmes"]
+    },
+    {
+      "id": "apps",
+      "name": "Apps",
+      "color": "#00a98f",
+      "description": ["Applications métier pour travailler, décider et piloter", "Architecture · données · opérations"]
+    }
+  ],
+  "assets": [
+    {
+      "id": "pendules-chaotiques", "territory": "studio", "title": "Pendules chaotiques", "type": "Board", "status": "public", "updatedAt": "2026-10-01",
+      "url": "https://studio.baam.pro/b/board-pendules",
+      "preview": { "type": "svg", "url": "https://studio.baam.pro/assets/svg/double_pendules_baam_mapped_v1.svg" }
+    },
+    {
+      "id": "champ-oscillant", "territory": "studio", "title": "Champ oscillant", "type": "Board", "status": "public", "updatedAt": "2026-09-30",
+      "url": "https://studio.baam.pro/b/oscillant",
+      "preview": { "type": "svg", "url": "https://studio.baam.pro/assets/svg/champ_oscillant_baam_mapped_full.svg" }
+    },
+    {
+      "id": "fink-doublefold", "territory": "studio", "title": "FINK Doublefold", "type": "Board", "status": "public", "updatedAt": "2026-09-29",
+      "url": "https://studio.baam.pro/b/fink-burning-doublefold-v4",
+      "preview": { "type": "svg", "url": "https://studio.baam.pro/assets/svg/FINK_double_peau_brulante_baam_mapped_v8_extreme.svg" }
+    },
+    {
+      "id": "deux-reseaux-vivants", "territory": "studio", "title": "Deux réseaux vivants", "type": "Animation", "status": "preview", "updatedAt": "2026-09-28",
+      "relations": [{ "type": "derived-from", "targetId": "reseaux-multi-echelles" }]
+    },
+
+    { "id": "lutile-et-lagreable", "territory": "editions", "title": "L'Utile et l'Agréable", "type": "Feuilleton", "status": "public", "updatedAt": "2026-10-01", "url": "http://127.0.0.1:8084/", "relations": [{ "type": "uses", "targetId": "deux-reseaux-vivants" }] },
+    { "id": "dieu-ecoute", "territory": "editions", "title": "Le dieu de l'écoute", "type": "Épisode 10", "status": "public", "updatedAt": "2026-09-30", "url": "http://127.0.0.1:8084/feuilleton/10-le-dieu-de-l-ecoute", "relations": [{ "type": "part-of", "targetId": "lutile-et-lagreable" }] },
+    { "id": "point-plus-bas", "territory": "editions", "title": "Le point le plus bas", "type": "Épisode 03", "status": "public", "updatedAt": "2026-09-29", "url": "http://127.0.0.1:8084/feuilleton/03-le-point-le-plus-bas", "relations": [{ "type": "part-of", "targetId": "lutile-et-lagreable" }] },
+
+    { "id": "cargos", "territory": "ideas", "title": "Cargos", "type": "Série", "status": "preview", "updatedAt": "2026-10-01", "relations": [{ "type": "uses", "targetId": "atlas-coca" }] },
+    { "id": "atlas-coca", "territory": "ideas", "title": "Atlas DB Coca", "type": "Atlas SVG", "status": "preview", "updatedAt": "2026-09-30" },
+    { "id": "emergence-grand-public", "territory": "ideas", "title": "L'émergence, sans mode d'emploi", "type": "Article", "status": "preview", "updatedAt": "2026-09-29", "relations": [{ "type": "derived-from", "targetId": "reseaux-multi-echelles" }] },
+
+    { "id": "zeus-series", "territory": "research", "title": "The Zeus Series", "type": "Research paper", "status": "public", "updatedAt": "2026-10-01", "url": "https://research.baam.pro/articles/serie_zeus_baam_research" },
+    { "id": "negative-crystals", "territory": "research", "title": "Negative Crystals", "type": "Research note", "status": "public", "updatedAt": "2026-09-30", "url": "https://research.baam.pro/articles/cristaux_negatifs_baam_research" },
+    { "id": "query-deformation", "territory": "research", "title": "Query as Deformation", "type": "Research paper", "status": "public", "updatedAt": "2026-09-29", "url": "https://research.baam.pro/articles/baam_query_deformation" },
+    { "id": "reseaux-multi-echelles", "territory": "research", "title": "Réseaux multi-échelles", "type": "Piste", "status": "preview", "updatedAt": "2026-09-28" },
+
+    { "id": "implementation-ia", "territory": "agence", "title": "Implémentation IA située", "type": "Offre", "status": "preview", "updatedAt": "2026-10-01", "relations": [{ "type": "uses", "targetId": "agents-metiers" }] },
+    { "id": "cartographies-actives", "territory": "agence", "title": "Cartographies actives", "type": "Capacité", "status": "preview", "updatedAt": "2026-09-30" },
+    { "id": "agents-metiers", "territory": "agence", "title": "Agents métiers sous garde", "type": "Capacité", "status": "preview", "updatedAt": "2026-09-29" },
+
+    { "id": "atelier-svg", "territory": "tools", "title": "Atelier Publication SVG", "type": "Outil", "status": "preview", "updatedAt": "2026-10-01", "relations": [{ "type": "links-to", "targetId": "studio" }] },
+    { "id": "clipforge", "territory": "tools", "title": "ClipForge", "type": "Outil", "status": "preview", "updatedAt": "2026-09-30" },
+    { "id": "carto-projects", "territory": "tools", "title": "CartoProjects", "type": "Outil", "status": "preview", "updatedAt": "2026-09-29", "relations": [{ "type": "links-to", "targetId": "apps" }] },
+
+    { "id": "r-time-game", "territory": "games", "title": "R-Time", "type": "Simulation", "status": "preview", "updatedAt": "2026-10-01", "relations": [{ "type": "related-to", "targetId": "r-time" }] },
+    { "id": "asymmetric-wars", "territory": "games", "title": "Asymmetric Wars", "type": "Jeu", "status": "preview", "updatedAt": "2026-09-30" },
+    { "id": "doctrine-engine", "territory": "games", "title": "Doctrine Engine", "type": "Jeu / moteur", "status": "preview", "updatedAt": "2026-09-29" },
+
+    { "id": "normarchi", "territory": "apps", "title": "NormArchi", "type": "App métier", "status": "preview", "updatedAt": "2026-10-01", "relations": [{ "type": "uses", "targetId": "agents-metiers" }] },
+    { "id": "archicarto", "territory": "apps", "title": "ArchiCarto", "type": "App métier", "status": "preview", "updatedAt": "2026-09-30", "relations": [{ "type": "uses", "targetId": "carto-projects" }] },
+    { "id": "timelinearchitect", "territory": "apps", "title": "TimelineArchitect", "type": "App métier", "status": "preview", "updatedAt": "2026-09-29" }
+  ]
+}

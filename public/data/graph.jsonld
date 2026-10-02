@@ -1,0 +1,605 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "baam": "https://baam.pro/vocab/"
+  },
+  "@graph": [
+    {
+      "@id": "https://baam.pro/",
+      "@type": "Organization",
+      "name": "BAAM.pro",
+      "url": "https://baam.pro/",
+      "description": "Créations, recherches, outils et éditions reliés.",
+      "hasPart": [
+        {
+          "@id": "https://studio.baam.pro/"
+        },
+        {
+          "@id": "https://lab.baam.pro/"
+        },
+        {
+          "@id": "http://127.0.0.1:8084/"
+        },
+        {
+          "@id": "https://baam.pro/#territory-ideas"
+        },
+        {
+          "@id": "https://research.baam.pro/"
+        },
+        {
+          "@id": "https://baam.pro/#territory-agence"
+        },
+        {
+          "@id": "https://baam.pro/#territory-tools"
+        },
+        {
+          "@id": "https://baam.pro/#territory-games"
+        },
+        {
+          "@id": "https://baam.pro/#territory-apps"
+        }
+      ]
+    },
+    {
+      "@id": "https://studio.baam.pro/",
+      "@type": "CollectionPage",
+      "name": "Studio",
+      "url": "https://studio.baam.pro/",
+      "isPartOf": {
+        "@id": "https://baam.pro/"
+      },
+      "hasPart": [
+        {
+          "@id": "https://studio.baam.pro/b/board-pendules"
+        },
+        {
+          "@id": "https://studio.baam.pro/b/oscillant"
+        },
+        {
+          "@id": "https://studio.baam.pro/b/fink-burning-doublefold-v4"
+        },
+        {
+          "@id": "https://baam.pro/id/deux-reseaux-vivants"
+        }
+      ]
+    },
+    {
+      "@id": "https://lab.baam.pro/",
+      "@type": "CollectionPage",
+      "name": "Lab",
+      "url": "https://lab.baam.pro/",
+      "isPartOf": {
+        "@id": "https://baam.pro/"
+      },
+      "hasPart": [
+        {
+          "@id": "https://baam.pro/id/pixel-bloom"
+        },
+        {
+          "@id": "https://baam.pro/id/suite-premiere"
+        },
+        {
+          "@id": "https://r-time-simulator.netlify.app/"
+        }
+      ]
+    },
+    {
+      "@id": "http://127.0.0.1:8084/",
+      "@type": "CollectionPage",
+      "name": "Éditions",
+      "url": "http://127.0.0.1:8084/",
+      "isPartOf": {
+        "@id": "https://baam.pro/"
+      },
+      "hasPart": [
+        {
+          "@id": "http://127.0.0.1:8084/"
+        },
+        {
+          "@id": "http://127.0.0.1:8084/feuilleton/10-le-dieu-de-l-ecoute"
+        },
+        {
+          "@id": "http://127.0.0.1:8084/feuilleton/03-le-point-le-plus-bas"
+        }
+      ]
+    },
+    {
+      "@id": "https://baam.pro/#territory-ideas",
+      "@type": "CollectionPage",
+      "name": "Idées",
+      "url": null,
+      "isPartOf": {
+        "@id": "https://baam.pro/"
+      },
+      "hasPart": [
+        {
+          "@id": "https://baam.pro/id/cargos"
+        },
+        {
+          "@id": "https://baam.pro/id/atlas-coca"
+        },
+        {
+          "@id": "https://baam.pro/id/emergence-grand-public"
+        }
+      ]
+    },
+    {
+      "@id": "https://research.baam.pro/",
+      "@type": "CollectionPage",
+      "name": "Research",
+      "url": "https://research.baam.pro/",
+      "isPartOf": {
+        "@id": "https://baam.pro/"
+      },
+      "hasPart": [
+        {
+          "@id": "https://research.baam.pro/articles/serie_zeus_baam_research"
+        },
+        {
+          "@id": "https://research.baam.pro/articles/cristaux_negatifs_baam_research"
+        },
+        {
+          "@id": "https://research.baam.pro/articles/baam_query_deformation"
+        },
+        {
+          "@id": "https://baam.pro/id/reseaux-multi-echelles"
+        }
+      ]
+    },
+    {
+      "@id": "https://baam.pro/#territory-agence",
+      "@type": "CollectionPage",
+      "name": "Agence",
+      "url": null,
+      "isPartOf": {
+        "@id": "https://baam.pro/"
+      },
+      "hasPart": [
+        {
+          "@id": "https://baam.pro/id/implementation-ia"
+        },
+        {
+          "@id": "https://baam.pro/id/cartographies-actives"
+        },
+        {
+          "@id": "https://baam.pro/id/agents-metiers"
+        }
+      ]
+    },
+    {
+      "@id": "https://baam.pro/#territory-tools",
+      "@type": "CollectionPage",
+      "name": "Tools",
+      "url": null,
+      "isPartOf": {
+        "@id": "https://baam.pro/"
+      },
+      "hasPart": [
+        {
+          "@id": "https://baam.pro/id/atelier-svg"
+        },
+        {
+          "@id": "https://baam.pro/id/clipforge"
+        },
+        {
+          "@id": "https://baam.pro/id/carto-projects"
+        }
+      ]
+    },
+    {
+      "@id": "https://baam.pro/#territory-games",
+      "@type": "CollectionPage",
+      "name": "Games",
+      "url": null,
+      "isPartOf": {
+        "@id": "https://baam.pro/"
+      },
+      "hasPart": [
+        {
+          "@id": "https://baam.pro/id/r-time-game"
+        },
+        {
+          "@id": "https://baam.pro/id/asymmetric-wars"
+        },
+        {
+          "@id": "https://baam.pro/id/doctrine-engine"
+        }
+      ]
+    },
+    {
+      "@id": "https://baam.pro/#territory-apps",
+      "@type": "CollectionPage",
+      "name": "Apps",
+      "url": null,
+      "isPartOf": {
+        "@id": "https://baam.pro/"
+      },
+      "hasPart": [
+        {
+          "@id": "https://baam.pro/id/normarchi"
+        },
+        {
+          "@id": "https://baam.pro/id/archicarto"
+        },
+        {
+          "@id": "https://baam.pro/id/timelinearchitect"
+        }
+      ]
+    },
+    {
+      "@id": "https://studio.baam.pro/b/board-pendules",
+      "@type": "CreativeWork",
+      "name": "Pendules chaotiques",
+      "dateModified": "2026-10-01",
+      "isPartOf": {
+        "@id": "https://studio.baam.pro/"
+      },
+      "url": "https://studio.baam.pro/b/board-pendules"
+    },
+    {
+      "@id": "https://studio.baam.pro/b/oscillant",
+      "@type": "CreativeWork",
+      "name": "Champ oscillant",
+      "dateModified": "2026-09-30",
+      "isPartOf": {
+        "@id": "https://studio.baam.pro/"
+      },
+      "url": "https://studio.baam.pro/b/oscillant"
+    },
+    {
+      "@id": "https://studio.baam.pro/b/fink-burning-doublefold-v4",
+      "@type": "CreativeWork",
+      "name": "FINK Doublefold",
+      "dateModified": "2026-09-29",
+      "isPartOf": {
+        "@id": "https://studio.baam.pro/"
+      },
+      "url": "https://studio.baam.pro/b/fink-burning-doublefold-v4"
+    },
+    {
+      "@id": "https://baam.pro/id/deux-reseaux-vivants",
+      "@type": "CreativeWork",
+      "name": "Deux réseaux vivants",
+      "dateModified": "2026-09-28",
+      "isPartOf": {
+        "@id": "https://studio.baam.pro/"
+      },
+      "baam:derived-from": [
+        {
+          "@id": "https://baam.pro/id/reseaux-multi-echelles"
+        }
+      ],
+      "baam:used-by": [
+        {
+          "@id": "http://127.0.0.1:8084/"
+        }
+      ]
+    },
+    {
+      "@id": "https://baam.pro/id/pixel-bloom",
+      "@type": "CreativeWork",
+      "name": "Pixel Bloom",
+      "dateModified": "2026-08-29",
+      "isPartOf": {
+        "@id": "https://lab.baam.pro/"
+      }
+    },
+    {
+      "@id": "https://baam.pro/id/suite-premiere",
+      "@type": "CreativeWork",
+      "name": "Suite Première",
+      "dateModified": "2026-08-29",
+      "isPartOf": {
+        "@id": "https://lab.baam.pro/"
+      }
+    },
+    {
+      "@id": "https://r-time-simulator.netlify.app/",
+      "@type": "CreativeWork",
+      "name": "R-Time",
+      "dateModified": "2026-07-11",
+      "isPartOf": {
+        "@id": "https://lab.baam.pro/"
+      },
+      "url": "https://r-time-simulator.netlify.app/",
+      "baam:related-to": [
+        {
+          "@id": "https://baam.pro/id/r-time-game"
+        }
+      ]
+    },
+    {
+      "@id": "http://127.0.0.1:8084/",
+      "@type": "CreativeWork",
+      "name": "L'Utile et l'Agréable",
+      "dateModified": "2026-10-01",
+      "isPartOf": {
+        "@id": "http://127.0.0.1:8084/"
+      },
+      "url": "http://127.0.0.1:8084/",
+      "baam:uses": [
+        {
+          "@id": "https://baam.pro/id/deux-reseaux-vivants"
+        }
+      ],
+      "baam:contains": [
+        {
+          "@id": "http://127.0.0.1:8084/feuilleton/10-le-dieu-de-l-ecoute"
+        },
+        {
+          "@id": "http://127.0.0.1:8084/feuilleton/03-le-point-le-plus-bas"
+        }
+      ]
+    },
+    {
+      "@id": "http://127.0.0.1:8084/feuilleton/10-le-dieu-de-l-ecoute",
+      "@type": "CreativeWork",
+      "name": "Le dieu de l'écoute",
+      "dateModified": "2026-09-30",
+      "isPartOf": {
+        "@id": "http://127.0.0.1:8084/"
+      },
+      "url": "http://127.0.0.1:8084/feuilleton/10-le-dieu-de-l-ecoute",
+      "baam:part-of": [
+        {
+          "@id": "http://127.0.0.1:8084/"
+        }
+      ]
+    },
+    {
+      "@id": "http://127.0.0.1:8084/feuilleton/03-le-point-le-plus-bas",
+      "@type": "CreativeWork",
+      "name": "Le point le plus bas",
+      "dateModified": "2026-09-29",
+      "isPartOf": {
+        "@id": "http://127.0.0.1:8084/"
+      },
+      "url": "http://127.0.0.1:8084/feuilleton/03-le-point-le-plus-bas",
+      "baam:part-of": [
+        {
+          "@id": "http://127.0.0.1:8084/"
+        }
+      ]
+    },
+    {
+      "@id": "https://baam.pro/id/cargos",
+      "@type": "CreativeWork",
+      "name": "Cargos",
+      "dateModified": "2026-10-01",
+      "isPartOf": {
+        "@id": "https://baam.pro/#territory-ideas"
+      },
+      "baam:uses": [
+        {
+          "@id": "https://baam.pro/id/atlas-coca"
+        }
+      ]
+    },
+    {
+      "@id": "https://baam.pro/id/atlas-coca",
+      "@type": "CreativeWork",
+      "name": "Atlas DB Coca",
+      "dateModified": "2026-09-30",
+      "isPartOf": {
+        "@id": "https://baam.pro/#territory-ideas"
+      },
+      "baam:used-by": [
+        {
+          "@id": "https://baam.pro/id/cargos"
+        }
+      ]
+    },
+    {
+      "@id": "https://baam.pro/id/emergence-grand-public",
+      "@type": "CreativeWork",
+      "name": "L'émergence, sans mode d'emploi",
+      "dateModified": "2026-09-29",
+      "isPartOf": {
+        "@id": "https://baam.pro/#territory-ideas"
+      },
+      "baam:derived-from": [
+        {
+          "@id": "https://baam.pro/id/reseaux-multi-echelles"
+        }
+      ]
+    },
+    {
+      "@id": "https://research.baam.pro/articles/serie_zeus_baam_research",
+      "@type": "CreativeWork",
+      "name": "The Zeus Series",
+      "dateModified": "2026-10-01",
+      "isPartOf": {
+        "@id": "https://research.baam.pro/"
+      },
+      "url": "https://research.baam.pro/articles/serie_zeus_baam_research"
+    },
+    {
+      "@id": "https://research.baam.pro/articles/cristaux_negatifs_baam_research",
+      "@type": "CreativeWork",
+      "name": "Negative Crystals",
+      "dateModified": "2026-09-30",
+      "isPartOf": {
+        "@id": "https://research.baam.pro/"
+      },
+      "url": "https://research.baam.pro/articles/cristaux_negatifs_baam_research"
+    },
+    {
+      "@id": "https://research.baam.pro/articles/baam_query_deformation",
+      "@type": "CreativeWork",
+      "name": "Query as Deformation",
+      "dateModified": "2026-09-29",
+      "isPartOf": {
+        "@id": "https://research.baam.pro/"
+      },
+      "url": "https://research.baam.pro/articles/baam_query_deformation"
+    },
+    {
+      "@id": "https://baam.pro/id/reseaux-multi-echelles",
+      "@type": "CreativeWork",
+      "name": "Réseaux multi-échelles",
+      "dateModified": "2026-09-28",
+      "isPartOf": {
+        "@id": "https://research.baam.pro/"
+      },
+      "baam:source-of": [
+        {
+          "@id": "https://baam.pro/id/deux-reseaux-vivants"
+        },
+        {
+          "@id": "https://baam.pro/id/emergence-grand-public"
+        }
+      ]
+    },
+    {
+      "@id": "https://baam.pro/id/implementation-ia",
+      "@type": "CreativeWork",
+      "name": "Implémentation IA située",
+      "dateModified": "2026-10-01",
+      "isPartOf": {
+        "@id": "https://baam.pro/#territory-agence"
+      },
+      "baam:uses": [
+        {
+          "@id": "https://baam.pro/id/agents-metiers"
+        }
+      ]
+    },
+    {
+      "@id": "https://baam.pro/id/cartographies-actives",
+      "@type": "CreativeWork",
+      "name": "Cartographies actives",
+      "dateModified": "2026-09-30",
+      "isPartOf": {
+        "@id": "https://baam.pro/#territory-agence"
+      }
+    },
+    {
+      "@id": "https://baam.pro/id/agents-metiers",
+      "@type": "CreativeWork",
+      "name": "Agents métiers sous garde",
+      "dateModified": "2026-09-29",
+      "isPartOf": {
+        "@id": "https://baam.pro/#territory-agence"
+      },
+      "baam:used-by": [
+        {
+          "@id": "https://baam.pro/id/implementation-ia"
+        },
+        {
+          "@id": "https://baam.pro/id/normarchi"
+        }
+      ]
+    },
+    {
+      "@id": "https://baam.pro/id/atelier-svg",
+      "@type": "CreativeWork",
+      "name": "Atelier Publication SVG",
+      "dateModified": "2026-10-01",
+      "isPartOf": {
+        "@id": "https://baam.pro/#territory-tools"
+      },
+      "baam:links-to": [
+        {
+          "@id": "https://studio.baam.pro/"
+        }
+      ]
+    },
+    {
+      "@id": "https://baam.pro/id/clipforge",
+      "@type": "CreativeWork",
+      "name": "ClipForge",
+      "dateModified": "2026-09-30",
+      "isPartOf": {
+        "@id": "https://baam.pro/#territory-tools"
+      }
+    },
+    {
+      "@id": "https://baam.pro/id/carto-projects",
+      "@type": "CreativeWork",
+      "name": "CartoProjects",
+      "dateModified": "2026-09-29",
+      "isPartOf": {
+        "@id": "https://baam.pro/#territory-tools"
+      },
+      "baam:links-to": [
+        {
+          "@id": "https://baam.pro/#territory-apps"
+        }
+      ],
+      "baam:used-by": [
+        {
+          "@id": "https://baam.pro/id/archicarto"
+        }
+      ]
+    },
+    {
+      "@id": "https://baam.pro/id/r-time-game",
+      "@type": "CreativeWork",
+      "name": "R-Time",
+      "dateModified": "2026-10-01",
+      "isPartOf": {
+        "@id": "https://baam.pro/#territory-games"
+      },
+      "baam:related-to": [
+        {
+          "@id": "https://r-time-simulator.netlify.app/"
+        }
+      ]
+    },
+    {
+      "@id": "https://baam.pro/id/asymmetric-wars",
+      "@type": "CreativeWork",
+      "name": "Asymmetric Wars",
+      "dateModified": "2026-09-30",
+      "isPartOf": {
+        "@id": "https://baam.pro/#territory-games"
+      }
+    },
+    {
+      "@id": "https://baam.pro/id/doctrine-engine",
+      "@type": "CreativeWork",
+      "name": "Doctrine Engine",
+      "dateModified": "2026-09-29",
+      "isPartOf": {
+        "@id": "https://baam.pro/#territory-games"
+      }
+    },
+    {
+      "@id": "https://baam.pro/id/normarchi",
+      "@type": "CreativeWork",
+      "name": "NormArchi",
+      "dateModified": "2026-10-01",
+      "isPartOf": {
+        "@id": "https://baam.pro/#territory-apps"
+      },
+      "baam:uses": [
+        {
+          "@id": "https://baam.pro/id/agents-metiers"
+        }
+      ]
+    },
+    {
+      "@id": "https://baam.pro/id/archicarto",
+      "@type": "CreativeWork",
+      "name": "ArchiCarto",
+      "dateModified": "2026-09-30",
+      "isPartOf": {
+        "@id": "https://baam.pro/#territory-apps"
+      },
+      "baam:uses": [
+        {
+          "@id": "https://baam.pro/id/carto-projects"
+        }
+      ]
+    },
+    {
+      "@id": "https://baam.pro/id/timelinearchitect",
+      "@type": "CreativeWork",
+      "name": "TimelineArchitect",
+      "dateModified": "2026-09-29",
+      "isPartOf": {
+        "@id": "https://baam.pro/#territory-apps"
+      }
+    }
+  ]
+}

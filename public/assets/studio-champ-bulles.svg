@@ -1,0 +1,109 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" width="1000" height="1000">
+<defs>
+  <filter id="glow"><feGaussianBlur stdDeviation="1.35" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+</defs>
+<rect width="1000" height="1000" fill="#ffffff"/>
+<g transform="translate(500 500)"><g id="cam"><g id="bubbles"></g></g></g>
+<script><![CDATA[
+(function(){
+const svg=document.currentScript.ownerSVGElement,NS="http://www.w3.org/2000/svg",cam=svg.getElementById("cam"),G=svg.getElementById("bubbles");
+const st={zoom:8.5,targetZoom:8.5,x:0,y:0,targetX:0,targetY:0,spread:.03,alive:.92,tension:.62,flow:.9,grain:.58,jitter:.24,clarity:.94,impulse:.78};
+const macro=[],meso=[],cluster=[],micro=[],events=[];
+const MACRO=8,MESO=14,CLUST=10,MIC=8,BIGX=-62000,BIGY=43000;
+const palettes=[
+  [0,217,95],
+  [0,184,82],
+  [68,242,139],
+  [0,157,91],
+  [119,255,174],
+  [0,200,112]
+];
+function C(v,a,b){return Math.max(a,Math.min(b,v))}
+function L(a,b,t){return a+(b-a)*t}
+function R(i){let x=Math.sin(i*127.1+91.7)*43758.5453;return x-Math.floor(x)}
+function rgb(c,a=1){return `rgba(${c[0]|0},${c[1]|0},${c[2]|0},${a})`}
+function mix(a,b,t){return [L(a[0],b[0],t),L(a[1],b[1],t),L(a[2],b[2],t)]}
+function E(n,a,p){let e=document.createElementNS(NS,n);for(let k in a)e.setAttribute(k,a[k]);p.appendChild(e);return e}
+function fld(x,y,t,s){let dx=x-BIGX,dy=y-BIGY,r=Math.sqrt(dx*dx+dy*dy)+1,nx=dx/r,ny=dy/r,tx=-ny,ty=nx,f=Math.sin(r*.00032-t*.026)*620+Math.sin(r*.00086+t*.016)*210;return{x:x+nx*f*.10+tx*Math.sin(r*.00017+t*.011)*55+Math.sin(y*.00125+t*.11+s)*64,y:y+ny*f*.10+ty*Math.cos(r*.00017-t*.010)*55+Math.sin(x*.0012-t*.10+s)*64}}
+function disc(cx,cy,r,n,i,seed){let a=i/n*6.283+(R(seed+i)-.5)*.68,mode=R(seed+i+99),rr=i===0?0:(mode<.42?r*Math.sqrt(R(seed+i+33))*.58:r*(.70+R(seed+i+44)*.34));return{x:cx+Math.cos(a)*rr,y:cy+Math.sin(a)*rr}}
+function setBubble(o,x,y,r,op,col){o.e.setAttribute("cx",x.toFixed(1));o.e.setAttribute("cy",y.toFixed(1));o.e.setAttribute("r",r.toFixed(2));o.e.setAttribute("opacity",op.toFixed(3));o.e.setAttribute("fill",rgb(col,.96));o.e.setAttribute("stroke",rgb(col,.55))}
+function dist(a,b){let dx=a.x-b.x,dy=a.y-b.y;return Math.sqrt(dx*dx+dy*dy)}
+function makeNode(x,y,r,parent,seed,level,color){
+ return {x,y,r,parent,seed,level,baseColor:color.slice(),color:color.slice(),target:color.slice(),mixAmt:0,energy:0,e:E("circle",{cx:0,cy:0,r:1,fill:rgb(color),stroke:rgb(color,.4),"stroke-width":.8,opacity:0,filter:"url(#glow)"},G)}
+}
+macro.push({x:0,y:0,r:760,seed:.11,baseColor:palettes[0]});
+for(let i=1;i<MACRO;i++){let a=(i-1)/(MACRO-1)*6.283+R(i)*.45,rad=2850+760*R(i+7);macro.push({x:Math.cos(a)*rad,y:Math.sin(a)*rad,r:700+160*R(i+2),seed:R(i+20),baseColor:palettes[i%palettes.length]})}
+macro.forEach((M,mi)=>{for(let j=0;j<MESO;j++){let p=disc(M.x,M.y,M.r,MESO,j,mi*100);let c=mix(M.baseColor,palettes[(mi+j)%palettes.length],.10+R(mi*20+j)*.12);meso.push(makeNode(p.x,p.y,125+35*R(mi*80+j),M,R(mi*80+j+30),"meso",c))}})
+meso.forEach((M,mi)=>{for(let j=0;j<CLUST;j++){let p=disc(M.x,M.y,M.r,CLUST,j,mi*120);let c=mix(M.baseColor,palettes[(mi+j+2)%palettes.length],.08+R(mi*31+j)*.10);cluster.push(makeNode(p.x,p.y,30+12*R(mi*90+j),M,R(mi*90+j+40),"cluster",c))}})
+cluster.forEach((C0,ci)=>{for(let j=0;j<MIC;j++){let p=disc(C0.x,C0.y,C0.r,MIC,j,ci*140);let c=mix(C0.baseColor,palettes[(ci+j+4)%palettes.length],.05+R(ci*50+j)*.10);micro.push(makeNode(p.x,p.y,1.2+2.7*R(ci*70+j),C0,R(ci*70+j+50),"micro",c))}})
+function addEvents(list,n,off,str){for(let i=0;i<n;i++){let a=Math.floor(R(off+i)*list.length),b=Math.floor(R(off+i+80)*list.length);if(Math.abs(a-b)<list.length*.2)b=(b+Math.floor(list.length*.47))%list.length;events.push({list,a,b,seed:R(off+i+200),str})}}
+addEvents(meso,7,2000,.38); addEvents(cluster,12,3000,.42); addEvents(micro,18,4000,.48);
+function pulse(t,s){return Math.pow(Math.max(0,Math.sin(t*.18+s*6.283)),10)}
+function updateBase(list,t){list.forEach(o=>o._base=fld(o.x,o.y,t,o.seed*6))}
+function influence(list,t,read){
+ events.forEach(ev=>{
+  if(ev.list!==list)return;
+  let A=list[ev.a],B=list[ev.b]; if(!A||!B||!A._base||!B._base)return;
+  let p=pulse(t,ev.seed)*ev.str*st.impulse*read;
+  if(p<.001)return;
+  // physical approach
+  A._pullX=(A._pullX||0)+(B._base.x-A._base.x)*p;
+  A._pullY=(A._pullY||0)+(B._base.y-A._base.y)*p;
+  B._pullX=(B._pullX||0)+(A._base.x-B._base.x)*p;
+  B._pullY=(B._pullY||0)+(A._base.y-B._base.y)*p;
+  // semantic color mixing
+  const hybrid=mix(A.color,B.color,.5);
+  A.target=mix(A.target,hybrid,p*.95); B.target=mix(B.target,hybrid,p*.95);
+  A.energy=Math.max(A.energy,p); B.energy=Math.max(B.energy,p);
+ });
+ // neighborhood contagion: nearby nodes drift toward the hybrid color and motion
+ for(let i=0;i<list.length;i++){
+  let a=list[i]; if(!a._base)continue;
+  for(let k=i+1;k<Math.min(list.length,i+24);k+=3){
+   let b=list[k]; if(!b._base)continue;
+   let d=dist(a._base,b._base),rad=a.level==="micro"?95:(a.level==="cluster"?240:980);
+   if(d<rad){
+    let q=(1-d/rad)*read*.035*(a.energy+b.energy+0.15);
+    let h=mix(a.color,b.color,.5);
+    a.target=mix(a.target,h,q); b.target=mix(b.target,h,q);
+    a._pullX=(a._pullX||0)+(b._base.x-a._base.x)*q*.18;
+    a._pullY=(a._pullY||0)+(b._base.y-a._base.y)*q*.18;
+    b._pullX=(b._pullX||0)+(a._base.x-b._base.x)*q*.18;
+    b._pullY=(b._pullY||0)+(a._base.y-b._base.y)*q*.18;
+   }
+  }
+ }
+}
+function settle(list){
+ list.forEach(o=>{
+  o.color=mix(o.color,o.target,.045);
+  o.target=mix(o.target,o.baseColor,.006);
+  o.energy*=.93;
+ });
+}
+svg.addEventListener("wheel",ev=>{ev.preventDefault();st.targetZoom=C(st.targetZoom*Math.exp(-ev.deltaY*.00108),.018,18)},{passive:false});
+let drag=false,last=null;svg.addEventListener("pointerdown",ev=>{drag=true;last={x:ev.clientX,y:ev.clientY};svg.setPointerCapture(ev.pointerId)});svg.addEventListener("pointermove",ev=>{if(!drag)return;let dx=ev.clientX-last.x,dy=ev.clientY-last.y;last={x:ev.clientX,y:ev.clientY};st.targetX+=dx/st.targetZoom;st.targetY+=dy/st.targetZoom});svg.addEventListener("pointerup",()=>drag=false);
+let running=true,elapsed=0,lastNow=performance.now();
+function frame(now){
+ if(!running)return;
+ const dt=Math.min(.05,Math.max(0,(now-lastNow)/1000));lastNow=now;elapsed+=dt;
+ let t=elapsed*st.flow;st.zoom=L(st.zoom,st.targetZoom,.13);st.x=L(st.x,st.targetX,.13);st.y=L(st.y,st.targetY,.13);cam.setAttribute("transform",`scale(${st.zoom}) translate(${st.x} ${st.y})`);
+ let z=st.zoom,uc=C((z-7)/10,0,1),close=C((z-.95)/4.4,0,1),mid=1-Math.abs(C((Math.log(z)-Math.log(.52))/1.65,-1,1)),far=C((.70-z)/.64,0,1),uf=C((.105-z)/.085,0,1);
+ [meso,cluster,micro].forEach(list=>list.forEach(o=>{o._pullX=0;o._pullY=0}));
+ updateBase(meso,t); updateBase(cluster,t); updateBase(micro,t);
+ influence(meso,t,mid*.28+far*.75); influence(cluster,t,close*.25+mid*.75); influence(micro,t,uc*.25+close*.80);
+ // propagate parent motion downward
+ meso.forEach(m=>{m._pos={x:m._base.x+(m._pullX||0),y:m._base.y+(m._pullY||0)}});
+ cluster.forEach(c=>{let ps={x:c.parent._pos.x-c.parent._base.x,y:c.parent._pos.y-c.parent._base.y};c._pos={x:c._base.x+ps.x+(c._pullX||0),y:c._base.y+ps.y+(c._pullY||0)}});
+ micro.forEach(b=>{let ps={x:b.parent._pos.x-b.parent._base.x,y:b.parent._pos.y-b.parent._base.y};b._pos={x:b._base.x+ps.x+(b._pullX||0),y:b._base.y+ps.y+(b._pullY||0)}});
+ meso.forEach(m=>{let q=1+Math.sin(t*.52+m.seed*8)*.08;setBubble(m,m._pos.x,m._pos.y,C((6+far*28+uf*18+mid*10)*q,3,46),C(.14+mid*.20+far*.66+uf*.18,0,.94),m.color)});
+ cluster.forEach(c=>{let q=1+Math.sin(t*.82+c.seed*9)*.10;setBubble(c,c._pos.x,c._pos.y,C((3.8+mid*11+close*5+far*4)*q,1.5,20),C(.10+close*.18+mid*.62+far*.18,0,.9),c.color)});
+ micro.forEach(b=>{let buzz=uc,x=b._pos.x+Math.sin(t*(1.8+st.alive)+b.seed*12)*14*buzz*st.jitter,y=b._pos.y+Math.cos(t*(1.7+st.alive)+b.seed*10)*14*buzz*st.jitter,size=b.r*(.95+close*1.25)+mid*(.8+b.seed*1.5)+uc*(.7+b.seed*1.7),op=.08+uc*(.18+b.seed*.22)+close*(.46+b.seed*.24)+mid*(.17+b.seed*.18);setBubble(b,x,y,C(size,.45,8.2),C(op,0,.94),b.color)});
+ settle(meso); settle(cluster); settle(micro);
+ svg.style.filter=`contrast(${1.12+st.clarity*.26}) brightness(1.18)`;if(running)requestAnimationFrame(frame)
+}
+svg.baamEngine={setBaam(o){if(!o||typeof o!=="object")return;Object.keys(o).forEach(k=>{let v=Math.max(0,Math.min(1,Number(o[k])||0));if(k==="spread"){st.spread=v;st.targetZoom=L(15.5,.022,v)}else if(k in st)st[k]=v})},setColor(){},setDuration(sec){let v=Number(sec);if(Number.isFinite(v)&&v>0)st.flow=C(8/v,0,1)},setPaused(paused){const next=!paused;if(next===running)return;running=next;if(running){lastNow=performance.now();requestAnimationFrame(frame)}},reset(){Object.assign(st,{targetZoom:8.5,targetX:0,targetY:0,spread:.03,alive:.92,tension:.62,flow:.9,grain:.58,jitter:.24,clarity:.94,impulse:.78})},getState(){return {...st}}};
+requestAnimationFrame(frame);
+})();
+]]></script>
+</svg>

@@ -1,0 +1,14 @@
+{
+  "name": "baam-pro-public-hub",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "build": "node scripts/build-registry.js",
+    "check": "node scripts/build-registry.js --check",
+    "test": "node scripts/test-registry.js",
+    "serve": "node server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1140 300" role="img" aria-labelledby="title desc">
+  <title id="title">BAAM.PRO</title>
+  <desc id="desc">Mot-signe BAAM.PRO isolé, noir avec point vert, sur fond transparent.</desc>
+  <style>
+    .wordmark {
+      font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+      font-size: 270px;
+      letter-spacing: -7px;
+    }
+  </style>
+  <text class="wordmark" x="18" y="252" fill="#0b0b0a">BAAM<tspan fill="#00d95f">.</tspan>PRO</text>
+</svg>
