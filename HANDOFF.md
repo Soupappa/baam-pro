@@ -158,8 +158,10 @@ Spider vs Ants publié → hook Games → Games publié → hook BAAM.pro → ra
 
 - Spider est disponible sur `https://baam-spider-vs-ants.netlify.app/` ; son domaine
   canonique est `https://spider-vs-ants.games.baam.pro/`.
-- Le record Netlify DNS du domaine canonique existe sur les serveurs autoritaires ;
-  sa propagation récursive et l'émission du certificat HTTPS restent à recontrôler.
+- La zone DNS active est bien celle de Namecheap. Le CNAME
+  `spider-vs-ants.games` → `baam-spider-vs-ants.netlify.app` y a été ajouté sur le
+  modèle des jeux Lab. Les deux serveurs autoritaires Namecheap le renvoient ; sa
+  propagation récursive et l'émission du certificat HTTPS restent à recontrôler.
 - Le registre public Games contient Spider en source `remote`, avec son URL canonique
   et la date `2026-10-03`.
 - Une première cascade complète a validé les notifications. Elle a aussi révélé que
