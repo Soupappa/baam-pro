@@ -177,7 +177,7 @@ pilote Spider vs Ants :
 - CNAME Namecheap `asym.games`, `doctrine.games` et `ninja-worms.games` vers leurs
   origines Netlify respectives ;
 - DNS validé par Netlify, certificats HTTPS émis et réponses publiques `200 OK` ;
-- notifications sortantes `Deploy succeeded` vers le hook privé de Games ;
+- notifications sortantes `Deploy succeeded` vers la file groupée de Games ;
 - sources Games configurées sur les origines Netlify stables ;
 - `npm run check`, `npm test` et `npm run build` réussis dans BAAM.Games ;
 - déploiements de contrôle des trois jeux réussis, suivis de trois reconstructions
@@ -187,11 +187,29 @@ pilote Spider vs Ants :
 La chaîne prouvée est maintenant générale :
 
 ```text
-push d'un jeu → Netlify jeu → hook Games → Netlify Games → hook BAAM.pro → racine
+push d'un jeu → Netlify jeu → file groupée 5 min → Netlify Games → hook BAAM.pro → racine
 ```
 
 La dette de lint/TypeScript des prototypes reste hors périmètre tant qu'elle ne bloque
 pas le build. Elle devra être traitée jeu par jeu lors des itérations produit.
+
+## Optimisation de cascade — lot groupé terminé
+
+Le 3 octobre 2026, la cascade directe a été remplacée par une file groupée sur
+BAAM.Games. Chaque jeu appelle désormais la fonction Netlify
+`queue-games-rebuild`. La dernière invocation d'une fenêtre de cinq minutes est la
+seule à déclencher le build hook Games ; les précédentes quittent sans reconstruction.
+La notification Games → BAAM.pro reste inchangée.
+
+Les deux secrets nécessaires sont enregistrés uniquement dans l'environnement
+Netlify de BAAM.Games. Les quatre notifications ont été contrôlées : Asymmetric Wars,
+Doctrine Engine, Ninja Worms et Spider vs Ants utilisent toutes le nouvel endpoint,
+sans ancien hook direct résiduel. Le commit Games `19a243c` est publié et la fonction
+est visible dans Netlify.
+
+Le carrousel Games de BAAM.pro référence maintenant explicitement les quatre jeux.
+Le commit racine `5a39464` a été publié par la cascade et la présence de
+`Spider vs Ants` a été vérifiée sur la façade publique.
 
 ## Phase 4 — vraies previews de gameplay
 

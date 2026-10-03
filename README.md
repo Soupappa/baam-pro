@@ -70,9 +70,10 @@ indisponibles, sa dernière projection valide conservée dans `data/territories/
 utilisée. Aucun dépôt de projet n'est requis dans le contexte de build Netlify.
 
 La propagation est déclenchée après publication : un jeu publié avec succès appelle
-le hook privé de BAAM.Games, puis BAAM.Games publié avec succès appelle celui de
-BAAM.pro. Les URLs de hooks restent dans la configuration Netlify et ne sont jamais
-versionnées.
+la file groupée de BAAM.Games. Toutes les publications reçues dans une fenêtre de
+cinq minutes sont fusionnées en une seule reconstruction de BAAM.Games, puis une
+seule reconstruction de BAAM.pro. Les URLs de hooks et le jeton de la file restent
+dans la configuration Netlify et ne sont jamais versionnés.
 
 ## Registre compilé
 
