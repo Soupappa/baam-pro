@@ -49,9 +49,9 @@ dessus des projets. Une relation est déclarée une fois ; son inverse est calcu
 - Build : `npm run build`; tests : `npm test`; serveur : `npm run serve`
 - Le compilateur racine importe Lab et Games depuis un dépôt frère en local, leur
   registre public sur Netlify en production, puis le dernier cache valide en repli.
-- `main` et `origin/main` étaient synchronisées sur
-  `7397ad7 feat: propagate video previews through BAAM.pro` avant le correctif de
-  lecture distante décrit plus bas.
+- Le correctif de lecture distante est publié sur
+  `98335aa feat: fetch territory registries in production` et son déploiement
+  Netlify a été vérifié.
 
 ### BAAM.Lab — chaîne de référence terminée
 
@@ -167,9 +167,9 @@ Spider vs Ants publié → hook Games → Games publié → hook BAAM.pro → ra
 - Le correctif racine ajoute les URLs publiques à `data/territory.sources.json` et la
   résolution dépôt local → registre public → cache. Tests, check et build passent.
 
-Commits déjà publiés : Spider `d63a10d`, Games `b169efb` puis `b94a430`, racine
-`7397ad7`. Le correctif racine et cette documentation doivent encore être commités et
-poussés, puis le registre public BAAM.pro doit être contrôlé.
+Commits publiés : Spider `d63a10d`, Games `b169efb`, `b94a430` puis `37b95b8`,
+racine `7397ad7` puis `98335aa`. Le registre public BAAM.pro a été contrôlé après la
+cascade : Spider y possède son URL canonique et la date `2026-10-03`.
 
 ## Suite de la phase 2 — publier les trois autres jeux et les vraies previews
 
