@@ -9,6 +9,8 @@ Site public racine de l'écosystème BAAM et registre de ses actifs.
 La spécification fondatrice du projet se trouve dans [SPEC.md](./SPEC.md).
 Le contrat récursif des manifests et des registres territoriaux est détaillé dans
 [MANIFEST.md](./MANIFEST.md).
+Pour reprendre le chantier dans un nouveau fil, lire d'abord [HANDOFF.md](./HANDOFF.md) :
+il contient l'état vérifié des déploiements et l'ordre des prochains lots.
 
 ## Architecture publique
 
