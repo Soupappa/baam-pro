@@ -17,6 +17,7 @@ const PUBLIC_STATUSES = new Set(['public', 'preview']);
 const ALL_STATUSES = new Set(['draft', 'private', 'preview', 'public', 'archived']);
 const ID_PATTERN = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
 const DATE_PATTERN = /^\d{4}-\d{2}-\d{2}$/;
+const VIDEO_MEDIA_TYPES = new Set(['video/webm', 'video/mp4']);
 const RELATIONS = Object.freeze({
   'part-of': { inverse: 'contains' },
   'derived-from': { inverse: 'source-of' },
@@ -99,6 +100,34 @@ function isPreviewUrl(value) {
   return typeof value === 'string' && (value.startsWith('/') || isAbsoluteUrl(value));
 }
 
+function validateAssetPreview(preview, at, fail) {
+  if (!isObject(preview) || !['iframe', 'image', 'svg', 'video'].includes(preview.type)) {
+    fail(`${at}.type`, 'iframe, image, svg ou video attendu');
+    return;
+  }
+  if (preview.type !== 'video') {
+    if (!isPreviewUrl(preview.url)) fail(`${at}.url`, 'URL absolue ou chemin racine attendu');
+    return;
+  }
+  if (!isPreviewUrl(preview.poster)) fail(`${at}.poster`, 'poster requis : URL absolue ou chemin racine attendu');
+  if (typeof preview.alt !== 'string' || !preview.alt.trim()) fail(`${at}.alt`, 'texte alternatif non vide requis');
+  if (!Number.isInteger(preview.width) || preview.width <= 0) fail(`${at}.width`, 'entier positif requis');
+  if (!Number.isInteger(preview.height) || preview.height <= 0) fail(`${at}.height`, 'entier positif requis');
+  if (!Array.isArray(preview.sources) || preview.sources.length === 0) {
+    fail(`${at}.sources`, 'au moins une source vidéo est requise');
+    return;
+  }
+  const mediaTypes = new Set();
+  preview.sources.forEach((source, index) => {
+    const sourceAt = `${at}.sources[${index}]`;
+    if (!isObject(source)) return fail(sourceAt, 'objet requis');
+    if (!VIDEO_MEDIA_TYPES.has(source.type)) fail(`${sourceAt}.type`, 'video/webm ou video/mp4 attendu');
+    if (!isPreviewUrl(source.url)) fail(`${sourceAt}.url`, 'URL absolue ou chemin racine attendu');
+    if (mediaTypes.has(source.type)) fail(`${sourceAt}.type`, `format répété : ${source.type}`);
+    mediaTypes.add(source.type);
+  });
+}
+
 function validate(source) {
   const errors = [];
   const fail = (location, message) => errors.push(`${location}: ${message}`);
@@ -156,8 +185,7 @@ function validate(source) {
     if (asset.url != null && !isAbsoluteUrl(asset.url)) fail(`${at}.url`, 'URL HTTP(S) absolue attendue');
     if (asset.status === 'public' && !isAbsoluteUrl(asset.url)) fail(`${at}.url`, 'un actif public doit avoir une URL');
     if (asset.preview != null) {
-      if (!isObject(asset.preview) || !['iframe', 'image', 'svg'].includes(asset.preview.type)) fail(`${at}.preview.type`, 'iframe, image ou svg attendu');
-      if (!isPreviewUrl(asset.preview?.url)) fail(`${at}.preview.url`, 'URL absolue ou chemin racine attendu');
+      validateAssetPreview(asset.preview, `${at}.preview`, fail);
     }
     if (asset.relations != null && !Array.isArray(asset.relations)) fail(`${at}.relations`, 'tableau attendu');
   });
@@ -226,7 +254,9 @@ function compile(source) {
     updatedAt: asset.updatedAt,
     tags: asset.tags || [],
     url: asset.url || null,
-    visual: ['svg', 'image'].includes(asset.preview?.type) ? asset.preview.url : null,
+    visual: ['svg', 'image'].includes(asset.preview?.type)
+      ? asset.preview.url
+      : asset.preview?.type === 'video' ? asset.preview.poster : null,
     preview: asset.preview || null,
     relations: []
   }));

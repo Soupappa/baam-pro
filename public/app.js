@@ -87,7 +87,11 @@
   }
 
   function productionCard(asset, territory) {
-    const visual = asset.visual
+    const visual = asset.preview?.type === 'video' && asset.preview.poster
+      ? `<img class="production-visual" src="${asset.preview.poster}" alt="${asset.preview.alt || ''}" loading="lazy" />`
+      : asset.preview?.type === 'image' && asset.visual
+      ? `<img class="production-visual" src="${asset.visual}" alt="" loading="lazy" />`
+      : asset.visual
       ? `<object class="production-visual" data="${asset.visual}" type="image/svg+xml" tabindex="-1" aria-hidden="true"></object>`
       : asset.url
         ? `<iframe class="production-page-preview" src="${asset.url}" title="Aperçu de ${asset.title}" loading="lazy" tabindex="-1" sandbox="allow-scripts allow-same-origin"></iframe>`

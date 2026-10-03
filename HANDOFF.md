@@ -130,7 +130,27 @@ Conclusion : le socle est publiable sans sprint de finition gameplay. Le prochai
 lot peut se concentrer sur le contrat de preview vidéo puis sur le déploiement pilote,
 en gardant la dette produit et la dette de lint hors périmètre sauf blocage réel.
 
-## Phase suivante 1 — publier les quatre jeux et leurs vraies previews
+## Contrat vidéo et cascade — phase 1 terminée
+
+Le contrat partagé accepte désormais `preview.type: "video"` avec poster, dimensions,
+texte alternatif et sources WebM/MP4. Games et BAAM.pro refusent les variantes
+incomplètes par des tests dédiés.
+
+Dans BAAM.Games, une vidéo joue uniquement si sa carte est ouverte, visible et si
+l'onglet est actif. La pause globale, `prefers-reduced-motion` et l'économie de données
+laissent le poster en place. BAAM.pro conserve seulement ce poster dans ses petits
+carrousels pour ne pas multiplier les lectures automatiques.
+
+BAAM.Games possède aussi un `postbuild` générique : lorsque la variable Netlify
+`BAAM_DOWNSTREAM_BUILD_HOOK` sera renseignée, chaque build territorial déclenchera
+automatiquement celui de BAAM.pro. Le hook est testé localement mais pas encore
+configuré dans Netlify. Le même mécanisme doit être posé dans chaque jeu pendant son
+déploiement, avec le build hook de Games comme destination.
+
+Aucun manifest de jeu n'utilise encore `video` : les URLs et médias réels seront
+ajoutés au moment des quatre publications.
+
+## Phase suivante 2 — publier les quatre jeux et leurs vraies previews
 
 Objectif : publier les jeux **en l'état**, sans lancer un sprint de finition gameplay.
 
@@ -142,9 +162,8 @@ Objectif : publier les jeux **en l'état**, sans lancer un sprint de finition ga
    tant que le jeu n'est pas présenté comme final.
 6. Capturer une **phase de jeu**, jamais la page d'accueil : boucle courte, lisible,
    sans son, démarrant directement dans l'action.
-7. Étendre le contrat de preview avec un type `video` : WebM/MP4, poster de repli,
-   dimensions et texte alternatif. Mettre à jour `MANIFEST.md`, les validateurs de
-   Games et de BAAM.pro, puis les caches.
+7. Utiliser le contrat `video` désormais livré : WebM/MP4, poster de repli,
+   dimensions et texte alternatif ; publier les médias réels dans chaque jeu.
 8. Dans une carte ouverte, lancer la vidéo en `muted autoplay loop playsinline` ; la
    suspendre quand la carte se ferme ou sort du viewport. Conserver un poster pour
    les économies de données et `prefers-reduced-motion`.

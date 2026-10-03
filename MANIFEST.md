@@ -75,10 +75,34 @@ du projet ni création d'un actif abstrait supérieur.
 - `iframe` — page publique embarquable et vivante ;
 - `svg` — animation ou illustration vectorielle ;
 - `image` — poster stable lorsque l'embarquement est impossible ;
+- `video` — boucle de gameplay ou démonstration courte, accompagnée d'un poster ;
 - `none` — carte typographique assumée.
 
 Le poster est un repli, pas la source principale. Les interfaces doivent préserver
 l'animation des SVG et des pages embarquées, y compris dans leurs variantes visuelles.
+
+Une preview vidéo suit ce contrat :
+
+```json
+{
+  "type": "video",
+  "poster": "https://jeu.games.baam.pro/preview/gameplay.webp",
+  "width": 1280,
+  "height": 720,
+  "alt": "Une phase de jeu en cours.",
+  "sources": [
+    { "url": "https://jeu.games.baam.pro/preview/gameplay.webm", "type": "video/webm" },
+    { "url": "https://jeu.games.baam.pro/preview/gameplay.mp4", "type": "video/mp4" }
+  ]
+}
+```
+
+Le poster, le texte alternatif, les dimensions et au moins une source WebM ou MP4
+sont obligatoires. Une interface ne lance la vidéo que lorsqu'elle est utile et
+visible. Elle la suspend quand la carte se ferme, sort du viewport ou que l'onglet
+est masqué. `prefers-reduced-motion` et l'économie de données conservent le poster.
+BAAM.pro utilise le poster dans ses petits carrousels afin de ne pas multiplier les
+lectures automatiques ; le territoire détaillé possède la boucle vivante.
 
 ## 6. Dernières productions
 
@@ -98,6 +122,12 @@ vers un rail horizontal cyclique sans changer le format des manifests.
 5. BAAM.pro reconstruit sa projection et ses exports globaux.
 
 Cette chaîne reste statique au départ. Aucun service central permanent n'est requis.
+
+L'implémentation Netlify utilise un hook descendant par niveau. Chaque dépôt de jeu
+déclenche BAAM.Games après son build ; BAAM.Games déclenche ensuite BAAM.pro. Les URLs
+des hooks restent des variables d'environnement privées et ne sont jamais versionnées.
+Un changement de gameplay est ainsi publié immédiatement à l'URL stable du jeu ; un
+changement de manifest se propage en plus dans les deux registres agrégés.
 
 ## 8. Première implémentation dans BAAM.pro
 

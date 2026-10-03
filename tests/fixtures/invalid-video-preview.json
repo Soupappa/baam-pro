@@ -1,0 +1,32 @@
+{
+  "version": 1,
+  "root": { "id": "baam-test", "name": "BAAM Test", "url": "https://baam.pro/" },
+  "territories": [
+    {
+      "id": "games",
+      "name": "Games",
+      "color": "#ff4268",
+      "description": ["Jeux en mouvement", "Systèmes à éprouver"]
+    }
+  ],
+  "assets": [
+    {
+      "id": "jeu-video",
+      "territory": "games",
+      "title": "Jeu vidéo invalide",
+      "type": "Jeu",
+      "status": "preview",
+      "updatedAt": "2026-10-03",
+      "preview": {
+        "type": "video",
+        "poster": "https://jeu.games.baam.pro/preview.webp",
+        "width": 1280,
+        "height": 720,
+        "sources": [
+          { "url": "https://jeu.games.baam.pro/preview.mov", "type": "video/quicktime" }
+        ]
+      },
+      "relations": []
+    }
+  ]
+}
