@@ -38,20 +38,46 @@ function readJson(file) {
   }
 }
 
-function mergeTerritoryRegistries(baseSource) {
+async function readRemoteJson(url) {
+  const response = await fetch(url, {
+    headers: { accept: 'application/json' },
+    signal: AbortSignal.timeout(10000)
+  });
+  if (!response.ok) throw new Error(`HTTP ${response.status}`);
+  return response.json();
+}
+
+async function mergeTerritoryRegistries(baseSource) {
   if (sourceArgumentIndex >= 0 || !fs.existsSync(TERRITORY_SOURCES_FILE)) return baseSource;
   const source = JSON.parse(JSON.stringify(baseSource));
   const selections = readJson(TERRITORY_SOURCES_FILE);
-  selections.forEach((selection) => {
+  for (const selection of selections) {
     const liveFile = path.resolve(ROOT, selection.file);
     const cacheFile = path.resolve(ROOT, selection.cache);
-    const selectedFile = fs.existsSync(liveFile) ? liveFile : cacheFile;
-    if (!fs.existsSync(selectedFile)) throw new Error(`${selection.territory}: registre territorial et cache introuvables`);
-    const territorial = readJson(selectedFile);
-    if (territorial.meta?.territory !== selection.territory || territorial.territory?.id !== selection.territory) {
-      throw new Error(`${selection.territory}: identité incohérente dans ${path.relative(ROOT, selectedFile)}`);
+    let territorial;
+    let sourceLabel;
+
+    if (fs.existsSync(liveFile)) {
+      territorial = readJson(liveFile);
+      sourceLabel = path.relative(ROOT, liveFile);
+    } else if (selection.url) {
+      try {
+        territorial = await readRemoteJson(selection.url);
+        sourceLabel = selection.url;
+      } catch (error) {
+        console.warn(`${selection.territory}: registre distant indisponible (${error.message}), repli sur le cache`);
+      }
     }
-    if (!CHECK_ONLY && selectedFile === liveFile) {
+
+    if (!territorial && fs.existsSync(cacheFile)) {
+      territorial = readJson(cacheFile);
+      sourceLabel = path.relative(ROOT, cacheFile);
+    }
+    if (!territorial) throw new Error(`${selection.territory}: registre local, distant et cache introuvables`);
+    if (territorial.meta?.territory !== selection.territory || territorial.territory?.id !== selection.territory) {
+      throw new Error(`${selection.territory}: identité incohérente dans ${sourceLabel}`);
+    }
+    if (!CHECK_ONLY && sourceLabel !== path.relative(ROOT, cacheFile)) {
       fs.mkdirSync(path.dirname(cacheFile), { recursive: true });
       fs.writeFileSync(cacheFile, `${JSON.stringify(territorial, null, 2)}\n`, 'utf8');
     }
@@ -78,7 +104,7 @@ function mergeTerritoryRegistries(baseSource) {
       if (asset.preview && asset.preview.type !== 'none') imported.preview = asset.preview;
       source.assets.push(imported);
     });
-  });
+  }
   return source;
 }
 
@@ -409,8 +435,8 @@ function writeOutputs(outputs) {
   }
 }
 
-try {
-  const source = mergeTerritoryRegistries(readJson(SOURCE_FILE));
+async function main() {
+  const source = await mergeTerritoryRegistries(readJson(SOURCE_FILE));
   const errors = validate(source);
   if (errors.length) {
     console.error(`Registre invalide (${errors.length} erreur${errors.length > 1 ? 's' : ''}) :`);
@@ -422,7 +448,9 @@ try {
     console.log(`${CHECK_ONLY ? 'Validation' : 'Compilation'} réussie : ${outputs.registry.meta.counts.territories} territoires, ${outputs.registry.meta.counts.assets} actifs, ${outputs.graph.edges.length} arêtes.`);
     if (CHECK_ONLY) console.log('Aucun fichier modifié ; les derniers exports valides restent en place.');
   }
-} catch (error) {
+}
+
+main().catch((error) => {
   console.error(error.message);
   process.exitCode = 1;
-}
+});

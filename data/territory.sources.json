@@ -2,11 +2,13 @@
   {
     "territory": "lab",
     "file": "../site-lab.baam.pro/public/data/registry.json",
+    "url": "https://lab.baam.pro/data/registry.json",
     "cache": "data/territories/lab.registry.json"
   },
   {
     "territory": "games",
     "file": "../site-games.baam.pro/public/data/registry.json",
+    "url": "https://games.baam.pro/data/registry.json",
     "cache": "data/territories/games.registry.json"
   }
 ]

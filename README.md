@@ -35,9 +35,10 @@ valide leurs données, calcule les relations inverses et publie son propre regis
 ainsi qu'un graphe JSON-LD et un sitemap.
 
 Le compilateur racine découvre ensuite ce registre via
-`data/territory.sources.json`. Il conserve une copie du dernier état valide dans
-`data/territories/` : une source momentanément indisponible ne fait donc pas
-disparaître un territoire ou ses projets du portail public.
+`data/territory.sources.json`. Pour chaque territoire, il essaie le registre du dépôt
+frère en local, puis son URL publique en production, et conserve une copie du dernier
+état valide dans `data/territories/`. Une source momentanément indisponible ne fait
+donc pas disparaître un territoire ou ses projets du portail public.
 
 ```text
 R-Time/baam.json ───────────┐
@@ -63,10 +64,15 @@ Le dépôt GitHub public est la source du déploiement Netlify. La branche `main
 déclenche automatiquement `npm run build`, puis Netlify publie le dossier
 `public/` sur `baam.pro`.
 
-Le build reste autonome : si un portail territorial n'est pas accessible au
-moment de la compilation, sa dernière projection valide conservée dans
-`data/territories/` est utilisée. Aucun dépôt de projet n'est requis dans le
-contexte de build Netlify.
+Le build reste autonome : il lit d'abord un éventuel dépôt territorial voisin, puis
+le registre public déclaré dans `data/territory.sources.json`. Si les deux sont
+indisponibles, sa dernière projection valide conservée dans `data/territories/` est
+utilisée. Aucun dépôt de projet n'est requis dans le contexte de build Netlify.
+
+La propagation est déclenchée après publication : un jeu publié avec succès appelle
+le hook privé de BAAM.Games, puis BAAM.Games publié avec succès appelle celui de
+BAAM.pro. Les URLs de hooks restent dans la configuration Netlify et ne sont jamais
+versionnées.
 
 ## Registre compilé
 

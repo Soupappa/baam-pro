@@ -2,8 +2,8 @@
   "meta": {
     "schemaVersion": 1,
     "source": "data/registry.source.json",
-    "sourceHash": "005c068346136b5d520c46484431c1b9854c84c37229df7daee817072889b5c8",
-    "compiledAt": "2026-10-02",
+    "sourceHash": "e1c37ea043fd0cc9d63e2f27c896a743d5239411dc1a0b77bc0818fd9181cccb",
+    "compiledAt": "2026-10-03",
     "relationVocabulary": [
       "part-of",
       "derived-from",
@@ -193,10 +193,10 @@
       "previewImage": null,
       "featuredAssets": [],
       "assets": [
+        "spider-vs-ants",
         "asymmetric-wars",
         "doctrine-engine",
-        "ninja-worms",
-        "spider-vs-ants"
+        "ninja-worms"
       ],
       "relations": []
     },
@@ -727,6 +727,31 @@
       ]
     },
     {
+      "id": "spider-vs-ants",
+      "territory": "games",
+      "title": "Spider vs Ants",
+      "summary": "Un jeu de plateau familial où dix espèces d'insectes se disputent le terrain, les ressources et le droit de ne pas finir dans la toile.",
+      "type": "board-game",
+      "status": "preview",
+      "updatedAt": "2026-10-03",
+      "tags": [
+        "plateau",
+        "insectes",
+        "2–4 joueurs",
+        "stratégie familiale"
+      ],
+      "url": "https://spider-vs-ants.games.baam.pro/",
+      "visual": null,
+      "preview": null,
+      "relations": [
+        {
+          "type": "related-to",
+          "target": "ninja-worms",
+          "generated": true
+        }
+      ]
+    },
+    {
       "id": "asymmetric-wars",
       "territory": "games",
       "title": "Asymmetric Wars",
@@ -798,31 +823,6 @@
           "type": "related-to",
           "target": "spider-vs-ants",
           "generated": false
-        }
-      ]
-    },
-    {
-      "id": "spider-vs-ants",
-      "territory": "games",
-      "title": "Spider vs Ants",
-      "summary": "Un jeu de plateau familial où dix espèces d'insectes se disputent le terrain, les ressources et le droit de ne pas finir dans la toile.",
-      "type": "board-game",
-      "status": "preview",
-      "updatedAt": "2026-10-02",
-      "tags": [
-        "plateau",
-        "insectes",
-        "2–4 joueurs",
-        "stratégie familiale"
-      ],
-      "url": null,
-      "visual": null,
-      "preview": null,
-      "relations": [
-        {
-          "type": "related-to",
-          "target": "ninja-worms",
-          "generated": true
         }
       ]
     },

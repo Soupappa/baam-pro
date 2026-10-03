@@ -47,13 +47,11 @@ dessus des projets. Une relation est déclarée une fois ; son inverse est calcu
 - Production : `https://baam.pro/`
 - Local : `http://127.0.0.1:8088/`
 - Build : `npm run build`; tests : `npm test`; serveur : `npm run serve`
-- Le compilateur racine sait importer Lab et Games avec conservation du dernier
-  registre territorial valide.
-- **Attention Git au relais :** `main` contient des commits locaux non poussés par
-  rapport à `origin/main`, dont
-  `02dd154 feat: aggregate BAAM Games territory` et la stabilisation documentaire de
-  la phase 0. Pousser explicitement seulement quand Antoine demande la publication
-  racine.
+- Le compilateur racine importe Lab et Games depuis un dépôt frère en local, leur
+  registre public sur Netlify en production, puis le dernier cache valide en repli.
+- `main` et `origin/main` étaient synchronisées sur
+  `7397ad7 feat: propagate video previews through BAAM.pro` avant le correctif de
+  lecture distante décrit plus bas.
 
 ### BAAM.Lab — chaîne de référence terminée
 
@@ -73,7 +71,7 @@ dessus des projets. Une relation est déclarée une fois ; son inverse est calcu
 - Secours Netlify : `https://baam-games.netlify.app/`
 - Local : `http://127.0.0.1:8090/`
 - Git : `main` propre et synchronisée sur le commit
-  `5b51313 feat: turn Games portal into a rotating physics playground`.
+  `b94a430 fix: ingest Spider manifest from stable origin`.
 - Namecheap : CNAME `games` vers `baam-games.netlify.app`.
 - DNS public et certificat HTTPS vérifiés ; réponse `200 OK` sur les deux nœuds
   Netlify au moment du relais.
@@ -84,15 +82,16 @@ repos. Les textes se redressent par quart de tour. La molette module la vitesse 
 HUD offre gravité, son, pause et replay par seed. Préserver cette logique : c'est le
 geste propre de Games, pas un simple effet décoratif.
 
-Les quatre sources existent déjà dans `portal.config.json` et dans
-`data/manifests/`, mais elles ont encore :
+Les quatre sources existent dans `portal.config.json` et dans `data/manifests/`.
+Spider vs Ants est désormais résolu à distance depuis son origine Netlify stable ;
+les trois autres jeux ont encore :
 
 - `status: "preview"` ;
 - `url: null` ;
 - `preview.type: "none"`.
 
-Le portail fonctionne donc aujourd'hui sur ses copies locales, sans jeux publics ni
-vidéos de gameplay.
+Le portail agrège donc déjà un premier jeu public. Les vidéos de gameplay restent à
+capturer et les trois autres jeux à publier.
 
 ## État des quatre jeux
 
@@ -101,7 +100,7 @@ vidéos de gameplay.
 | Asymmetric Wars | `../asymmetric-war/` | dépôt GitHub existant, **nombreuses modifications locales non commitées** | `https://asym.games.baam.pro/` |
 | Doctrine Engine | `../Doctrine Engine/` | **pas encore de dépôt Git détecté** | `https://doctrine.games.baam.pro/` |
 | Ninja Worms | `../NinjaWorms/` | dépôt GitHub existant, README + manifest/public non commitées | `https://ninja-worms.games.baam.pro/` |
-| Spider vs Ants | `../SpiderVsAnts/` | dépôt GitHub existant, README + manifest/public non commitées | `https://spider-vs-ants.games.baam.pro/` |
+| Spider vs Ants | `../SpiderVsAnts/` | `main` synchronisée sur `d63a10d` ; déploiement Netlify public | `https://spider-vs-ants.games.baam.pro/` |
 
 Ne jamais nettoyer, restaurer ou écraser ces arbres sales. Pour Asymmetric Wars en
 particulier, les changements locaux dépassent largement le seul raccord BAAM.
@@ -141,16 +140,38 @@ l'onglet est actif. La pause globale, `prefers-reduced-motion` et l'économie de
 laissent le poster en place. BAAM.pro conserve seulement ce poster dans ses petits
 carrousels pour ne pas multiplier les lectures automatiques.
 
-BAAM.Games possède aussi un `postbuild` générique : lorsque la variable Netlify
-`BAAM_DOWNSTREAM_BUILD_HOOK` sera renseignée, chaque build territorial déclenchera
-automatiquement celui de BAAM.pro. Le hook est testé localement mais pas encore
-configuré dans Netlify. Le même mécanisme doit être posé dans chaque jeu pendant son
-déploiement, avec le build hook de Games comme destination.
+Le `postbuild` générique reste disponible comme repli, mais la production utilise des
+notifications HTTP POST Netlify limitées à `Deploy succeeded`. Spider appelle ainsi
+le build hook privé de Games, puis Games appelle celui de BAAM.pro. Les URLs des hooks
+ne sont jamais versionnées.
 
-Aucun manifest de jeu n'utilise encore `video` : les URLs et médias réels seront
-ajoutés au moment des quatre publications.
+Aucun manifest de jeu n'utilise encore `video` : les médias réels seront ajoutés au
+moment des captures de gameplay.
 
-## Phase suivante 2 — publier les quatre jeux et leurs vraies previews
+## Phase 2 — pilote Spider vs Ants validé
+
+Le 3 octobre 2026, le premier arbre automatique a été exécuté de bout en bout :
+
+```text
+Spider vs Ants publié → hook Games → Games publié → hook BAAM.pro → racine publiée
+```
+
+- Spider est disponible sur `https://baam-spider-vs-ants.netlify.app/` ; son domaine
+  canonique est `https://spider-vs-ants.games.baam.pro/`.
+- Le record Netlify DNS du domaine canonique existe sur les serveurs autoritaires ;
+  sa propagation récursive et l'émission du certificat HTTPS restent à recontrôler.
+- Le registre public Games contient Spider en source `remote`, avec son URL canonique
+  et la date `2026-10-03`.
+- Une première cascade complète a validé les notifications. Elle a aussi révélé que
+  la racine Netlify relisait son cache faute de dépôt Games voisin.
+- Le correctif racine ajoute les URLs publiques à `data/territory.sources.json` et la
+  résolution dépôt local → registre public → cache. Tests, check et build passent.
+
+Commits déjà publiés : Spider `d63a10d`, Games `b169efb` puis `b94a430`, racine
+`7397ad7`. Le correctif racine et cette documentation doivent encore être commités et
+poussés, puis le registre public BAAM.pro doit être contrôlé.
+
+## Suite de la phase 2 — publier les trois autres jeux et les vraies previews
 
 Objectif : publier les jeux **en l'état**, sans lancer un sprint de finition gameplay.
 
@@ -167,9 +188,9 @@ Objectif : publier les jeux **en l'état**, sans lancer un sprint de finition ga
 8. Dans une carte ouverte, lancer la vidéo en `muted autoplay loop playsinline` ; la
    suspendre quand la carte se ferme ou sort du viewport. Conserver un poster pour
    les économies de données et `prefers-reduced-motion`.
-9. Recompiler Games, vérifier les quatre cartes, pousser et déployer.
-10. Déclencher ensuite la reconstruction de BAAM.pro pour tester la propagation
-    complète projet → Games → racine.
+9. Vérifier la cascade automatique Games puis BAAM.pro après chaque publication.
+10. Contrôler les registres publics et les routes finales, pas seulement le succès des
+    builds Netlify.
 
 Le premier carrousel peut alterner plusieurs séquences plus tard. Le premier lot doit
 d'abord livrer une vidéo de gameplay forte et légère par jeu.

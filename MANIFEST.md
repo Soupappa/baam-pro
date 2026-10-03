@@ -116,18 +116,20 @@ vers un rail horizontal cyclique sans changer le format des manifests.
 ## 7. Déclenchement des builds
 
 1. Le dépôt projet valide puis déploie son manifest.
-2. Son pipeline appelle le build hook du territoire concerné.
-3. Le territoire compile et publie son nouveau `registry.json`.
-4. Le territoire appelle le build hook de BAAM.pro.
-5. BAAM.pro reconstruit sa projection et ses exports globaux.
+2. Une notification de déploiement réussi appelle le build hook du territoire.
+3. Le territoire relit le manifest public, compile et publie son `registry.json`.
+4. Une notification de déploiement territorial réussi appelle le hook de BAAM.pro.
+5. BAAM.pro relit le registre public et reconstruit ses exports globaux.
 
 Cette chaîne reste statique au départ. Aucun service central permanent n'est requis.
 
 L'implémentation Netlify utilise un hook descendant par niveau. Chaque dépôt de jeu
-déclenche BAAM.Games après son build ; BAAM.Games déclenche ensuite BAAM.pro. Les URLs
-des hooks restent des variables d'environnement privées et ne sont jamais versionnées.
-Un changement de gameplay est ainsi publié immédiatement à l'URL stable du jeu ; un
-changement de manifest se propage en plus dans les deux registres agrégés.
+déclenche BAAM.Games après un `Deploy succeeded` ; BAAM.Games déclenche ensuite
+BAAM.pro selon la même règle. Ce déclenchement post-publication empêche le niveau
+suivant de relire une ancienne version. Les URLs des hooks restent privées et ne sont
+jamais versionnées. Un changement de gameplay est ainsi publié immédiatement à l'URL
+stable du jeu ; un changement de manifest se propage en plus dans les deux registres
+agrégés.
 
 ## 8. Première implémentation dans BAAM.pro
 
@@ -164,7 +166,8 @@ BAAM.Lab applique désormais ce contrat de bout en bout :
 - une copie de chaque dernier manifest valide est conservée sous
   `site-lab.baam.pro/data/manifests/` ;
 - `site-baam.pro/scripts/build-registry.js` importe le registre territorial grâce à
-  `data/territory.sources.json`, sans ouvrir directement les trois dépôts ;
+  `data/territory.sources.json` : dépôt frère en local, URL publique en production,
+  puis cache si les deux sources vivantes sont indisponibles ;
 - le portail racine conserve à son tour le dernier registre territorial valide sous
   `data/territories/`.
 

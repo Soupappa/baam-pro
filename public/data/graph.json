@@ -2,8 +2,8 @@
   "meta": {
     "schemaVersion": 1,
     "source": "data/registry.source.json",
-    "sourceHash": "005c068346136b5d520c46484431c1b9854c84c37229df7daee817072889b5c8",
-    "compiledAt": "2026-10-02",
+    "sourceHash": "e1c37ea043fd0cc9d63e2f27c896a743d5239411dc1a0b77bc0818fd9181cccb",
+    "compiledAt": "2026-10-03",
     "relationVocabulary": [
       "part-of",
       "derived-from",
@@ -332,6 +332,16 @@
       "url": null
     },
     {
+      "id": "spider-vs-ants",
+      "kind": "asset",
+      "title": "Spider vs Ants",
+      "territory": "games",
+      "type": "board-game",
+      "status": "preview",
+      "updatedAt": "2026-10-03",
+      "url": "https://spider-vs-ants.games.baam.pro/"
+    },
+    {
       "id": "asymmetric-wars",
       "kind": "asset",
       "title": "Asymmetric Wars",
@@ -357,16 +367,6 @@
       "title": "Ninja Worms",
       "territory": "games",
       "type": "game",
-      "status": "preview",
-      "updatedAt": "2026-10-02",
-      "url": null
-    },
-    {
-      "id": "spider-vs-ants",
-      "kind": "asset",
-      "title": "Spider vs Ants",
-      "territory": "games",
-      "type": "board-game",
       "status": "preview",
       "updatedAt": "2026-10-02",
       "url": null
@@ -740,6 +740,18 @@
       "generated": true
     },
     {
+      "from": "spider-vs-ants",
+      "type": "part-of",
+      "to": "games",
+      "generated": true
+    },
+    {
+      "from": "spider-vs-ants",
+      "type": "related-to",
+      "to": "ninja-worms",
+      "generated": true
+    },
+    {
       "from": "asymmetric-wars",
       "type": "part-of",
       "to": "games",
@@ -774,18 +786,6 @@
       "type": "related-to",
       "to": "spider-vs-ants",
       "generated": false
-    },
-    {
-      "from": "spider-vs-ants",
-      "type": "part-of",
-      "to": "games",
-      "generated": true
-    },
-    {
-      "from": "spider-vs-ants",
-      "type": "related-to",
-      "to": "ninja-worms",
-      "generated": true
     },
     {
       "from": "normarchi",

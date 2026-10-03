@@ -202,6 +202,9 @@
       },
       "hasPart": [
         {
+          "@id": "https://spider-vs-ants.games.baam.pro/"
+        },
+        {
           "@id": "https://baam.pro/id/asymmetric-wars"
         },
         {
@@ -209,9 +212,6 @@
         },
         {
           "@id": "https://baam.pro/id/ninja-worms"
-        },
-        {
-          "@id": "https://baam.pro/id/spider-vs-ants"
         }
       ]
     },
@@ -577,6 +577,21 @@
       ]
     },
     {
+      "@id": "https://spider-vs-ants.games.baam.pro/",
+      "@type": "CreativeWork",
+      "name": "Spider vs Ants",
+      "dateModified": "2026-10-03",
+      "isPartOf": {
+        "@id": "https://games.baam.pro/"
+      },
+      "url": "https://spider-vs-ants.games.baam.pro/",
+      "baam:related-to": [
+        {
+          "@id": "https://baam.pro/id/ninja-worms"
+        }
+      ]
+    },
+    {
       "@id": "https://baam.pro/id/asymmetric-wars",
       "@type": "CreativeWork",
       "name": "Asymmetric Wars",
@@ -614,21 +629,7 @@
       },
       "baam:related-to": [
         {
-          "@id": "https://baam.pro/id/spider-vs-ants"
-        }
-      ]
-    },
-    {
-      "@id": "https://baam.pro/id/spider-vs-ants",
-      "@type": "CreativeWork",
-      "name": "Spider vs Ants",
-      "dateModified": "2026-10-02",
-      "isPartOf": {
-        "@id": "https://games.baam.pro/"
-      },
-      "baam:related-to": [
-        {
-          "@id": "https://baam.pro/id/ninja-worms"
+          "@id": "https://spider-vs-ants.games.baam.pro/"
         }
       ]
     },
