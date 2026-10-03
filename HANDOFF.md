@@ -63,15 +63,15 @@ dessus des projets. Une relation est déclarée une fois ; son inverse est calcu
   manifests et agrégés jusqu'à BAAM.pro.
 - C'est le modèle technique à copier, pas nécessairement son design.
 
-### BAAM.Games — portail terminé, jeux à publier
+### BAAM.Games — portail et quatre jeux publiés
 
 - Dossier : `../site-games.baam.pro/`
 - Dépôt : `https://github.com/Soupappa/baam-games`
 - Production : `https://games.baam.pro/`
 - Secours Netlify : `https://baam-games.netlify.app/`
 - Local : `http://127.0.0.1:8090/`
-- Git : `main` propre et synchronisée sur le commit
-  `b94a430 fix: ingest Spider manifest from stable origin`.
+- Git : publication du registre complet sur
+  `df45396 feat: publish complete BAAM Games registry`.
 - Namecheap : CNAME `games` vers `baam-games.netlify.app`.
 - DNS public et certificat HTTPS vérifiés ; réponse `200 OK` sur les deux nœuds
   Netlify au moment du relais.
@@ -83,27 +83,23 @@ HUD offre gravité, son, pause et replay par seed. Préserver cette logique : c'
 geste propre de Games, pas un simple effet décoratif.
 
 Les quatre sources existent dans `portal.config.json` et dans `data/manifests/`.
-Spider vs Ants est désormais résolu à distance depuis son origine Netlify stable ;
-les trois autres jeux ont encore :
-
-- `status: "preview"` ;
-- `url: null` ;
-- `preview.type: "none"`.
-
-Le portail agrège donc déjà un premier jeu public. Les vidéos de gameplay restent à
-capturer et les trois autres jeux à publier.
+Elles sont toutes résolues en production depuis leur origine Netlify stable, tout en
+exposant leur URL canonique `*.games.baam.pro`. Le registre public Games et le
+registre public racine contiennent les quatre jeux en source distante, datés du
+`2026-10-03`. Le statut reste volontairement `preview` et `preview.type` reste
+`none` jusqu'à la capture des vraies séquences de gameplay.
 
 ## État des quatre jeux
 
-| Jeu | Dossier | Git | Prochaine URL prévue |
+| Jeu | Dossier | Git publié | URL canonique |
 |---|---|---|---|
-| Asymmetric Wars | `../asymmetric-war/` | dépôt GitHub existant, **nombreuses modifications locales non commitées** | `https://asym.games.baam.pro/` |
-| Doctrine Engine | `../Doctrine Engine/` | **pas encore de dépôt Git détecté** | `https://doctrine.games.baam.pro/` |
-| Ninja Worms | `../NinjaWorms/` | dépôt GitHub existant, README + manifest/public non commitées | `https://ninja-worms.games.baam.pro/` |
-| Spider vs Ants | `../SpiderVsAnts/` | `main` synchronisée sur `d63a10d` ; déploiement Netlify public | `https://spider-vs-ants.games.baam.pro/` |
+| Asymmetric Wars | `../asymmetric-war/` | `4a8768a` — `Soupappa/asymmetric-war` | `https://asym.games.baam.pro/` |
+| Doctrine Engine | `../Doctrine Engine/` | `8322822` — `Soupappa/DoctrineEngine` | `https://doctrine.games.baam.pro/` |
+| Ninja Worms | `../NinjaWorms/` | `06afa18` — `Soupappa/NinjaWorms` | `https://ninja-worms.games.baam.pro/` |
+| Spider vs Ants | `../SpiderVsAnts/` | `d63a10d` — `Soupappa/SpiderVsAnts` | `https://spider-vs-ants.games.baam.pro/` |
 
-Ne jamais nettoyer, restaurer ou écraser ces arbres sales. Pour Asymmetric Wars en
-particulier, les changements locaux dépassent largement le seul raccord BAAM.
+Chaque jeu possède désormais son `netlify.toml`, son manifest racine et sa copie
+`public/.well-known/baam.json`, ainsi qu'une cascade sortante après déploiement réussi.
 
 ## Audit de reprise — phase 0 terminée
 
@@ -160,8 +156,7 @@ Spider vs Ants publié → hook Games → Games publié → hook BAAM.pro → ra
   canonique est `https://spider-vs-ants.games.baam.pro/`.
 - La zone DNS active est bien celle de Namecheap. Le CNAME
   `spider-vs-ants.games` → `baam-spider-vs-ants.netlify.app` y a été ajouté sur le
-  modèle des jeux Lab. Les deux serveurs autoritaires Namecheap le renvoient ; sa
-  propagation récursive et l'émission du certificat HTTPS restent à recontrôler.
+  modèle des jeux Lab. Sa propagation et son certificat HTTPS sont vérifiés.
 - Le registre public Games contient Spider en source `remote`, avec son URL canonique
   et la date `2026-10-03`.
 - Une première cascade complète a validé les notifications. Elle a aussi révélé que
@@ -173,28 +168,45 @@ Commits publiés : Spider `d63a10d`, Games `b169efb`, `b94a430` puis `37b95b8`,
 racine `7397ad7` puis `98335aa`. Le registre public BAAM.pro a été contrôlé après la
 cascade : Spider y possède son URL canonique et la date `2026-10-03`.
 
-## Suite de la phase 2 — publier les trois autres jeux et les vraies previews
+## Phase 3 — publication des quatre jeux terminée
 
-Objectif : publier les jeux **en l'état**, sans lancer un sprint de finition gameplay.
+Le 3 octobre 2026, Asymmetric Wars, Doctrine Engine et Ninja Worms ont rejoint le
+pilote Spider vs Ants :
 
-1. Pour chaque jeu, identifier la commande de build et vérifier une partie jouable.
-2. Préserver les changements locaux ; commiter seulement après inspection du diff.
-3. Créer ou confirmer le dépôt GitHub autonome.
-4. Déployer sur Netlify et brancher le sous-sous-domaine prévu chez Namecheap.
-5. Publier `/.well-known/baam.json` avec l'URL réelle. Garder le statut `preview`
-   tant que le jeu n'est pas présenté comme final.
-6. Capturer une **phase de jeu**, jamais la page d'accueil : boucle courte, lisible,
+- dépôts GitHub autonomes et builds Netlify continus ;
+- CNAME Namecheap `asym.games`, `doctrine.games` et `ninja-worms.games` vers leurs
+  origines Netlify respectives ;
+- DNS validé par Netlify, certificats HTTPS émis et réponses publiques `200 OK` ;
+- notifications sortantes `Deploy succeeded` vers le hook privé de Games ;
+- sources Games configurées sur les origines Netlify stables ;
+- `npm run check`, `npm test` et `npm run build` réussis dans BAAM.Games ;
+- déploiements de contrôle des trois jeux réussis, suivis de trois reconstructions
+  Games puis BAAM.pro ;
+- registres publics Games et BAAM.pro contrôlés : quatre jeux, quatre URL canoniques.
+
+La chaîne prouvée est maintenant générale :
+
+```text
+push d'un jeu → Netlify jeu → hook Games → Netlify Games → hook BAAM.pro → racine
+```
+
+La dette de lint/TypeScript des prototypes reste hors périmètre tant qu'elle ne bloque
+pas le build. Elle devra être traitée jeu par jeu lors des itérations produit.
+
+## Phase 4 — vraies previews de gameplay
+
+Objectif : remplacer `preview.type: "none"` par une séquence forte et légère pour
+chaque jeu, sans retarder la façade déjà envoyable.
+
+1. Capturer une **phase de jeu**, jamais la page d'accueil : boucle courte, lisible,
    sans son, démarrant directement dans l'action.
-7. Utiliser le contrat `video` désormais livré : WebM/MP4, poster de repli,
-   dimensions et texte alternatif ; publier les médias réels dans chaque jeu.
-8. Dans une carte ouverte, lancer la vidéo en `muted autoplay loop playsinline` ; la
-   suspendre quand la carte se ferme ou sort du viewport. Conserver un poster pour
-   les économies de données et `prefers-reduced-motion`.
-9. Vérifier la cascade automatique Games puis BAAM.pro après chaque publication.
-10. Contrôler les registres publics et les routes finales, pas seulement le succès des
-    builds Netlify.
+2. Produire WebM/MP4 et un poster de repli, avec dimensions et texte alternatif.
+3. Renseigner le contrat `video` déjà validé dans chaque manifest.
+4. Vérifier autoplay muet, pause hors écran, économie de données et mouvement réduit.
+5. Laisser chaque push de jeu propager automatiquement la nouvelle preview jusqu'à
+   Games puis BAAM.pro, et contrôler les deux registres publics.
 
-Le premier carrousel peut alterner plusieurs séquences plus tard. Le premier lot doit
+Le premier carrousel pourra alterner plusieurs séquences plus tard. Ce lot doit
 d'abord livrer une vidéo de gameplay forte et légère par jeu.
 
 ## Phase suivante 2 — BAAM.Apps
