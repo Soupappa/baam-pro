@@ -62,7 +62,8 @@
       "id": "games",
       "name": "Games",
       "color": "#ff4268",
-      "description": ["Jeux, simulations et règles pour penser autrement", "Stratégie · émergence · systèmes"]
+      "description": ["Jeux, simulations et règles pour penser autrement", "Stratégie · émergence · systèmes"],
+      "featuredAssets": ["asymmetric-wars", "doctrine-engine", "ninja-worms", "spider-vs-ants"]
     },
     {
       "id": "apps",

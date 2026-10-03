@@ -2,7 +2,7 @@
   "meta": {
     "schemaVersion": 1,
     "source": "data/registry.source.json",
-    "sourceHash": "e1c37ea043fd0cc9d63e2f27c896a743d5239411dc1a0b77bc0818fd9181cccb",
+    "sourceHash": "5728ddac9bfa9a0d99bf603428f6bf75111729a2d00828277ec01372fb1d02d4",
     "compiledAt": "2026-10-03",
     "relationVocabulary": [
       "part-of",
@@ -191,12 +191,17 @@
       "siteUrl": "https://games.baam.pro/",
       "previewUrl": "https://games.baam.pro/",
       "previewImage": null,
-      "featuredAssets": [],
-      "assets": [
-        "spider-vs-ants",
+      "featuredAssets": [
         "asymmetric-wars",
         "doctrine-engine",
-        "ninja-worms"
+        "ninja-worms",
+        "spider-vs-ants"
+      ],
+      "assets": [
+        "asymmetric-wars",
+        "doctrine-engine",
+        "ninja-worms",
+        "spider-vs-ants"
       ],
       "relations": []
     },
@@ -727,6 +732,81 @@
       ]
     },
     {
+      "id": "asymmetric-wars",
+      "territory": "games",
+      "title": "Asymmetric Wars",
+      "summary": "Une guerre en temps réel entre une coalition technologiquement supérieure et un régime lent, résilient, impossible à lire avec les mêmes règles.",
+      "type": "game",
+      "status": "preview",
+      "updatedAt": "2026-10-03",
+      "tags": [
+        "stratégie",
+        "asymétrie",
+        "temps réel",
+        "doctrine"
+      ],
+      "url": "https://asym.games.baam.pro/",
+      "visual": null,
+      "preview": null,
+      "relations": [
+        {
+          "type": "related-to",
+          "target": "doctrine-engine",
+          "generated": true
+        }
+      ]
+    },
+    {
+      "id": "doctrine-engine",
+      "territory": "games",
+      "title": "Doctrine Engine",
+      "summary": "Deux intelligences artificielles inventent leurs unités, affrontent leurs doctrines et évoluent sous une même contrainte de budget.",
+      "type": "game-engine",
+      "status": "preview",
+      "updatedAt": "2026-10-03",
+      "tags": [
+        "IA",
+        "évolution",
+        "tactique",
+        "simulation"
+      ],
+      "url": "https://doctrine.games.baam.pro/",
+      "visual": null,
+      "preview": null,
+      "relations": [
+        {
+          "type": "related-to",
+          "target": "asymmetric-wars",
+          "generated": false
+        }
+      ]
+    },
+    {
+      "id": "ninja-worms",
+      "territory": "games",
+      "title": "Ninja Worms",
+      "summary": "Un worms-like nerveux : dix secondes pour viser, bondir, lancer le grappin et faire exploser un terrain qui ne se remet jamais vraiment.",
+      "type": "game",
+      "status": "preview",
+      "updatedAt": "2026-10-03",
+      "tags": [
+        "arcade",
+        "grappin",
+        "terrain destructible",
+        "multijoueur"
+      ],
+      "url": "https://ninja-worms.games.baam.pro/",
+      "visual": null,
+      "preview": null,
+      "relations": [
+        {
+          "type": "related-to",
+          "target": "spider-vs-ants",
+          "generated": false
+        }
+      ]
+    },
+    {
       "id": "spider-vs-ants",
       "territory": "games",
       "title": "Spider vs Ants",
@@ -748,81 +828,6 @@
           "type": "related-to",
           "target": "ninja-worms",
           "generated": true
-        }
-      ]
-    },
-    {
-      "id": "asymmetric-wars",
-      "territory": "games",
-      "title": "Asymmetric Wars",
-      "summary": "Une guerre en temps réel entre une coalition technologiquement supérieure et un régime lent, résilient, impossible à lire avec les mêmes règles.",
-      "type": "game",
-      "status": "preview",
-      "updatedAt": "2026-10-02",
-      "tags": [
-        "stratégie",
-        "asymétrie",
-        "temps réel",
-        "doctrine"
-      ],
-      "url": null,
-      "visual": null,
-      "preview": null,
-      "relations": [
-        {
-          "type": "related-to",
-          "target": "doctrine-engine",
-          "generated": true
-        }
-      ]
-    },
-    {
-      "id": "doctrine-engine",
-      "territory": "games",
-      "title": "Doctrine Engine",
-      "summary": "Deux intelligences artificielles inventent leurs unités, affrontent leurs doctrines et évoluent sous une même contrainte de budget.",
-      "type": "game-engine",
-      "status": "preview",
-      "updatedAt": "2026-10-02",
-      "tags": [
-        "IA",
-        "évolution",
-        "tactique",
-        "simulation"
-      ],
-      "url": null,
-      "visual": null,
-      "preview": null,
-      "relations": [
-        {
-          "type": "related-to",
-          "target": "asymmetric-wars",
-          "generated": false
-        }
-      ]
-    },
-    {
-      "id": "ninja-worms",
-      "territory": "games",
-      "title": "Ninja Worms",
-      "summary": "Un worms-like nerveux : dix secondes pour viser, bondir, lancer le grappin et faire exploser un terrain qui ne se remet jamais vraiment.",
-      "type": "game",
-      "status": "preview",
-      "updatedAt": "2026-10-02",
-      "tags": [
-        "arcade",
-        "grappin",
-        "terrain destructible",
-        "multijoueur"
-      ],
-      "url": null,
-      "visual": null,
-      "preview": null,
-      "relations": [
-        {
-          "type": "related-to",
-          "target": "spider-vs-ants",
-          "generated": false
         }
       ]
     },

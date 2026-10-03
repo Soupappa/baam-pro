@@ -202,16 +202,16 @@
       },
       "hasPart": [
         {
+          "@id": "https://asym.games.baam.pro/"
+        },
+        {
+          "@id": "https://doctrine.games.baam.pro/"
+        },
+        {
+          "@id": "https://ninja-worms.games.baam.pro/"
+        },
+        {
           "@id": "https://spider-vs-ants.games.baam.pro/"
-        },
-        {
-          "@id": "https://baam.pro/id/asymmetric-wars"
-        },
-        {
-          "@id": "https://baam.pro/id/doctrine-engine"
-        },
-        {
-          "@id": "https://baam.pro/id/ninja-worms"
         }
       ]
     },
@@ -577,6 +577,51 @@
       ]
     },
     {
+      "@id": "https://asym.games.baam.pro/",
+      "@type": "CreativeWork",
+      "name": "Asymmetric Wars",
+      "dateModified": "2026-10-03",
+      "isPartOf": {
+        "@id": "https://games.baam.pro/"
+      },
+      "url": "https://asym.games.baam.pro/",
+      "baam:related-to": [
+        {
+          "@id": "https://doctrine.games.baam.pro/"
+        }
+      ]
+    },
+    {
+      "@id": "https://doctrine.games.baam.pro/",
+      "@type": "CreativeWork",
+      "name": "Doctrine Engine",
+      "dateModified": "2026-10-03",
+      "isPartOf": {
+        "@id": "https://games.baam.pro/"
+      },
+      "url": "https://doctrine.games.baam.pro/",
+      "baam:related-to": [
+        {
+          "@id": "https://asym.games.baam.pro/"
+        }
+      ]
+    },
+    {
+      "@id": "https://ninja-worms.games.baam.pro/",
+      "@type": "CreativeWork",
+      "name": "Ninja Worms",
+      "dateModified": "2026-10-03",
+      "isPartOf": {
+        "@id": "https://games.baam.pro/"
+      },
+      "url": "https://ninja-worms.games.baam.pro/",
+      "baam:related-to": [
+        {
+          "@id": "https://spider-vs-ants.games.baam.pro/"
+        }
+      ]
+    },
+    {
       "@id": "https://spider-vs-ants.games.baam.pro/",
       "@type": "CreativeWork",
       "name": "Spider vs Ants",
@@ -587,49 +632,7 @@
       "url": "https://spider-vs-ants.games.baam.pro/",
       "baam:related-to": [
         {
-          "@id": "https://baam.pro/id/ninja-worms"
-        }
-      ]
-    },
-    {
-      "@id": "https://baam.pro/id/asymmetric-wars",
-      "@type": "CreativeWork",
-      "name": "Asymmetric Wars",
-      "dateModified": "2026-10-02",
-      "isPartOf": {
-        "@id": "https://games.baam.pro/"
-      },
-      "baam:related-to": [
-        {
-          "@id": "https://baam.pro/id/doctrine-engine"
-        }
-      ]
-    },
-    {
-      "@id": "https://baam.pro/id/doctrine-engine",
-      "@type": "CreativeWork",
-      "name": "Doctrine Engine",
-      "dateModified": "2026-10-02",
-      "isPartOf": {
-        "@id": "https://games.baam.pro/"
-      },
-      "baam:related-to": [
-        {
-          "@id": "https://baam.pro/id/asymmetric-wars"
-        }
-      ]
-    },
-    {
-      "@id": "https://baam.pro/id/ninja-worms",
-      "@type": "CreativeWork",
-      "name": "Ninja Worms",
-      "dateModified": "2026-10-02",
-      "isPartOf": {
-        "@id": "https://games.baam.pro/"
-      },
-      "baam:related-to": [
-        {
-          "@id": "https://spider-vs-ants.games.baam.pro/"
+          "@id": "https://ninja-worms.games.baam.pro/"
         }
       ]
     },

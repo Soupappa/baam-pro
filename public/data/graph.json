@@ -2,7 +2,7 @@
   "meta": {
     "schemaVersion": 1,
     "source": "data/registry.source.json",
-    "sourceHash": "e1c37ea043fd0cc9d63e2f27c896a743d5239411dc1a0b77bc0818fd9181cccb",
+    "sourceHash": "5728ddac9bfa9a0d99bf603428f6bf75111729a2d00828277ec01372fb1d02d4",
     "compiledAt": "2026-10-03",
     "relationVocabulary": [
       "part-of",
@@ -332,24 +332,14 @@
       "url": null
     },
     {
-      "id": "spider-vs-ants",
-      "kind": "asset",
-      "title": "Spider vs Ants",
-      "territory": "games",
-      "type": "board-game",
-      "status": "preview",
-      "updatedAt": "2026-10-03",
-      "url": "https://spider-vs-ants.games.baam.pro/"
-    },
-    {
       "id": "asymmetric-wars",
       "kind": "asset",
       "title": "Asymmetric Wars",
       "territory": "games",
       "type": "game",
       "status": "preview",
-      "updatedAt": "2026-10-02",
-      "url": null
+      "updatedAt": "2026-10-03",
+      "url": "https://asym.games.baam.pro/"
     },
     {
       "id": "doctrine-engine",
@@ -358,8 +348,8 @@
       "territory": "games",
       "type": "game-engine",
       "status": "preview",
-      "updatedAt": "2026-10-02",
-      "url": null
+      "updatedAt": "2026-10-03",
+      "url": "https://doctrine.games.baam.pro/"
     },
     {
       "id": "ninja-worms",
@@ -368,8 +358,18 @@
       "territory": "games",
       "type": "game",
       "status": "preview",
-      "updatedAt": "2026-10-02",
-      "url": null
+      "updatedAt": "2026-10-03",
+      "url": "https://ninja-worms.games.baam.pro/"
+    },
+    {
+      "id": "spider-vs-ants",
+      "kind": "asset",
+      "title": "Spider vs Ants",
+      "territory": "games",
+      "type": "board-game",
+      "status": "preview",
+      "updatedAt": "2026-10-03",
+      "url": "https://spider-vs-ants.games.baam.pro/"
     },
     {
       "id": "normarchi",
@@ -740,18 +740,6 @@
       "generated": true
     },
     {
-      "from": "spider-vs-ants",
-      "type": "part-of",
-      "to": "games",
-      "generated": true
-    },
-    {
-      "from": "spider-vs-ants",
-      "type": "related-to",
-      "to": "ninja-worms",
-      "generated": true
-    },
-    {
       "from": "asymmetric-wars",
       "type": "part-of",
       "to": "games",
@@ -786,6 +774,18 @@
       "type": "related-to",
       "to": "spider-vs-ants",
       "generated": false
+    },
+    {
+      "from": "spider-vs-ants",
+      "type": "part-of",
+      "to": "games",
+      "generated": true
+    },
+    {
+      "from": "spider-vs-ants",
+      "type": "related-to",
+      "to": "ninja-worms",
+      "generated": true
     },
     {
       "from": "normarchi",
