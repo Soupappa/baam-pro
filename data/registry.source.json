@@ -56,7 +56,8 @@
       "id": "tools",
       "name": "Tools",
       "color": "#753cff",
-      "description": ["Outils de fabrication et de publication réutilisables", "SVG · vidéo · automatisation"]
+      "description": ["Outils concrets, guides copiables et ressources pour fabriquer", "SVG · mouvement · méthode · export"],
+      "featuredAssets": ["operateur-texte", "animateur-logo", "fonds-vivants", "convertisseur"]
     },
     {
       "id": "games",
@@ -118,7 +119,7 @@
     { "id": "doctrine-engine", "territory": "games", "title": "Doctrine Engine", "type": "Jeu / moteur", "status": "preview", "updatedAt": "2026-09-29" },
 
     { "id": "normarchi", "territory": "apps", "title": "NormArchi", "type": "App métier", "status": "preview", "updatedAt": "2026-10-01", "relations": [{ "type": "uses", "targetId": "agents-metiers" }] },
-    { "id": "archicarto", "territory": "apps", "title": "ArchiCarto", "type": "App métier", "status": "preview", "updatedAt": "2026-09-30", "relations": [{ "type": "uses", "targetId": "carto-projects" }] },
+    { "id": "archicarto", "territory": "apps", "title": "ArchiCarto", "type": "App métier", "status": "preview", "updatedAt": "2026-09-30", "relations": [{ "type": "links-to", "targetId": "tools" }] },
     { "id": "timelinearchitect", "territory": "apps", "title": "TimelineArchitect", "type": "App métier", "status": "preview", "updatedAt": "2026-09-29" }
   ]
 }

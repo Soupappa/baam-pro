@@ -2,8 +2,8 @@
   "meta": {
     "schemaVersion": 1,
     "source": "data/registry.source.json",
-    "sourceHash": "5728ddac9bfa9a0d99bf603428f6bf75111729a2d00828277ec01372fb1d02d4",
-    "compiledAt": "2026-10-03",
+    "sourceHash": "e81c5de0dfa32cce9fc15613a7d42051f727f87a8b9294f7d69b8f9fb44c6e93",
+    "compiledAt": "2026-10-05",
     "relationVocabulary": [
       "part-of",
       "derived-from",
@@ -17,7 +17,7 @@
     ],
     "counts": {
       "territories": 9,
-      "assets": 32
+      "assets": 44
     }
   },
   "nodes": [
@@ -67,7 +67,7 @@
       "id": "tools",
       "kind": "territory",
       "title": "Tools",
-      "url": null
+      "url": "https://tools.baam.pro/"
     },
     {
       "id": "games",
@@ -302,34 +302,154 @@
       "url": null
     },
     {
-      "id": "atelier-svg",
+      "id": "animateur-logo",
       "kind": "asset",
-      "title": "Atelier Publication SVG",
+      "title": "Animateur de logo",
       "territory": "tools",
-      "type": "Outil",
-      "status": "preview",
-      "updatedAt": "2026-10-01",
-      "url": null
+      "type": "free-webtool",
+      "status": "public",
+      "updatedAt": "2026-10-05",
+      "url": "https://tools.baam.pro/baam-tools/animateur-logo/"
     },
     {
-      "id": "clipforge",
+      "id": "fonds-vivants",
       "kind": "asset",
-      "title": "ClipForge",
+      "title": "Fonds vivants",
       "territory": "tools",
-      "type": "Outil",
-      "status": "preview",
-      "updatedAt": "2026-09-30",
-      "url": null
+      "type": "free-webtool",
+      "status": "public",
+      "updatedAt": "2026-10-05",
+      "url": "https://tools.baam.pro/baam-tools/fonds-vivants/"
     },
     {
-      "id": "carto-projects",
+      "id": "convertisseur",
       "kind": "asset",
-      "title": "CartoProjects",
+      "title": "Convertisseur SVG",
       "territory": "tools",
-      "type": "Outil",
+      "type": "free-webtool",
+      "status": "public",
+      "updatedAt": "2026-10-05",
+      "url": "https://tools.baam.pro/baam-tools/convertisseur/"
+    },
+    {
+      "id": "operateur-texte",
+      "kind": "asset",
+      "title": "Opérateur Texte",
+      "territory": "tools",
+      "type": "free-webtool",
+      "status": "public",
+      "updatedAt": "2026-10-04",
+      "url": "https://tools.baam.pro/baam-tools/operateur-texte/"
+    },
+    {
+      "id": "color-picker",
+      "kind": "asset",
+      "title": "Color Picker",
+      "territory": "tools",
+      "type": "free-webtool",
       "status": "preview",
-      "updatedAt": "2026-09-29",
-      "url": null
+      "updatedAt": "2026-10-04",
+      "url": "https://tools.baam.pro/baam-tools/color-picker/"
+    },
+    {
+      "id": "mindmap-recursive",
+      "kind": "asset",
+      "title": "Mindmap Récursive",
+      "territory": "tools",
+      "type": "free-webtool",
+      "status": "preview",
+      "updatedAt": "2026-10-04",
+      "url": "https://tools.baam.pro/baam-tools/mindmap-recursive/"
+    },
+    {
+      "id": "guide-motion-claude",
+      "kind": "asset",
+      "title": "Le guide BAAM du motion par Claude",
+      "territory": "tools",
+      "type": "tutorial",
+      "status": "public",
+      "updatedAt": "2026-10-04",
+      "url": "https://tools.baam.pro/guides/motion-par-claude/"
+    },
+    {
+      "id": "opus-55-videos",
+      "kind": "asset",
+      "title": "Opus 5.5 Videos",
+      "territory": "tools",
+      "type": "resource",
+      "status": "public",
+      "updatedAt": "2026-10-04",
+      "url": "https://tools.baam.pro/externes/opus-55-videos/"
+    },
+    {
+      "id": "svgomg",
+      "kind": "asset",
+      "title": "SVGOMG",
+      "territory": "tools",
+      "type": "resource",
+      "status": "public",
+      "updatedAt": "2026-10-04",
+      "url": "https://tools.baam.pro/externes/svgomg/"
+    },
+    {
+      "id": "guide-brief-visuel",
+      "kind": "asset",
+      "title": "Le guide BAAM du brief visuel qui produit",
+      "territory": "tools",
+      "type": "tutorial",
+      "status": "public",
+      "updatedAt": "2026-10-04",
+      "url": "https://tools.baam.pro/guides/brief-visuel-actionnable/"
+    },
+    {
+      "id": "guide-landing-page",
+      "kind": "asset",
+      "title": "Le guide BAAM de la landing page qui tranche",
+      "territory": "tools",
+      "type": "tutorial",
+      "status": "public",
+      "updatedAt": "2026-10-04",
+      "url": "https://tools.baam.pro/guides/landing-page-qui-tranche/"
+    },
+    {
+      "id": "excalidraw",
+      "kind": "asset",
+      "title": "Excalidraw",
+      "territory": "tools",
+      "type": "resource",
+      "status": "public",
+      "updatedAt": "2026-10-04",
+      "url": "https://tools.baam.pro/externes/excalidraw/"
+    },
+    {
+      "id": "penpot",
+      "kind": "asset",
+      "title": "Penpot",
+      "territory": "tools",
+      "type": "resource",
+      "status": "public",
+      "updatedAt": "2026-10-04",
+      "url": "https://tools.baam.pro/externes/penpot/"
+    },
+    {
+      "id": "squoosh",
+      "kind": "asset",
+      "title": "Squoosh",
+      "territory": "tools",
+      "type": "resource",
+      "status": "public",
+      "updatedAt": "2026-10-04",
+      "url": "https://tools.baam.pro/externes/squoosh/"
+    },
+    {
+      "id": "haikei",
+      "kind": "asset",
+      "title": "Haikei",
+      "territory": "tools",
+      "type": "resource",
+      "status": "public",
+      "updatedAt": "2026-10-04",
+      "url": "https://tools.baam.pro/externes/haikei/"
     },
     {
       "id": "asymmetric-wars",
@@ -704,39 +824,273 @@
       "generated": true
     },
     {
-      "from": "atelier-svg",
+      "from": "animateur-logo",
       "type": "part-of",
       "to": "tools",
       "generated": true
     },
     {
-      "from": "atelier-svg",
-      "type": "links-to",
-      "to": "studio",
+      "from": "animateur-logo",
+      "type": "related-to",
+      "to": "color-picker",
       "generated": false
     },
     {
-      "from": "clipforge",
-      "type": "part-of",
-      "to": "tools",
-      "generated": true
-    },
-    {
-      "from": "carto-projects",
-      "type": "part-of",
-      "to": "tools",
-      "generated": true
-    },
-    {
-      "from": "carto-projects",
-      "type": "links-to",
-      "to": "apps",
+      "from": "animateur-logo",
+      "type": "related-to",
+      "to": "convertisseur",
       "generated": false
     },
     {
-      "from": "carto-projects",
-      "type": "used-by",
-      "to": "archicarto",
+      "from": "fonds-vivants",
+      "type": "part-of",
+      "to": "tools",
+      "generated": true
+    },
+    {
+      "from": "fonds-vivants",
+      "type": "related-to",
+      "to": "color-picker",
+      "generated": false
+    },
+    {
+      "from": "fonds-vivants",
+      "type": "related-to",
+      "to": "convertisseur",
+      "generated": false
+    },
+    {
+      "from": "convertisseur",
+      "type": "part-of",
+      "to": "tools",
+      "generated": true
+    },
+    {
+      "from": "convertisseur",
+      "type": "related-to",
+      "to": "animateur-logo",
+      "generated": true
+    },
+    {
+      "from": "convertisseur",
+      "type": "related-to",
+      "to": "fonds-vivants",
+      "generated": true
+    },
+    {
+      "from": "convertisseur",
+      "type": "related-to",
+      "to": "operateur-texte",
+      "generated": false
+    },
+    {
+      "from": "operateur-texte",
+      "type": "part-of",
+      "to": "tools",
+      "generated": true
+    },
+    {
+      "from": "operateur-texte",
+      "type": "related-to",
+      "to": "convertisseur",
+      "generated": true
+    },
+    {
+      "from": "operateur-texte",
+      "type": "related-to",
+      "to": "guide-motion-claude",
+      "generated": true
+    },
+    {
+      "from": "color-picker",
+      "type": "part-of",
+      "to": "tools",
+      "generated": true
+    },
+    {
+      "from": "color-picker",
+      "type": "related-to",
+      "to": "animateur-logo",
+      "generated": true
+    },
+    {
+      "from": "color-picker",
+      "type": "related-to",
+      "to": "fonds-vivants",
+      "generated": true
+    },
+    {
+      "from": "color-picker",
+      "type": "related-to",
+      "to": "guide-brief-visuel",
+      "generated": true
+    },
+    {
+      "from": "color-picker",
+      "type": "related-to",
+      "to": "guide-landing-page",
+      "generated": true
+    },
+    {
+      "from": "mindmap-recursive",
+      "type": "part-of",
+      "to": "tools",
+      "generated": true
+    },
+    {
+      "from": "mindmap-recursive",
+      "type": "related-to",
+      "to": "guide-brief-visuel",
+      "generated": true
+    },
+    {
+      "from": "guide-motion-claude",
+      "type": "part-of",
+      "to": "tools",
+      "generated": true
+    },
+    {
+      "from": "guide-motion-claude",
+      "type": "related-to",
+      "to": "operateur-texte",
+      "generated": false
+    },
+    {
+      "from": "guide-motion-claude",
+      "type": "related-to",
+      "to": "opus-55-videos",
+      "generated": false
+    },
+    {
+      "from": "opus-55-videos",
+      "type": "part-of",
+      "to": "tools",
+      "generated": true
+    },
+    {
+      "from": "opus-55-videos",
+      "type": "related-to",
+      "to": "guide-motion-claude",
+      "generated": true
+    },
+    {
+      "from": "svgomg",
+      "type": "part-of",
+      "to": "tools",
+      "generated": true
+    },
+    {
+      "from": "guide-brief-visuel",
+      "type": "part-of",
+      "to": "tools",
+      "generated": true
+    },
+    {
+      "from": "guide-brief-visuel",
+      "type": "related-to",
+      "to": "mindmap-recursive",
+      "generated": false
+    },
+    {
+      "from": "guide-brief-visuel",
+      "type": "related-to",
+      "to": "color-picker",
+      "generated": false
+    },
+    {
+      "from": "guide-brief-visuel",
+      "type": "related-to",
+      "to": "excalidraw",
+      "generated": false
+    },
+    {
+      "from": "guide-brief-visuel",
+      "type": "related-to",
+      "to": "penpot",
+      "generated": false
+    },
+    {
+      "from": "guide-landing-page",
+      "type": "part-of",
+      "to": "tools",
+      "generated": true
+    },
+    {
+      "from": "guide-landing-page",
+      "type": "related-to",
+      "to": "color-picker",
+      "generated": false
+    },
+    {
+      "from": "guide-landing-page",
+      "type": "related-to",
+      "to": "penpot",
+      "generated": false
+    },
+    {
+      "from": "guide-landing-page",
+      "type": "related-to",
+      "to": "squoosh",
+      "generated": false
+    },
+    {
+      "from": "guide-landing-page",
+      "type": "related-to",
+      "to": "haikei",
+      "generated": false
+    },
+    {
+      "from": "excalidraw",
+      "type": "part-of",
+      "to": "tools",
+      "generated": true
+    },
+    {
+      "from": "excalidraw",
+      "type": "related-to",
+      "to": "guide-brief-visuel",
+      "generated": true
+    },
+    {
+      "from": "penpot",
+      "type": "part-of",
+      "to": "tools",
+      "generated": true
+    },
+    {
+      "from": "penpot",
+      "type": "related-to",
+      "to": "guide-brief-visuel",
+      "generated": true
+    },
+    {
+      "from": "penpot",
+      "type": "related-to",
+      "to": "guide-landing-page",
+      "generated": true
+    },
+    {
+      "from": "squoosh",
+      "type": "part-of",
+      "to": "tools",
+      "generated": true
+    },
+    {
+      "from": "squoosh",
+      "type": "related-to",
+      "to": "guide-landing-page",
+      "generated": true
+    },
+    {
+      "from": "haikei",
+      "type": "part-of",
+      "to": "tools",
+      "generated": true
+    },
+    {
+      "from": "haikei",
+      "type": "related-to",
+      "to": "guide-landing-page",
       "generated": true
     },
     {
@@ -807,8 +1161,8 @@
     },
     {
       "from": "archicarto",
-      "type": "uses",
-      "to": "carto-projects",
+      "type": "links-to",
+      "to": "tools",
       "generated": false
     },
     {
@@ -818,15 +1172,9 @@
       "generated": true
     },
     {
-      "from": "studio",
+      "from": "tools",
       "type": "linked-from",
-      "to": "atelier-svg",
-      "generated": true
-    },
-    {
-      "from": "apps",
-      "type": "linked-from",
-      "to": "carto-projects",
+      "to": "archicarto",
       "generated": true
     }
   ]

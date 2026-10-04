@@ -1,6 +1,6 @@
 # HANDOFF — BAAM.pro et ses territoires publics
 
-> Relais de session au **3 octobre 2026**.
+> Relais de session au **5 octobre 2026**.
 > Ce document concerne l'écosystème public BAAM.pro. Il ne faut pas le confondre
 > avec le **BAAM Hub**, OS interne d'agents documenté dans `../baam-hub/HANDOFF.md`.
 
@@ -210,6 +210,26 @@ est visible dans Netlify.
 Le carrousel Games de BAAM.pro référence maintenant explicitement les quatre jeux.
 Le commit racine `5a39464` a été publié par la cascade et la présence de
 `Spider vs Ants` a été vérifiée sur la façade publique.
+
+## BAAM.Tools — portail connecté et publié
+
+Le portail Tools est désormais autonome dans `../site-tools-baam.pro/` :
+
+- dépôt public `https://github.com/Soupappa/baam-tools` ;
+- origine Netlify `https://baam-tools.netlify.app/` ;
+- quinze contenus publics, dont six outils, trois guides et six ressources ;
+- trois outils vectoriels connectés — Animateur de logo, Fonds vivants et
+  Convertisseur — qui se transmettent leurs données avec BAAM-LINK ;
+- collecte `bonus` raccordée à Netlify Forms et détection activée ;
+- notification `Deploy succeeded` reliée au build hook de BAAM.pro.
+
+La racine importe le registre Tools par fichier local, URL publique puis cache. Elle
+expose ses 15 actifs et met en avant Opérateur Texte, Animateur de logo, Fonds vivants
+et Convertisseur. Les checks, tests et builds Tools/racine passent.
+
+Le dernier point d'infrastructure est le CNAME Namecheap `tools` vers
+`baam-tools.netlify.app`, puis la vérification HTTPS. Une fois ce DNS actif, chaque
+push groupé de Tools doit reconstruire Tools puis BAAM.pro sans intervention manuelle.
 
 ## Phase 4 — vraies previews de gameplay
 

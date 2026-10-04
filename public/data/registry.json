@@ -2,8 +2,8 @@
   "meta": {
     "schemaVersion": 1,
     "source": "data/registry.source.json",
-    "sourceHash": "5728ddac9bfa9a0d99bf603428f6bf75111729a2d00828277ec01372fb1d02d4",
-    "compiledAt": "2026-10-03",
+    "sourceHash": "e81c5de0dfa32cce9fc15613a7d42051f727f87a8b9294f7d69b8f9fb44c6e93",
+    "compiledAt": "2026-10-05",
     "relationVocabulary": [
       "part-of",
       "derived-from",
@@ -17,7 +17,7 @@
     ],
     "counts": {
       "territories": 9,
-      "assets": 32
+      "assets": 44
     }
   },
   "root": {
@@ -49,13 +49,7 @@
         "fink-doublefold",
         "deux-reseaux-vivants"
       ],
-      "relations": [
-        {
-          "type": "linked-from",
-          "target": "atelier-svg",
-          "generated": true
-        }
-      ]
+      "relations": []
     },
     {
       "id": "lab",
@@ -166,19 +160,42 @@
       "name": "Tools",
       "color": "#753cff",
       "description": [
-        "Outils de fabrication et de publication réutilisables",
-        "SVG · vidéo · automatisation"
+        "Outils concrets, guides copiables et ressources pour fabriquer",
+        "SVG · mouvement · méthode · export"
       ],
-      "siteUrl": null,
-      "previewUrl": null,
+      "siteUrl": "https://tools.baam.pro/",
+      "previewUrl": "https://tools.baam.pro/",
       "previewImage": null,
-      "featuredAssets": [],
-      "assets": [
-        "atelier-svg",
-        "clipforge",
-        "carto-projects"
+      "featuredAssets": [
+        "operateur-texte",
+        "animateur-logo",
+        "fonds-vivants",
+        "convertisseur"
       ],
-      "relations": []
+      "assets": [
+        "animateur-logo",
+        "fonds-vivants",
+        "convertisseur",
+        "operateur-texte",
+        "color-picker",
+        "mindmap-recursive",
+        "guide-motion-claude",
+        "opus-55-videos",
+        "svgomg",
+        "guide-brief-visuel",
+        "guide-landing-page",
+        "excalidraw",
+        "penpot",
+        "squoosh",
+        "haikei"
+      ],
+      "relations": [
+        {
+          "type": "linked-from",
+          "target": "archicarto",
+          "generated": true
+        }
+      ]
     },
     {
       "id": "games",
@@ -222,13 +239,7 @@
         "archicarto",
         "timelinearchitect"
       ],
-      "relations": [
-        {
-          "type": "linked-from",
-          "target": "carto-projects",
-          "generated": true
-        }
-      ]
+      "relations": []
     }
   ],
   "assets": [
@@ -673,60 +684,446 @@
       ]
     },
     {
-      "id": "atelier-svg",
+      "id": "animateur-logo",
       "territory": "tools",
-      "title": "Atelier Publication SVG",
-      "summary": null,
-      "type": "Outil",
-      "status": "preview",
-      "updatedAt": "2026-10-01",
-      "tags": [],
-      "url": null,
+      "title": "Animateur de logo",
+      "summary": "Déposer un logo, lui appliquer un opérateur BAAM et exporter un SVG animé autonome, sans appel IA.",
+      "type": "free-webtool",
+      "status": "public",
+      "updatedAt": "2026-10-05",
+      "tags": [
+        "design",
+        "svg",
+        "animation"
+      ],
+      "url": "https://tools.baam.pro/baam-tools/animateur-logo/",
       "visual": null,
       "preview": null,
       "relations": [
         {
-          "type": "links-to",
-          "target": "studio",
+          "type": "related-to",
+          "target": "color-picker",
+          "generated": false
+        },
+        {
+          "type": "related-to",
+          "target": "convertisseur",
           "generated": false
         }
       ]
     },
     {
-      "id": "clipforge",
+      "id": "fonds-vivants",
       "territory": "tools",
-      "title": "ClipForge",
-      "summary": null,
-      "type": "Outil",
+      "title": "Fonds vivants",
+      "summary": "Composer une trame vivante, régler ses couleurs et son mouvement, puis l’exporter en SVG, PNG ou CSS.",
+      "type": "free-webtool",
+      "status": "public",
+      "updatedAt": "2026-10-05",
+      "tags": [
+        "design",
+        "animation",
+        "couleur"
+      ],
+      "url": "https://tools.baam.pro/baam-tools/fonds-vivants/",
+      "visual": null,
+      "preview": null,
+      "relations": [
+        {
+          "type": "related-to",
+          "target": "color-picker",
+          "generated": false
+        },
+        {
+          "type": "related-to",
+          "target": "convertisseur",
+          "generated": false
+        }
+      ]
+    },
+    {
+      "id": "convertisseur",
+      "territory": "tools",
+      "title": "Convertisseur SVG",
+      "summary": "Convertir un SVG statique ou animé en PNG, JPG, WebP, GIF, vidéo, favicon ou planche de sprites, dans le navigateur.",
+      "type": "free-webtool",
+      "status": "public",
+      "updatedAt": "2026-10-05",
+      "tags": [
+        "design",
+        "svg",
+        "export"
+      ],
+      "url": "https://tools.baam.pro/baam-tools/convertisseur/",
+      "visual": null,
+      "preview": null,
+      "relations": [
+        {
+          "type": "related-to",
+          "target": "animateur-logo",
+          "generated": true
+        },
+        {
+          "type": "related-to",
+          "target": "fonds-vivants",
+          "generated": true
+        },
+        {
+          "type": "related-to",
+          "target": "operateur-texte",
+          "generated": false
+        }
+      ]
+    },
+    {
+      "id": "operateur-texte",
+      "territory": "tools",
+      "title": "Opérateur Texte",
+      "summary": "Écrire un mot, lui appliquer un comportement vivant et exporter un SVG animé autonome — sans appel IA.",
+      "type": "free-webtool",
+      "status": "public",
+      "updatedAt": "2026-10-04",
+      "tags": [
+        "design",
+        "svg",
+        "animation"
+      ],
+      "url": "https://tools.baam.pro/baam-tools/operateur-texte/",
+      "visual": null,
+      "preview": {
+        "type": "iframe",
+        "url": "https://tools.baam.pro/baam-tools/operateur-texte/"
+      },
+      "relations": [
+        {
+          "type": "related-to",
+          "target": "convertisseur",
+          "generated": true
+        },
+        {
+          "type": "related-to",
+          "target": "guide-motion-claude",
+          "generated": true
+        }
+      ]
+    },
+    {
+      "id": "color-picker",
+      "territory": "tools",
+      "title": "Color Picker",
+      "summary": "Configurer ses couleurs, comprendre les palettes binaires, ternaires ou complémentaires, et les visualiser en temps réel sur le cercle chromatique.",
+      "type": "free-webtool",
       "status": "preview",
-      "updatedAt": "2026-09-30",
-      "tags": [],
-      "url": null,
+      "updatedAt": "2026-10-04",
+      "tags": [
+        "design",
+        "méthode",
+        "couleur"
+      ],
+      "url": "https://tools.baam.pro/baam-tools/color-picker/",
+      "visual": null,
+      "preview": null,
+      "relations": [
+        {
+          "type": "related-to",
+          "target": "animateur-logo",
+          "generated": true
+        },
+        {
+          "type": "related-to",
+          "target": "fonds-vivants",
+          "generated": true
+        },
+        {
+          "type": "related-to",
+          "target": "guide-brief-visuel",
+          "generated": true
+        },
+        {
+          "type": "related-to",
+          "target": "guide-landing-page",
+          "generated": true
+        }
+      ]
+    },
+    {
+      "id": "mindmap-recursive",
+      "territory": "tools",
+      "title": "Mindmap Récursive",
+      "summary": "Créer des mindmaps modulables à nœuds récursifs, importer un texte puis exporter la structure en Markdown ou en JSON.",
+      "type": "free-webtool",
+      "status": "preview",
+      "updatedAt": "2026-10-04",
+      "tags": [
+        "design",
+        "méthode",
+        "cartographie"
+      ],
+      "url": "https://tools.baam.pro/baam-tools/mindmap-recursive/",
+      "visual": null,
+      "preview": null,
+      "relations": [
+        {
+          "type": "related-to",
+          "target": "guide-brief-visuel",
+          "generated": true
+        }
+      ]
+    },
+    {
+      "id": "guide-motion-claude",
+      "territory": "tools",
+      "title": "Le guide BAAM du motion par Claude",
+      "summary": "Transformer une matière réelle en motion codé, dirigé et réutilisable — sans confondre génération spectaculaire et direction artistique.",
+      "type": "tutorial",
+      "status": "public",
+      "updatedAt": "2026-10-04",
+      "tags": [
+        "motion",
+        "claude",
+        "méthode",
+        "design"
+      ],
+      "url": "https://tools.baam.pro/guides/motion-par-claude/",
+      "visual": null,
+      "preview": null,
+      "relations": [
+        {
+          "type": "related-to",
+          "target": "operateur-texte",
+          "generated": false
+        },
+        {
+          "type": "related-to",
+          "target": "opus-55-videos",
+          "generated": false
+        }
+      ]
+    },
+    {
+      "id": "opus-55-videos",
+      "territory": "tools",
+      "title": "Opus 5.5 Videos",
+      "summary": "Une galerie de motions, explainers, scènes 3D et jeux créés avec Claude, avec prompts d’origine et remakes consultables.",
+      "type": "resource",
+      "status": "public",
+      "updatedAt": "2026-10-04",
+      "tags": [
+        "motion",
+        "claude",
+        "inspiration",
+        "vidéo"
+      ],
+      "url": "https://tools.baam.pro/externes/opus-55-videos/",
+      "visual": null,
+      "preview": null,
+      "relations": [
+        {
+          "type": "related-to",
+          "target": "guide-motion-claude",
+          "generated": true
+        }
+      ]
+    },
+    {
+      "id": "svgomg",
+      "territory": "tools",
+      "title": "SVGOMG",
+      "summary": "Une interface web pour alléger un SVG avec SVGO et observer immédiatement l’effet de chaque option.",
+      "type": "resource",
+      "status": "public",
+      "updatedAt": "2026-10-04",
+      "tags": [
+        "svg",
+        "performance",
+        "web"
+      ],
+      "url": "https://tools.baam.pro/externes/svgomg/",
       "visual": null,
       "preview": null,
       "relations": []
     },
     {
-      "id": "carto-projects",
+      "id": "guide-brief-visuel",
       "territory": "tools",
-      "title": "CartoProjects",
-      "summary": null,
-      "type": "Outil",
-      "status": "preview",
-      "updatedAt": "2026-09-29",
-      "tags": [],
-      "url": null,
+      "title": "Le guide BAAM du brief visuel qui produit",
+      "summary": "Transformer une intention floue en décisions visuelles, critères vérifiables et matière directement exploitable par un humain ou une IA.",
+      "type": "tutorial",
+      "status": "public",
+      "updatedAt": "2026-10-04",
+      "tags": [
+        "design",
+        "méthode",
+        "direction artistique",
+        "claude"
+      ],
+      "url": "https://tools.baam.pro/guides/brief-visuel-actionnable/",
       "visual": null,
       "preview": null,
       "relations": [
         {
-          "type": "links-to",
-          "target": "apps",
+          "type": "related-to",
+          "target": "mindmap-recursive",
           "generated": false
         },
         {
-          "type": "used-by",
-          "target": "archicarto",
+          "type": "related-to",
+          "target": "color-picker",
+          "generated": false
+        },
+        {
+          "type": "related-to",
+          "target": "excalidraw",
+          "generated": false
+        },
+        {
+          "type": "related-to",
+          "target": "penpot",
+          "generated": false
+        }
+      ]
+    },
+    {
+      "id": "guide-landing-page",
+      "territory": "tools",
+      "title": "Le guide BAAM de la landing page qui tranche",
+      "summary": "Passer d’une promesse floue à une page rapide, lisible et convaincante, construite autour d’une preuve et d’une action plutôt que d’un empilement de sections.",
+      "type": "tutorial",
+      "status": "public",
+      "updatedAt": "2026-10-04",
+      "tags": [
+        "web",
+        "design",
+        "méthode",
+        "conversion"
+      ],
+      "url": "https://tools.baam.pro/guides/landing-page-qui-tranche/",
+      "visual": null,
+      "preview": null,
+      "relations": [
+        {
+          "type": "related-to",
+          "target": "color-picker",
+          "generated": false
+        },
+        {
+          "type": "related-to",
+          "target": "penpot",
+          "generated": false
+        },
+        {
+          "type": "related-to",
+          "target": "squoosh",
+          "generated": false
+        },
+        {
+          "type": "related-to",
+          "target": "haikei",
+          "generated": false
+        }
+      ]
+    },
+    {
+      "id": "excalidraw",
+      "territory": "tools",
+      "title": "Excalidraw",
+      "summary": "Un tableau blanc au dessin volontairement brut pour cadrer une idée, construire un diagramme ou partager rapidement un wireframe.",
+      "type": "resource",
+      "status": "public",
+      "updatedAt": "2026-10-04",
+      "tags": [
+        "cartographie",
+        "collaboration",
+        "wireframe",
+        "open source"
+      ],
+      "url": "https://tools.baam.pro/externes/excalidraw/",
+      "visual": null,
+      "preview": null,
+      "relations": [
+        {
+          "type": "related-to",
+          "target": "guide-brief-visuel",
+          "generated": true
+        }
+      ]
+    },
+    {
+      "id": "penpot",
+      "territory": "tools",
+      "title": "Penpot",
+      "summary": "Une plateforme open source de design d’interface et de prototypage qui rapproche composants, design tokens, CSS, SVG et collaboration produit.",
+      "type": "resource",
+      "status": "public",
+      "updatedAt": "2026-10-04",
+      "tags": [
+        "design",
+        "prototype",
+        "open source",
+        "collaboration"
+      ],
+      "url": "https://tools.baam.pro/externes/penpot/",
+      "visual": null,
+      "preview": null,
+      "relations": [
+        {
+          "type": "related-to",
+          "target": "guide-brief-visuel",
+          "generated": true
+        },
+        {
+          "type": "related-to",
+          "target": "guide-landing-page",
+          "generated": true
+        }
+      ]
+    },
+    {
+      "id": "squoosh",
+      "territory": "tools",
+      "title": "Squoosh",
+      "summary": "Comparer visuellement codecs, dimensions et niveaux de compression afin de réduire le poids d’une image directement dans le navigateur.",
+      "type": "resource",
+      "status": "public",
+      "updatedAt": "2026-10-04",
+      "tags": [
+        "image",
+        "performance",
+        "web",
+        "open source"
+      ],
+      "url": "https://tools.baam.pro/externes/squoosh/",
+      "visual": null,
+      "preview": null,
+      "relations": [
+        {
+          "type": "related-to",
+          "target": "guide-landing-page",
+          "generated": true
+        }
+      ]
+    },
+    {
+      "id": "haikei",
+      "territory": "tools",
+      "title": "Haikei",
+      "summary": "Un ensemble de générateurs visuels pour composer vagues, blobs, grilles, gradients et motifs puis les exporter en SVG ou en PNG.",
+      "type": "resource",
+      "status": "public",
+      "updatedAt": "2026-10-04",
+      "tags": [
+        "svg",
+        "design",
+        "génératif",
+        "web"
+      ],
+      "url": "https://tools.baam.pro/externes/haikei/",
+      "visual": null,
+      "preview": null,
+      "relations": [
+        {
+          "type": "related-to",
+          "target": "guide-landing-page",
           "generated": true
         }
       ]
@@ -865,8 +1262,8 @@
       "preview": null,
       "relations": [
         {
-          "type": "uses",
-          "target": "carto-projects",
+          "type": "links-to",
+          "target": "tools",
           "generated": false
         }
       ]

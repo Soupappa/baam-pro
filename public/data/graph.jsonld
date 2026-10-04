@@ -30,7 +30,7 @@
           "@id": "https://baam.pro/#territory-agence"
         },
         {
-          "@id": "https://baam.pro/#territory-tools"
+          "@id": "https://tools.baam.pro/"
         },
         {
           "@id": "https://games.baam.pro/"
@@ -173,22 +173,58 @@
       ]
     },
     {
-      "@id": "https://baam.pro/#territory-tools",
+      "@id": "https://tools.baam.pro/",
       "@type": "CollectionPage",
       "name": "Tools",
-      "url": null,
+      "url": "https://tools.baam.pro/",
       "isPartOf": {
         "@id": "https://baam.pro/"
       },
       "hasPart": [
         {
-          "@id": "https://baam.pro/id/atelier-svg"
+          "@id": "https://tools.baam.pro/baam-tools/animateur-logo/"
         },
         {
-          "@id": "https://baam.pro/id/clipforge"
+          "@id": "https://tools.baam.pro/baam-tools/fonds-vivants/"
         },
         {
-          "@id": "https://baam.pro/id/carto-projects"
+          "@id": "https://tools.baam.pro/baam-tools/convertisseur/"
+        },
+        {
+          "@id": "https://tools.baam.pro/baam-tools/operateur-texte/"
+        },
+        {
+          "@id": "https://tools.baam.pro/baam-tools/color-picker/"
+        },
+        {
+          "@id": "https://tools.baam.pro/baam-tools/mindmap-recursive/"
+        },
+        {
+          "@id": "https://tools.baam.pro/guides/motion-par-claude/"
+        },
+        {
+          "@id": "https://tools.baam.pro/externes/opus-55-videos/"
+        },
+        {
+          "@id": "https://tools.baam.pro/externes/svgomg/"
+        },
+        {
+          "@id": "https://tools.baam.pro/guides/brief-visuel-actionnable/"
+        },
+        {
+          "@id": "https://tools.baam.pro/guides/landing-page-qui-tranche/"
+        },
+        {
+          "@id": "https://tools.baam.pro/externes/excalidraw/"
+        },
+        {
+          "@id": "https://tools.baam.pro/externes/penpot/"
+        },
+        {
+          "@id": "https://tools.baam.pro/externes/squoosh/"
+        },
+        {
+          "@id": "https://tools.baam.pro/externes/haikei/"
         }
       ]
     },
@@ -535,44 +571,270 @@
       ]
     },
     {
-      "@id": "https://baam.pro/id/atelier-svg",
+      "@id": "https://tools.baam.pro/baam-tools/animateur-logo/",
       "@type": "CreativeWork",
-      "name": "Atelier Publication SVG",
-      "dateModified": "2026-10-01",
+      "name": "Animateur de logo",
+      "dateModified": "2026-10-05",
       "isPartOf": {
-        "@id": "https://baam.pro/#territory-tools"
+        "@id": "https://tools.baam.pro/"
       },
-      "baam:links-to": [
+      "url": "https://tools.baam.pro/baam-tools/animateur-logo/",
+      "baam:related-to": [
         {
-          "@id": "https://studio.baam.pro/"
+          "@id": "https://tools.baam.pro/baam-tools/color-picker/"
+        },
+        {
+          "@id": "https://tools.baam.pro/baam-tools/convertisseur/"
         }
       ]
     },
     {
-      "@id": "https://baam.pro/id/clipforge",
+      "@id": "https://tools.baam.pro/baam-tools/fonds-vivants/",
       "@type": "CreativeWork",
-      "name": "ClipForge",
-      "dateModified": "2026-09-30",
+      "name": "Fonds vivants",
+      "dateModified": "2026-10-05",
       "isPartOf": {
-        "@id": "https://baam.pro/#territory-tools"
-      }
+        "@id": "https://tools.baam.pro/"
+      },
+      "url": "https://tools.baam.pro/baam-tools/fonds-vivants/",
+      "baam:related-to": [
+        {
+          "@id": "https://tools.baam.pro/baam-tools/color-picker/"
+        },
+        {
+          "@id": "https://tools.baam.pro/baam-tools/convertisseur/"
+        }
+      ]
     },
     {
-      "@id": "https://baam.pro/id/carto-projects",
+      "@id": "https://tools.baam.pro/baam-tools/convertisseur/",
       "@type": "CreativeWork",
-      "name": "CartoProjects",
-      "dateModified": "2026-09-29",
+      "name": "Convertisseur SVG",
+      "dateModified": "2026-10-05",
       "isPartOf": {
-        "@id": "https://baam.pro/#territory-tools"
+        "@id": "https://tools.baam.pro/"
       },
-      "baam:links-to": [
+      "url": "https://tools.baam.pro/baam-tools/convertisseur/",
+      "baam:related-to": [
         {
-          "@id": "https://baam.pro/#territory-apps"
+          "@id": "https://tools.baam.pro/baam-tools/animateur-logo/"
+        },
+        {
+          "@id": "https://tools.baam.pro/baam-tools/fonds-vivants/"
+        },
+        {
+          "@id": "https://tools.baam.pro/baam-tools/operateur-texte/"
         }
-      ],
-      "baam:used-by": [
+      ]
+    },
+    {
+      "@id": "https://tools.baam.pro/baam-tools/operateur-texte/",
+      "@type": "CreativeWork",
+      "name": "Opérateur Texte",
+      "dateModified": "2026-10-04",
+      "isPartOf": {
+        "@id": "https://tools.baam.pro/"
+      },
+      "url": "https://tools.baam.pro/baam-tools/operateur-texte/",
+      "baam:related-to": [
         {
-          "@id": "https://baam.pro/id/archicarto"
+          "@id": "https://tools.baam.pro/baam-tools/convertisseur/"
+        },
+        {
+          "@id": "https://tools.baam.pro/guides/motion-par-claude/"
+        }
+      ]
+    },
+    {
+      "@id": "https://tools.baam.pro/baam-tools/color-picker/",
+      "@type": "CreativeWork",
+      "name": "Color Picker",
+      "dateModified": "2026-10-04",
+      "isPartOf": {
+        "@id": "https://tools.baam.pro/"
+      },
+      "url": "https://tools.baam.pro/baam-tools/color-picker/",
+      "baam:related-to": [
+        {
+          "@id": "https://tools.baam.pro/baam-tools/animateur-logo/"
+        },
+        {
+          "@id": "https://tools.baam.pro/baam-tools/fonds-vivants/"
+        },
+        {
+          "@id": "https://tools.baam.pro/guides/brief-visuel-actionnable/"
+        },
+        {
+          "@id": "https://tools.baam.pro/guides/landing-page-qui-tranche/"
+        }
+      ]
+    },
+    {
+      "@id": "https://tools.baam.pro/baam-tools/mindmap-recursive/",
+      "@type": "CreativeWork",
+      "name": "Mindmap Récursive",
+      "dateModified": "2026-10-04",
+      "isPartOf": {
+        "@id": "https://tools.baam.pro/"
+      },
+      "url": "https://tools.baam.pro/baam-tools/mindmap-recursive/",
+      "baam:related-to": [
+        {
+          "@id": "https://tools.baam.pro/guides/brief-visuel-actionnable/"
+        }
+      ]
+    },
+    {
+      "@id": "https://tools.baam.pro/guides/motion-par-claude/",
+      "@type": "CreativeWork",
+      "name": "Le guide BAAM du motion par Claude",
+      "dateModified": "2026-10-04",
+      "isPartOf": {
+        "@id": "https://tools.baam.pro/"
+      },
+      "url": "https://tools.baam.pro/guides/motion-par-claude/",
+      "baam:related-to": [
+        {
+          "@id": "https://tools.baam.pro/baam-tools/operateur-texte/"
+        },
+        {
+          "@id": "https://tools.baam.pro/externes/opus-55-videos/"
+        }
+      ]
+    },
+    {
+      "@id": "https://tools.baam.pro/externes/opus-55-videos/",
+      "@type": "CreativeWork",
+      "name": "Opus 5.5 Videos",
+      "dateModified": "2026-10-04",
+      "isPartOf": {
+        "@id": "https://tools.baam.pro/"
+      },
+      "url": "https://tools.baam.pro/externes/opus-55-videos/",
+      "baam:related-to": [
+        {
+          "@id": "https://tools.baam.pro/guides/motion-par-claude/"
+        }
+      ]
+    },
+    {
+      "@id": "https://tools.baam.pro/externes/svgomg/",
+      "@type": "CreativeWork",
+      "name": "SVGOMG",
+      "dateModified": "2026-10-04",
+      "isPartOf": {
+        "@id": "https://tools.baam.pro/"
+      },
+      "url": "https://tools.baam.pro/externes/svgomg/"
+    },
+    {
+      "@id": "https://tools.baam.pro/guides/brief-visuel-actionnable/",
+      "@type": "CreativeWork",
+      "name": "Le guide BAAM du brief visuel qui produit",
+      "dateModified": "2026-10-04",
+      "isPartOf": {
+        "@id": "https://tools.baam.pro/"
+      },
+      "url": "https://tools.baam.pro/guides/brief-visuel-actionnable/",
+      "baam:related-to": [
+        {
+          "@id": "https://tools.baam.pro/baam-tools/mindmap-recursive/"
+        },
+        {
+          "@id": "https://tools.baam.pro/baam-tools/color-picker/"
+        },
+        {
+          "@id": "https://tools.baam.pro/externes/excalidraw/"
+        },
+        {
+          "@id": "https://tools.baam.pro/externes/penpot/"
+        }
+      ]
+    },
+    {
+      "@id": "https://tools.baam.pro/guides/landing-page-qui-tranche/",
+      "@type": "CreativeWork",
+      "name": "Le guide BAAM de la landing page qui tranche",
+      "dateModified": "2026-10-04",
+      "isPartOf": {
+        "@id": "https://tools.baam.pro/"
+      },
+      "url": "https://tools.baam.pro/guides/landing-page-qui-tranche/",
+      "baam:related-to": [
+        {
+          "@id": "https://tools.baam.pro/baam-tools/color-picker/"
+        },
+        {
+          "@id": "https://tools.baam.pro/externes/penpot/"
+        },
+        {
+          "@id": "https://tools.baam.pro/externes/squoosh/"
+        },
+        {
+          "@id": "https://tools.baam.pro/externes/haikei/"
+        }
+      ]
+    },
+    {
+      "@id": "https://tools.baam.pro/externes/excalidraw/",
+      "@type": "CreativeWork",
+      "name": "Excalidraw",
+      "dateModified": "2026-10-04",
+      "isPartOf": {
+        "@id": "https://tools.baam.pro/"
+      },
+      "url": "https://tools.baam.pro/externes/excalidraw/",
+      "baam:related-to": [
+        {
+          "@id": "https://tools.baam.pro/guides/brief-visuel-actionnable/"
+        }
+      ]
+    },
+    {
+      "@id": "https://tools.baam.pro/externes/penpot/",
+      "@type": "CreativeWork",
+      "name": "Penpot",
+      "dateModified": "2026-10-04",
+      "isPartOf": {
+        "@id": "https://tools.baam.pro/"
+      },
+      "url": "https://tools.baam.pro/externes/penpot/",
+      "baam:related-to": [
+        {
+          "@id": "https://tools.baam.pro/guides/brief-visuel-actionnable/"
+        },
+        {
+          "@id": "https://tools.baam.pro/guides/landing-page-qui-tranche/"
+        }
+      ]
+    },
+    {
+      "@id": "https://tools.baam.pro/externes/squoosh/",
+      "@type": "CreativeWork",
+      "name": "Squoosh",
+      "dateModified": "2026-10-04",
+      "isPartOf": {
+        "@id": "https://tools.baam.pro/"
+      },
+      "url": "https://tools.baam.pro/externes/squoosh/",
+      "baam:related-to": [
+        {
+          "@id": "https://tools.baam.pro/guides/landing-page-qui-tranche/"
+        }
+      ]
+    },
+    {
+      "@id": "https://tools.baam.pro/externes/haikei/",
+      "@type": "CreativeWork",
+      "name": "Haikei",
+      "dateModified": "2026-10-04",
+      "isPartOf": {
+        "@id": "https://tools.baam.pro/"
+      },
+      "url": "https://tools.baam.pro/externes/haikei/",
+      "baam:related-to": [
+        {
+          "@id": "https://tools.baam.pro/guides/landing-page-qui-tranche/"
         }
       ]
     },
@@ -658,9 +920,9 @@
       "isPartOf": {
         "@id": "https://baam.pro/#territory-apps"
       },
-      "baam:uses": [
+      "baam:links-to": [
         {
-          "@id": "https://baam.pro/id/carto-projects"
+          "@id": "https://tools.baam.pro/"
         }
       ]
     },

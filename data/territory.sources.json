@@ -10,5 +10,11 @@
     "file": "../site-games.baam.pro/public/data/registry.json",
     "url": "https://games.baam.pro/data/registry.json",
     "cache": "data/territories/games.registry.json"
+  },
+  {
+    "territory": "tools",
+    "file": "../site-tools-baam.pro/public/data/registry.json",
+    "url": "https://tools.baam.pro/data/registry.json",
+    "cache": "data/territories/tools.registry.json"
   }
 ]

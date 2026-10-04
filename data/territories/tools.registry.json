@@ -1,0 +1,923 @@
+{
+  "meta": {
+    "schemaVersion": 1,
+    "territory": "tools",
+    "sourceHash": "a6234d4471416152ebf77d7e747fa9a4b763bd8a7d6e9b623bc11d8f7c3cc14f",
+    "compiledAt": "2026-10-05",
+    "count": 15,
+    "contentTypes": {
+      "free-webtool": "BAAM Tool",
+      "tutorial": "Guide",
+      "resource": "Externe"
+    },
+    "relationVocabulary": [
+      "uses",
+      "used-by",
+      "inspired-by",
+      "inspires",
+      "derived-from",
+      "has-derivative",
+      "part-of",
+      "has-part",
+      "related-to"
+    ]
+  },
+  "territory": {
+    "id": "tools",
+    "name": "Tools",
+    "title": "BAAM.TOOLS",
+    "url": "https://tools.baam.pro/",
+    "localUrl": "http://127.0.0.1:8091/",
+    "accent": "#5b45ff",
+    "tagline": "Prendre. Comprendre. Fabriquer.",
+    "description": "Des outils concrets, des guides copiables et une sélection de ressources externes pour fabriquer sans détour."
+  },
+  "assets": [
+    {
+      "schemaVersion": 1,
+      "id": "operateur-texte",
+      "title": "Opérateur Texte",
+      "eyebrow": "Premier outil BAAM",
+      "summary": "Écrire un mot, lui appliquer un comportement vivant et exporter un SVG animé autonome — sans appel IA.",
+      "type": "free-webtool",
+      "typeLabel": "BAAM Tool",
+      "status": "public",
+      "territories": [
+        "tools"
+      ],
+      "url": "https://tools.baam.pro/baam-tools/operateur-texte/",
+      "path": "/baam-tools/operateur-texte/",
+      "externalUrl": null,
+      "updatedAt": "2026-10-04",
+      "tags": [
+        "design",
+        "svg",
+        "animation"
+      ],
+      "themes": [
+        "design",
+        "svg",
+        "animation"
+      ],
+      "meta": [
+        "Gratuit",
+        "Navigateur",
+        "Export SVG"
+      ],
+      "cta": "Ouvrir l’outil",
+      "preview": {
+        "type": "iframe",
+        "url": "https://tools.baam.pro/baam-tools/operateur-texte/"
+      },
+      "cardPreview": {
+        "type": "iframe",
+        "url": "/baam-tools/operateur-texte/",
+        "alt": "L’Opérateur Texte BAAM en mouvement"
+      },
+      "presentation": {
+        "accent": "#00a86b",
+        "index": "01",
+        "glyph": "Aa"
+      },
+      "relations": [
+        {
+          "type": "related-to",
+          "target": "convertisseur",
+          "generated": true
+        },
+        {
+          "type": "related-to",
+          "target": "guide-motion-claude",
+          "generated": true
+        }
+      ],
+      "sourceOrigin": "file"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "color-picker",
+      "title": "Color Picker",
+      "eyebrow": "Palette interactive",
+      "summary": "Configurer ses couleurs, comprendre les palettes binaires, ternaires ou complémentaires, et les visualiser en temps réel sur le cercle chromatique.",
+      "type": "free-webtool",
+      "typeLabel": "BAAM Tool",
+      "status": "preview",
+      "territories": [
+        "tools"
+      ],
+      "url": "https://tools.baam.pro/baam-tools/color-picker/",
+      "path": "/baam-tools/color-picker/",
+      "externalUrl": null,
+      "updatedAt": "2026-10-04",
+      "tags": [
+        "design",
+        "méthode",
+        "couleur"
+      ],
+      "themes": [
+        "design",
+        "méthode",
+        "couleur"
+      ],
+      "meta": [
+        "Gratuit",
+        "Palette",
+        "Sans IA"
+      ],
+      "cta": "Ouvrir l’outil",
+      "preview": {
+        "type": "none"
+      },
+      "cardPreview": {
+        "type": "iframe",
+        "url": "/baam-tools/color-picker/",
+        "alt": "Le Color Picker BAAM en mouvement"
+      },
+      "presentation": {
+        "accent": "#00a86b",
+        "index": "02",
+        "glyph": "◉"
+      },
+      "relations": [
+        {
+          "type": "related-to",
+          "target": "animateur-logo",
+          "generated": true
+        },
+        {
+          "type": "related-to",
+          "target": "fonds-vivants",
+          "generated": true
+        },
+        {
+          "type": "related-to",
+          "target": "guide-brief-visuel",
+          "generated": true
+        },
+        {
+          "type": "related-to",
+          "target": "guide-landing-page",
+          "generated": true
+        }
+      ],
+      "sourceOrigin": "file"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "mindmap-recursive",
+      "title": "Mindmap Récursive",
+      "eyebrow": "Cartographie récursive",
+      "summary": "Créer des mindmaps modulables à nœuds récursifs, importer un texte puis exporter la structure en Markdown ou en JSON.",
+      "type": "free-webtool",
+      "typeLabel": "BAAM Tool",
+      "status": "preview",
+      "territories": [
+        "tools"
+      ],
+      "url": "https://tools.baam.pro/baam-tools/mindmap-recursive/",
+      "path": "/baam-tools/mindmap-recursive/",
+      "externalUrl": null,
+      "updatedAt": "2026-10-04",
+      "tags": [
+        "design",
+        "méthode",
+        "cartographie"
+      ],
+      "themes": [
+        "design",
+        "méthode",
+        "cartographie"
+      ],
+      "meta": [
+        "Gratuit",
+        "Import texte",
+        "Export MD et JSON"
+      ],
+      "cta": "Ouvrir l’outil",
+      "preview": {
+        "type": "none"
+      },
+      "cardPreview": {
+        "type": "iframe",
+        "url": "/baam-tools/mindmap-recursive/",
+        "alt": "La Mindmap Récursive BAAM en action"
+      },
+      "presentation": {
+        "accent": "#00a86b",
+        "index": "03",
+        "glyph": "⌘"
+      },
+      "relations": [
+        {
+          "type": "related-to",
+          "target": "guide-brief-visuel",
+          "generated": true
+        }
+      ],
+      "sourceOrigin": "file"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "animateur-logo",
+      "title": "Animateur de logo",
+      "eyebrow": "Identité en mouvement",
+      "summary": "Déposer un logo, lui appliquer un opérateur BAAM et exporter un SVG animé autonome, sans appel IA.",
+      "type": "free-webtool",
+      "typeLabel": "BAAM Tool",
+      "status": "public",
+      "territories": [
+        "tools"
+      ],
+      "url": "https://tools.baam.pro/baam-tools/animateur-logo/",
+      "path": "/baam-tools/animateur-logo/",
+      "externalUrl": null,
+      "updatedAt": "2026-10-05",
+      "tags": [
+        "design",
+        "svg",
+        "animation"
+      ],
+      "themes": [
+        "design",
+        "svg",
+        "animation"
+      ],
+      "meta": [
+        "Gratuit",
+        "Export SVG",
+        "Sans IA"
+      ],
+      "cta": "Animer un logo",
+      "preview": {
+        "type": "none"
+      },
+      "cardPreview": {
+        "type": "iframe",
+        "url": "/baam-tools/animateur-logo/",
+        "alt": "L’Animateur de logo BAAM en mouvement"
+      },
+      "presentation": {
+        "accent": "#00a86b",
+        "index": "04",
+        "glyph": "◒"
+      },
+      "relations": [
+        {
+          "type": "related-to",
+          "target": "color-picker"
+        },
+        {
+          "type": "related-to",
+          "target": "convertisseur"
+        }
+      ],
+      "sourceOrigin": "file"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "fonds-vivants",
+      "title": "Fonds vivants",
+      "eyebrow": "Trames animées",
+      "summary": "Composer une trame vivante, régler ses couleurs et son mouvement, puis l’exporter en SVG, PNG ou CSS.",
+      "type": "free-webtool",
+      "typeLabel": "BAAM Tool",
+      "status": "public",
+      "territories": [
+        "tools"
+      ],
+      "url": "https://tools.baam.pro/baam-tools/fonds-vivants/",
+      "path": "/baam-tools/fonds-vivants/",
+      "externalUrl": null,
+      "updatedAt": "2026-10-05",
+      "tags": [
+        "design",
+        "animation",
+        "couleur"
+      ],
+      "themes": [
+        "design",
+        "animation",
+        "couleur"
+      ],
+      "meta": [
+        "Gratuit",
+        "Boucle parfaite",
+        "Export SVG"
+      ],
+      "cta": "Créer un fond vivant",
+      "preview": {
+        "type": "none"
+      },
+      "cardPreview": {
+        "type": "iframe",
+        "url": "/baam-tools/fonds-vivants/",
+        "alt": "Les Fonds vivants BAAM en mouvement"
+      },
+      "presentation": {
+        "accent": "#00a86b",
+        "index": "05",
+        "glyph": "≋"
+      },
+      "relations": [
+        {
+          "type": "related-to",
+          "target": "color-picker"
+        },
+        {
+          "type": "related-to",
+          "target": "convertisseur"
+        }
+      ],
+      "sourceOrigin": "file"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "convertisseur",
+      "title": "Convertisseur SVG",
+      "eyebrow": "Exports prêts à publier",
+      "summary": "Convertir un SVG statique ou animé en PNG, JPG, WebP, GIF, vidéo, favicon ou planche de sprites, dans le navigateur.",
+      "type": "free-webtool",
+      "typeLabel": "BAAM Tool",
+      "status": "public",
+      "territories": [
+        "tools"
+      ],
+      "url": "https://tools.baam.pro/baam-tools/convertisseur/",
+      "path": "/baam-tools/convertisseur/",
+      "externalUrl": null,
+      "updatedAt": "2026-10-05",
+      "tags": [
+        "design",
+        "svg",
+        "export"
+      ],
+      "themes": [
+        "design",
+        "svg",
+        "export"
+      ],
+      "meta": [
+        "Gratuit",
+        "GIF et vidéo",
+        "Traitement local"
+      ],
+      "cta": "Convertir un SVG",
+      "preview": {
+        "type": "none"
+      },
+      "cardPreview": {
+        "type": "iframe",
+        "url": "/baam-tools/convertisseur/",
+        "alt": "Le Convertisseur SVG BAAM en action"
+      },
+      "presentation": {
+        "accent": "#00a86b",
+        "index": "06",
+        "glyph": "↯"
+      },
+      "relations": [
+        {
+          "type": "related-to",
+          "target": "operateur-texte"
+        },
+        {
+          "type": "related-to",
+          "target": "animateur-logo",
+          "generated": true
+        },
+        {
+          "type": "related-to",
+          "target": "fonds-vivants",
+          "generated": true
+        }
+      ],
+      "sourceOrigin": "file"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "guide-motion-claude",
+      "title": "Le guide BAAM du motion par Claude",
+      "eyebrow": "Guide complet · modèle",
+      "summary": "Transformer une matière réelle en motion codé, dirigé et réutilisable — sans confondre génération spectaculaire et direction artistique.",
+      "type": "tutorial",
+      "typeLabel": "Guide",
+      "status": "public",
+      "territories": [
+        "tools"
+      ],
+      "url": "https://tools.baam.pro/guides/motion-par-claude/",
+      "path": "/guides/motion-par-claude/",
+      "externalUrl": null,
+      "updatedAt": "2026-10-04",
+      "tags": [
+        "motion",
+        "claude",
+        "méthode",
+        "design"
+      ],
+      "themes": [
+        "motion",
+        "claude",
+        "méthode",
+        "design"
+      ],
+      "meta": [
+        "Guide modèle",
+        "9 passages",
+        "5 blocs copiables"
+      ],
+      "cta": "Lire le guide complet",
+      "preview": {
+        "type": "none"
+      },
+      "cardPreview": {
+        "type": "text",
+        "headline": "MATIÈRE → SCÈNES → MOUVEMENT → RENDU",
+        "caption": "Le motion comme système dirigé, pas comme effet surprise."
+      },
+      "presentation": {
+        "accent": "#ff8a34",
+        "index": "04",
+        "glyph": "▶"
+      },
+      "relations": [
+        {
+          "type": "related-to",
+          "target": "operateur-texte"
+        },
+        {
+          "type": "related-to",
+          "target": "opus-55-videos"
+        }
+      ],
+      "sourceOrigin": "file"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "opus-55-videos",
+      "title": "Opus 5.5 Videos",
+      "eyebrow": "Ressource externe",
+      "summary": "Une galerie de motions, explainers, scènes 3D et jeux créés avec Claude, avec prompts d’origine et remakes consultables.",
+      "type": "resource",
+      "typeLabel": "Externe",
+      "status": "public",
+      "territories": [
+        "tools"
+      ],
+      "url": "https://tools.baam.pro/externes/opus-55-videos/",
+      "path": "/externes/opus-55-videos/",
+      "externalUrl": "https://skillry.dev/ai-videos/opus-5-5",
+      "updatedAt": "2026-10-04",
+      "tags": [
+        "motion",
+        "claude",
+        "inspiration",
+        "vidéo"
+      ],
+      "themes": [
+        "motion",
+        "claude",
+        "inspiration",
+        "vidéo"
+      ],
+      "meta": [
+        "Externe",
+        "Galerie",
+        "Prompts et remakes"
+      ],
+      "cta": "Voir la fiche",
+      "preview": {
+        "type": "none"
+      },
+      "cardPreview": {
+        "type": "text",
+        "headline": "MOTION · EXPLAINERS · 3D · GAMES",
+        "caption": "Comparer les prompts, les moteurs et les choix de mise en scène."
+      },
+      "presentation": {
+        "accent": "#5b45ff",
+        "index": "05",
+        "glyph": "◫"
+      },
+      "relations": [
+        {
+          "type": "related-to",
+          "target": "guide-motion-claude",
+          "generated": true
+        }
+      ],
+      "sourceOrigin": "file"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "svgomg",
+      "title": "SVGOMG",
+      "eyebrow": "Ressource externe",
+      "summary": "Une interface web pour alléger un SVG avec SVGO et observer immédiatement l’effet de chaque option.",
+      "type": "resource",
+      "typeLabel": "Externe",
+      "status": "public",
+      "territories": [
+        "tools"
+      ],
+      "url": "https://tools.baam.pro/externes/svgomg/",
+      "path": "/externes/svgomg/",
+      "externalUrl": "https://jakearchibald.github.io/svgomg/",
+      "updatedAt": "2026-10-04",
+      "tags": [
+        "svg",
+        "performance",
+        "web"
+      ],
+      "themes": [
+        "svg",
+        "performance",
+        "web"
+      ],
+      "meta": [
+        "Externe",
+        "Open source",
+        "Optimisation SVG"
+      ],
+      "cta": "Voir la fiche",
+      "preview": {
+        "type": "none"
+      },
+      "cardPreview": {
+        "type": "text",
+        "headline": "SVG IN → SVG LIGHT",
+        "caption": "Voir immédiatement l’effet de chaque option d’optimisation."
+      },
+      "presentation": {
+        "accent": "#5b45ff",
+        "index": "06",
+        "glyph": "↗"
+      },
+      "relations": [],
+      "sourceOrigin": "file"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "guide-brief-visuel",
+      "title": "Le guide BAAM du brief visuel qui produit",
+      "eyebrow": "Guide complet · direction",
+      "summary": "Transformer une intention floue en décisions visuelles, critères vérifiables et matière directement exploitable par un humain ou une IA.",
+      "type": "tutorial",
+      "typeLabel": "Guide",
+      "status": "public",
+      "territories": [
+        "tools"
+      ],
+      "url": "https://tools.baam.pro/guides/brief-visuel-actionnable/",
+      "path": "/guides/brief-visuel-actionnable/",
+      "externalUrl": null,
+      "updatedAt": "2026-10-04",
+      "tags": [
+        "design",
+        "méthode",
+        "direction artistique",
+        "claude"
+      ],
+      "themes": [
+        "design",
+        "méthode",
+        "direction artistique",
+        "claude"
+      ],
+      "meta": [
+        "Guide BAAM",
+        "8 passages",
+        "4 blocs copiables"
+      ],
+      "cta": "Construire un vrai brief",
+      "preview": {
+        "type": "none"
+      },
+      "cardPreview": {
+        "type": "text",
+        "headline": "INTENTION → RÈGLES → PREUVES → LIVRABLE",
+        "caption": "Un brief utile réduit les interprétations sans tuer les possibilités."
+      },
+      "presentation": {
+        "accent": "#ff8a34",
+        "index": "07",
+        "glyph": "⌁"
+      },
+      "relations": [
+        {
+          "type": "related-to",
+          "target": "mindmap-recursive"
+        },
+        {
+          "type": "related-to",
+          "target": "color-picker"
+        },
+        {
+          "type": "related-to",
+          "target": "excalidraw"
+        },
+        {
+          "type": "related-to",
+          "target": "penpot"
+        }
+      ],
+      "sourceOrigin": "file"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "guide-landing-page",
+      "title": "Le guide BAAM de la landing page qui tranche",
+      "eyebrow": "Guide complet · conversion",
+      "summary": "Passer d’une promesse floue à une page rapide, lisible et convaincante, construite autour d’une preuve et d’une action plutôt que d’un empilement de sections.",
+      "type": "tutorial",
+      "typeLabel": "Guide",
+      "status": "public",
+      "territories": [
+        "tools"
+      ],
+      "url": "https://tools.baam.pro/guides/landing-page-qui-tranche/",
+      "path": "/guides/landing-page-qui-tranche/",
+      "externalUrl": null,
+      "updatedAt": "2026-10-04",
+      "tags": [
+        "web",
+        "design",
+        "méthode",
+        "conversion"
+      ],
+      "themes": [
+        "web",
+        "design",
+        "méthode",
+        "conversion"
+      ],
+      "meta": [
+        "Guide BAAM",
+        "8 passages",
+        "4 blocs copiables"
+      ],
+      "cta": "Construire la page",
+      "preview": {
+        "type": "none"
+      },
+      "cardPreview": {
+        "type": "text",
+        "headline": "PROMESSE → PREUVE → OBJECTION → ACTION",
+        "caption": "Une page n’a pas besoin de tout dire. Elle doit faire avancer."
+      },
+      "presentation": {
+        "accent": "#ff8a34",
+        "index": "08",
+        "glyph": "↘"
+      },
+      "relations": [
+        {
+          "type": "related-to",
+          "target": "color-picker"
+        },
+        {
+          "type": "related-to",
+          "target": "penpot"
+        },
+        {
+          "type": "related-to",
+          "target": "squoosh"
+        },
+        {
+          "type": "related-to",
+          "target": "haikei"
+        }
+      ],
+      "sourceOrigin": "file"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "excalidraw",
+      "title": "Excalidraw",
+      "eyebrow": "Ressource externe",
+      "summary": "Un tableau blanc au dessin volontairement brut pour cadrer une idée, construire un diagramme ou partager rapidement un wireframe.",
+      "type": "resource",
+      "typeLabel": "Externe",
+      "status": "public",
+      "territories": [
+        "tools"
+      ],
+      "url": "https://tools.baam.pro/externes/excalidraw/",
+      "path": "/externes/excalidraw/",
+      "externalUrl": "https://excalidraw.com/",
+      "updatedAt": "2026-10-04",
+      "tags": [
+        "cartographie",
+        "collaboration",
+        "wireframe",
+        "open source"
+      ],
+      "themes": [
+        "cartographie",
+        "collaboration",
+        "wireframe",
+        "open source"
+      ],
+      "meta": [
+        "Externe",
+        "Open source",
+        "Sans compte"
+      ],
+      "cta": "Voir la fiche",
+      "preview": {
+        "type": "none"
+      },
+      "cardPreview": {
+        "type": "text",
+        "headline": "IDÉE → SCHÉMA → LIEN PARTAGEABLE",
+        "caption": "Dessiner assez vite pour continuer à penser."
+      },
+      "presentation": {
+        "accent": "#5b45ff",
+        "index": "09",
+        "glyph": "✎"
+      },
+      "relations": [
+        {
+          "type": "related-to",
+          "target": "guide-brief-visuel",
+          "generated": true
+        }
+      ],
+      "sourceOrigin": "file"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "penpot",
+      "title": "Penpot",
+      "eyebrow": "Ressource externe",
+      "summary": "Une plateforme open source de design d’interface et de prototypage qui rapproche composants, design tokens, CSS, SVG et collaboration produit.",
+      "type": "resource",
+      "typeLabel": "Externe",
+      "status": "public",
+      "territories": [
+        "tools"
+      ],
+      "url": "https://tools.baam.pro/externes/penpot/",
+      "path": "/externes/penpot/",
+      "externalUrl": "https://design.penpot.app/",
+      "updatedAt": "2026-10-04",
+      "tags": [
+        "design",
+        "prototype",
+        "open source",
+        "collaboration"
+      ],
+      "themes": [
+        "design",
+        "prototype",
+        "open source",
+        "collaboration"
+      ],
+      "meta": [
+        "Externe",
+        "Open source",
+        "Design × code"
+      ],
+      "cta": "Voir la fiche",
+      "preview": {
+        "type": "none"
+      },
+      "cardPreview": {
+        "type": "text",
+        "headline": "DESIGN TOKENS · FLEX · GRID · SVG",
+        "caption": "Prototyper dans un vocabulaire plus proche du produit final."
+      },
+      "presentation": {
+        "accent": "#5b45ff",
+        "index": "10",
+        "glyph": "▦"
+      },
+      "relations": [
+        {
+          "type": "related-to",
+          "target": "guide-brief-visuel",
+          "generated": true
+        },
+        {
+          "type": "related-to",
+          "target": "guide-landing-page",
+          "generated": true
+        }
+      ],
+      "sourceOrigin": "file"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "squoosh",
+      "title": "Squoosh",
+      "eyebrow": "Ressource externe",
+      "summary": "Comparer visuellement codecs, dimensions et niveaux de compression afin de réduire le poids d’une image directement dans le navigateur.",
+      "type": "resource",
+      "typeLabel": "Externe",
+      "status": "public",
+      "territories": [
+        "tools"
+      ],
+      "url": "https://tools.baam.pro/externes/squoosh/",
+      "path": "/externes/squoosh/",
+      "externalUrl": "https://squoosh.app/",
+      "updatedAt": "2026-10-04",
+      "tags": [
+        "image",
+        "performance",
+        "web",
+        "open source"
+      ],
+      "themes": [
+        "image",
+        "performance",
+        "web",
+        "open source"
+      ],
+      "meta": [
+        "Externe",
+        "Traitement local",
+        "Compression image"
+      ],
+      "cta": "Voir la fiche",
+      "preview": {
+        "type": "none"
+      },
+      "cardPreview": {
+        "type": "text",
+        "headline": "AVANT ⇄ APRÈS · POIDS ↓",
+        "caption": "Choisir la différence que l’œil accepte et le réseau apprécie."
+      },
+      "presentation": {
+        "accent": "#5b45ff",
+        "index": "11",
+        "glyph": "⇲"
+      },
+      "relations": [
+        {
+          "type": "related-to",
+          "target": "guide-landing-page",
+          "generated": true
+        }
+      ],
+      "sourceOrigin": "file"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "haikei",
+      "title": "Haikei",
+      "eyebrow": "Ressource externe",
+      "summary": "Un ensemble de générateurs visuels pour composer vagues, blobs, grilles, gradients et motifs puis les exporter en SVG ou en PNG.",
+      "type": "resource",
+      "typeLabel": "Externe",
+      "status": "public",
+      "territories": [
+        "tools"
+      ],
+      "url": "https://tools.baam.pro/externes/haikei/",
+      "path": "/externes/haikei/",
+      "externalUrl": "https://app.haikei.app/",
+      "updatedAt": "2026-10-04",
+      "tags": [
+        "svg",
+        "design",
+        "génératif",
+        "web"
+      ],
+      "themes": [
+        "svg",
+        "design",
+        "génératif",
+        "web"
+      ],
+      "meta": [
+        "Externe",
+        "Sans inscription",
+        "SVG et PNG"
+      ],
+      "cta": "Voir la fiche",
+      "preview": {
+        "type": "none"
+      },
+      "cardPreview": {
+        "type": "text",
+        "headline": "WAVES · BLOBS · GRIDS · GRADIENTS",
+        "caption": "Générer une matière, puis la reprendre dans le système du projet."
+      },
+      "presentation": {
+        "accent": "#5b45ff",
+        "index": "12",
+        "glyph": "≈"
+      },
+      "relations": [
+        {
+          "type": "related-to",
+          "target": "guide-landing-page",
+          "generated": true
+        }
+      ],
+      "sourceOrigin": "file"
+    }
+  ]
+}
