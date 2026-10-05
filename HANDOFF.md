@@ -222,14 +222,16 @@ Le portail Tools est désormais autonome dans `../site-tools-baam.pro/` :
   Convertisseur — qui se transmettent leurs données avec BAAM-LINK ;
 - collecte `bonus` raccordée à Netlify Forms et détection activée ;
 - notification `Deploy succeeded` reliée au build hook de BAAM.pro.
+- CNAME Namecheap `tools` → `baam-tools.netlify.app` actif, DNS validé par Netlify,
+  certificat HTTPS émis et réponse publique `200 OK` vérifiée.
 
 La racine importe le registre Tools par fichier local, URL publique puis cache. Elle
 expose ses 15 actifs et met en avant Opérateur Texte, Animateur de logo, Fonds vivants
 et Convertisseur. Les checks, tests et builds Tools/racine passent.
 
-Le dernier point d'infrastructure est le CNAME Namecheap `tools` vers
-`baam-tools.netlify.app`, puis la vérification HTTPS. Une fois ce DNS actif, chaque
-push groupé de Tools doit reconstruire Tools puis BAAM.pro sans intervention manuelle.
+La chaîne est complète : chaque push groupé de Tools reconstruit Tools puis BAAM.pro
+sans intervention manuelle. Il reste seulement à tester une première inscription
+réelle dans **Forms → bonus** avant toute campagne d'acquisition.
 
 ## Phase 4 — vraies previews de gameplay
 
