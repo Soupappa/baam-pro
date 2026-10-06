@@ -9,7 +9,7 @@
       "@type": "Organization",
       "name": "BAAM.pro",
       "url": "https://baam.pro/",
-      "description": "Créations, recherches, outils et éditions reliés.",
+      "description": "Portail des créations, médias, recherches, outils, jeux, applications et éditions de l’écosystème BAAM.",
       "hasPart": [
         {
           "@id": "https://studio.baam.pro/"
@@ -21,7 +21,7 @@
           "@id": "https://lutileetlagreable.netlify.app/"
         },
         {
-          "@id": "https://baam.pro/#territory-ideas"
+          "@id": "https://baam.pro/#territory-media"
         },
         {
           "@id": "https://research.baam.pro/"
@@ -110,9 +110,9 @@
       ]
     },
     {
-      "@id": "https://baam.pro/#territory-ideas",
+      "@id": "https://baam.pro/#territory-media",
       "@type": "CollectionPage",
-      "name": "Idées",
+      "name": "Média",
       "url": null,
       "isPartOf": {
         "@id": "https://baam.pro/"
@@ -447,7 +447,7 @@
       "name": "Cargos",
       "dateModified": "2026-10-01",
       "isPartOf": {
-        "@id": "https://baam.pro/#territory-ideas"
+        "@id": "https://baam.pro/#territory-media"
       },
       "baam:uses": [
         {
@@ -461,7 +461,7 @@
       "name": "Atlas DB Coca",
       "dateModified": "2026-09-30",
       "isPartOf": {
-        "@id": "https://baam.pro/#territory-ideas"
+        "@id": "https://baam.pro/#territory-media"
       },
       "baam:used-by": [
         {
@@ -475,7 +475,7 @@
       "name": "L'émergence, sans mode d'emploi",
       "dateModified": "2026-09-29",
       "isPartOf": {
-        "@id": "https://baam.pro/#territory-ideas"
+        "@id": "https://baam.pro/#territory-media"
       },
       "baam:derived-from": [
         {

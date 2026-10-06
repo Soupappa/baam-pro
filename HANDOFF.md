@@ -1,6 +1,6 @@
 # HANDOFF — BAAM.pro et ses territoires publics
 
-> Relais de session au **5 octobre 2026**.
+> Relais de session au **6 octobre 2026**.
 > Ce document concerne l'écosystème public BAAM.pro. Il ne faut pas le confondre
 > avec le **BAAM Hub**, OS interne d'agents documenté dans `../baam-hub/HANDOFF.md`.
 
@@ -52,6 +52,26 @@ dessus des projets. Une relation est déclarée une fois ; son inverse est calcu
 - Le correctif de lecture distante est publié sur
   `98335aa feat: fetch territory registries in production` et son déploiement
   Netlify a été vérifié.
+
+### Passe pré-lancement — SEO et finitions de façade
+
+Le 6 octobre 2026, la racine a reçu une passe locale prête à être publiée en lot :
+
+- le build injecte désormais dans `public/index.html` les 9 territoires et les
+  44 actifs sous forme de HTML sémantique ; le portail reste donc lisible sans
+  JavaScript et les robots n'ont plus à attendre le `fetch()` du registre ;
+- le graphe JSON-LD complet est présent dans le HTML initial, sans doublon injecté
+  au runtime ; canonical, robots, Open Graph et description couvrent tout l'écosystème ;
+- le territoire public `ideas` est devenu `media` et son nom visible est **Média** ;
+- l'aperçu principal de L'utile et l'agréable utilise une capture locale de la scène
+  finale, et les cinq cartes Éditions possèdent leurs propres captures locales : les
+  previews restent immédiates sans lancer six applications distantes en iframe ;
+- la route du troisième épisode est corrigée vers
+  `/feuilleton/03-le-point-le-plus-bas` ;
+- la pupille du bouton de thème suit le pointeur sur toute la page, avec une mise à
+  jour limitée à une frame et un repli neutre au tactile ;
+- `npm run build`, `npm run check` et `npm test` passent, avec des assertions dédiées
+  au HTML statique, au JSON-LD et au renommage Média.
 
 ### BAAM.Lab — chaîne de référence terminée
 
@@ -303,9 +323,9 @@ adressables, publication statique, puis compilation Tools → BAAM.pro.
 
 La décision actuelle est d'en faire un **site éditorial complet**, et non un petit
 sous-portail. Il pourra mettre en scène les derniers articles dans des carrousels,
-avec les héros d'articles déjà denses — punchline et animation. Le renommage d'Idées
-vers Médias doit être répercuté dans `SPEC.md`, les données racine et les URLs quand
-le site réel est prêt, pas par une substitution partielle avant cela.
+avec les héros d'articles déjà denses — punchline et animation. La racine utilise
+désormais le nom **Média** et l'identifiant `media`. Le nom et l'URL du futur site
+éditorial autonome devront être fixés ensemble au moment de sa création.
 
 ### BAAM Agence
 

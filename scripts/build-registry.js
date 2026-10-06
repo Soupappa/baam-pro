@@ -10,6 +10,7 @@ const SOURCE_FILE = sourceArgumentIndex >= 0
   ? path.resolve(ROOT, process.argv[sourceArgumentIndex + 1] || '')
   : path.join(ROOT, 'data', 'registry.source.json');
 const OUTPUT_DIR = path.join(ROOT, 'public', 'data');
+const INDEX_FILE = path.join(ROOT, 'public', 'index.html');
 const CHECK_ONLY = process.argv.includes('--check');
 const TERRITORY_SOURCES_FILE = path.join(ROOT, 'data', 'territory.sources.json');
 
@@ -409,6 +410,52 @@ function stableJson(value) {
   return `${JSON.stringify(value, (_key, item) => item === undefined ? null : item, 2)}\n`;
 }
 
+function escapeHtml(value) {
+  return String(value).replace(/[&<>"']/g, (character) => ({
+    '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
+  })[character]);
+}
+
+function replaceGeneratedBlock(source, name, content) {
+  const start = `<!-- BAAM:${name}-START -->`;
+  const end = `<!-- BAAM:${name}-END -->`;
+  if (!source.includes(start) || !source.includes(end)) {
+    throw new Error(`Marqueurs ${name} absents de public/index.html`);
+  }
+  return source.replace(new RegExp(`${start}[\\s\\S]*?${end}`), `${start}\n${content}\n          ${end}`);
+}
+
+function renderStaticRegistry(registry) {
+  const assets = new Map(registry.assets.map((asset) => [asset.id, asset]));
+  return registry.territories.map((territory) => {
+    const items = territory.assets.map((assetId) => assets.get(assetId)).filter(Boolean).map((asset) => {
+      const label = escapeHtml(asset.title);
+      const title = asset.url
+        ? `<a href="${escapeHtml(asset.url)}">${label}</a>`
+        : `<span>${label}</span>`;
+      return `<li>${title}<span class="visually-hidden"> — ${escapeHtml(asset.type)}, ${escapeHtml(asset.status)}</span></li>`;
+    }).join('\n              ');
+    const name = territory.siteUrl
+      ? `<a href="${escapeHtml(territory.siteUrl)}">${escapeHtml(territory.name)}</a>`
+      : escapeHtml(territory.name);
+    return `        <article class="territory-card territory-card-static" id="territory-${escapeHtml(territory.id)}" style="--accent:${escapeHtml(territory.color)}">
+          <h2 class="card-name">${name}</h2>
+          <p class="card-description"><span>${escapeHtml(territory.description[0])}</span><span>${escapeHtml(territory.description[1])}</span></p>
+          <ul class="static-asset-list" aria-label="${territory.assets.length} contenus dans ${escapeHtml(territory.name)}">
+              ${items}
+          </ul>
+        </article>`;
+  }).join('\n');
+}
+
+function renderIndex(outputs) {
+  let index = fs.readFileSync(INDEX_FILE, 'utf8');
+  const jsonLd = JSON.stringify(outputs.graphJsonLd, null, 2).replace(/</g, '\\u003c');
+  index = replaceGeneratedBlock(index, 'SEO', `    <script id="baam-knowledge-graph" type="application/ld+json">\n${jsonLd}\n    </script>`);
+  index = replaceGeneratedBlock(index, 'REGISTRY', renderStaticRegistry(outputs.registry));
+  return index;
+}
+
 function writeOutputs(outputs) {
   fs.mkdirSync(OUTPUT_DIR, { recursive: true });
   const files = new Map([
@@ -429,6 +476,9 @@ function writeOutputs(outputs) {
     const temporarySitemap = `${publicSitemap}.${process.pid}.tmp`;
     fs.writeFileSync(temporarySitemap, outputs.sitemap, 'utf8');
     fs.renameSync(temporarySitemap, publicSitemap);
+    const temporaryIndex = `${INDEX_FILE}.${process.pid}.tmp`;
+    fs.writeFileSync(temporaryIndex, renderIndex(outputs), 'utf8');
+    fs.renameSync(temporaryIndex, INDEX_FILE);
   } catch (error) {
     staged.forEach(([temporary]) => { try { fs.unlinkSync(temporary); } catch {} });
     throw error;

@@ -1,17 +1,7 @@
 (async () => {
-  const [registryResponse, jsonLdResponse] = await Promise.all([
-    fetch('/data/registry.json', { cache: 'no-store' }),
-    fetch('/data/graph.jsonld', { cache: 'no-store' })
-  ]);
+  const registryResponse = await fetch('/data/registry.json', { cache: 'no-store' });
   if (!registryResponse.ok) throw new Error(`Registre indisponible (${registryResponse.status})`);
   const registry = await registryResponse.json();
-  if (jsonLdResponse.ok) {
-    const jsonLd = await jsonLdResponse.json();
-    const metadata = document.createElement('script');
-    metadata.type = 'application/ld+json';
-    metadata.textContent = JSON.stringify(jsonLd);
-    document.head.appendChild(metadata);
-  }
   const assets = new Map(registry.assets.map((asset) => [asset.id, asset]));
   const territories = new Map(registry.territories.map((territory) => [territory.id, territory]));
   const OPEN_KEY = 'baam.pro.open-territories';
@@ -47,18 +37,35 @@
 
   setTheme(document.documentElement.classList.contains('theme-noir'), false);
   themeButton.addEventListener('click', () => setTheme(!document.documentElement.classList.contains('theme-noir')));
-  themeButton.addEventListener('pointermove', (event) => {
-    if (event.pointerType === 'touch') return;
-    const rect = themeButton.getBoundingClientRect();
-    const x = ((event.clientX - rect.left) / rect.width - 0.5) * 2;
-    const y = ((event.clientY - rect.top) / rect.height - 0.5) * 2;
-    themeButton.style.setProperty('--orb-x', `${x * 8}px`);
-    themeButton.style.setProperty('--orb-y', `${y * 8}px`);
-  });
-  themeButton.addEventListener('pointerleave', () => {
+  let orbFrame = 0;
+  let pendingPointer = null;
+  const resetOrb = () => {
+    pendingPointer = null;
     themeButton.style.setProperty('--orb-x', '0px');
     themeButton.style.setProperty('--orb-y', '0px');
-  });
+  };
+  const drawOrb = () => {
+    orbFrame = 0;
+    if (!pendingPointer) return;
+    const event = pendingPointer;
+    pendingPointer = null;
+    if (event.pointerType === 'touch') return;
+    const rect = themeButton.getBoundingClientRect();
+    const dx = event.clientX - (rect.left + rect.width / 2);
+    const dy = event.clientY - (rect.top + rect.height / 2);
+    const distance = Math.hypot(dx, dy);
+    const travel = Math.min(9, distance * 0.085);
+    const ratio = distance ? travel / distance : 0;
+    themeButton.style.setProperty('--orb-x', `${(dx * ratio).toFixed(2)}px`);
+    themeButton.style.setProperty('--orb-y', `${(dy * ratio).toFixed(2)}px`);
+  };
+  document.addEventListener('pointermove', (event) => {
+    if (event.pointerType === 'touch') return;
+    pendingPointer = event;
+    if (!orbFrame) orbFrame = requestAnimationFrame(drawOrb);
+  }, { passive: true });
+  document.addEventListener('pointerleave', resetOrb);
+  window.addEventListener('blur', resetOrb);
 
   function patternSvg(id) {
     const patterns = {
@@ -70,8 +77,8 @@
         <div class="territory-pattern territory-editions-sequence" aria-hidden="true">
           <object class="territory-live-pattern pattern-editions-live" data-pattern-engine="loop" data="/assets/editions-paysage-horizon.svg" type="image/svg+xml" tabindex="-1"></object>
         </div>`,
-      ideas: `
-        <object class="territory-pattern territory-live-pattern pattern-ideas-live" data-pattern-engine="loop" data="/assets/idees-nappe-visqueuse.svg" type="image/svg+xml" tabindex="-1" aria-hidden="true"></object>`,
+      media: `
+        <object class="territory-pattern territory-live-pattern pattern-media-live" data-pattern-engine="loop" data="/assets/idees-nappe-visqueuse.svg" type="image/svg+xml" tabindex="-1" aria-hidden="true"></object>`,
       research: `
         <object class="territory-pattern territory-live-pattern pattern-research-live" data-pattern-engine="loop" data="/assets/research-champ-pixels.svg" type="image/svg+xml" tabindex="-1" aria-hidden="true"></object>`,
       agence: `
@@ -183,7 +190,7 @@
     grid.innerHTML = ordered.map((territory) => {
       const open = openCards.has(territory.id);
       return `
-        <article class="territory-card${open ? ' is-open' : ''}" style="--accent:${territory.color}" data-territory="${territory.id}">
+        <article class="territory-card${open ? ' is-open' : ''}" id="territory-${territory.id}" style="--accent:${territory.color}" data-territory="${territory.id}">
           ${patternSvg(territory.id)}
           <button class="card-trigger" type="button" data-toggle-card="${territory.id}" aria-expanded="${open}">
             <h2 class="card-name">${territory.name}</h2>
@@ -550,6 +557,6 @@
 })().catch((error) => {
   console.error(error);
   const grid = document.querySelector('#territory-grid');
-  if (grid) grid.innerHTML = `<p class="registry-error">LE REGISTRE NE RÉPOND PAS.<br><small>${error.message}</small></p>`;
+  if (grid) grid.insertAdjacentHTML('afterbegin', `<p class="registry-error">LE REGISTRE DYNAMIQUE NE RÉPOND PAS.<br><small>La version éditoriale reste disponible ci-dessous. ${error.message}</small></p>`);
 });
 

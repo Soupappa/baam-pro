@@ -83,6 +83,7 @@ déclarées ; leurs inverses ne sont jamais saisis à la main.
 ```text
 data/registry.source.json
           ↓ scripts/build-registry.js
+public/index.html          HTML sémantique + JSON-LD directement lisibles
 public/data/registry.json   interface
 public/data/graph.json      graphe technique
 public/data/graph.jsonld    graphe sémantique
@@ -99,6 +100,9 @@ npm run serve   serveur local sur le port 8088
 ```
 
 Le build est déterministe : la date de compilation correspond à la date la plus
-récente du corpus et un hash identifie exactement la source. En cas d'erreur, aucun
-export n'est remplacé. Netlify exécute `npm run build` avant chaque publication.
+récente du corpus et un hash identifie exactement la source. Il injecte aussi les
+territoires, les actifs et le graphe JSON-LD dans le HTML initial afin que moteurs de
+recherche, lecteurs et navigateurs sans JavaScript voient le portail complet. En cas
+d'erreur, aucun export n'est remplacé. Netlify exécute `npm run build` avant chaque
+publication.
 

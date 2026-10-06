@@ -2,7 +2,7 @@
   "meta": {
     "schemaVersion": 1,
     "source": "data/registry.source.json",
-    "sourceHash": "e81c5de0dfa32cce9fc15613a7d42051f727f87a8b9294f7d69b8f9fb44c6e93",
+    "sourceHash": "2ff5928b1036da5b26635c77f2e465afcd33b64d3f0bfcc2bb7d9ee87532fbf9",
     "compiledAt": "2026-10-05",
     "relationVocabulary": [
       "part-of",
@@ -24,7 +24,7 @@
     "id": "baam-pro",
     "name": "BAAM.pro",
     "url": "https://baam.pro/",
-    "description": "Créations, recherches, outils et éditions reliés."
+    "description": "Portail des créations, médias, recherches, outils, jeux, applications et éditions de l’écosystème BAAM."
   },
   "territories": [
     {
@@ -79,8 +79,8 @@
         "Lire librement · garder · soutenir"
       ],
       "siteUrl": "https://lutileetlagreable.netlify.app/",
-      "previewUrl": "https://lutileetlagreable.netlify.app/?intro=final",
-      "previewImage": null,
+      "previewUrl": null,
+      "previewImage": "/assets/editions-preview-final.webp",
       "featuredAssets": [
         "lutile-et-lagreable",
         "monde-sous-respirateur",
@@ -98,8 +98,8 @@
       "relations": []
     },
     {
-      "id": "ideas",
-      "name": "Idées",
+      "id": "media",
+      "name": "Média",
       "color": "#f0d000",
       "description": [
         "La recherche racontée pour séduire, intriguer et transmettre",
@@ -387,8 +387,11 @@
       "updatedAt": "2026-10-02",
       "tags": [],
       "url": "https://lutileetlagreable.netlify.app/roman",
-      "visual": null,
-      "preview": null,
+      "visual": "/assets/editions-roman.webp",
+      "preview": {
+        "type": "image",
+        "url": "/assets/editions-roman.webp"
+      },
       "relations": [
         {
           "type": "uses",
@@ -427,8 +430,11 @@
       "updatedAt": "2026-10-01",
       "tags": [],
       "url": "https://lutileetlagreable.netlify.app/feuilleton/01-le-monde-sous-respirateur",
-      "visual": null,
-      "preview": null,
+      "visual": "/assets/editions-episode-01.webp",
+      "preview": {
+        "type": "image",
+        "url": "/assets/editions-episode-01.webp"
+      },
       "relations": [
         {
           "type": "part-of",
@@ -447,8 +453,11 @@
       "updatedAt": "2026-09-30",
       "tags": [],
       "url": "https://lutileetlagreable.netlify.app/feuilleton/02-on-a-un-probleme-avec-toi-gros",
-      "visual": null,
-      "preview": null,
+      "visual": "/assets/editions-episode-02.webp",
+      "preview": {
+        "type": "image",
+        "url": "/assets/editions-episode-02.webp"
+      },
       "relations": [
         {
           "type": "part-of",
@@ -467,8 +476,11 @@
       "updatedAt": "2026-09-29",
       "tags": [],
       "url": "https://lutileetlagreable.netlify.app/feuilleton/03-le-point-le-plus-bas",
-      "visual": null,
-      "preview": null,
+      "visual": "/assets/editions-episode-03.webp",
+      "preview": {
+        "type": "image",
+        "url": "/assets/editions-episode-03.webp"
+      },
       "relations": [
         {
           "type": "part-of",
@@ -487,8 +499,11 @@
       "updatedAt": "2026-09-28",
       "tags": [],
       "url": "https://lutileetlagreable.netlify.app/auteur",
-      "visual": null,
-      "preview": null,
+      "visual": "/assets/editions-auteur.webp",
+      "preview": {
+        "type": "image",
+        "url": "/assets/editions-auteur.webp"
+      },
       "relations": [
         {
           "type": "related-to",
@@ -499,7 +514,7 @@
     },
     {
       "id": "cargos",
-      "territory": "ideas",
+      "territory": "media",
       "title": "Cargos",
       "summary": null,
       "type": "Série",
@@ -519,7 +534,7 @@
     },
     {
       "id": "atlas-coca",
-      "territory": "ideas",
+      "territory": "media",
       "title": "Atlas DB Coca",
       "summary": null,
       "type": "Atlas SVG",
@@ -539,7 +554,7 @@
     },
     {
       "id": "emergence-grand-public",
-      "territory": "ideas",
+      "territory": "media",
       "title": "L'émergence, sans mode d'emploi",
       "summary": null,
       "type": "Article",

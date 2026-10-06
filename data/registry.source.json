@@ -5,7 +5,7 @@
     "id": "baam-pro",
     "name": "BAAM.pro",
     "url": "https://baam.pro/",
-    "description": "Créations, recherches, outils et éditions reliés."
+    "description": "Portail des créations, médias, recherches, outils, jeux, applications et éditions de l’écosystème BAAM."
   },
   "territories": [
     {
@@ -29,12 +29,12 @@
       "color": "#ff762e",
       "description": ["Livres, feuilletons et objets éditoriaux augmentés", "Lire librement · garder · soutenir"],
       "siteUrl": "https://lutileetlagreable.netlify.app/",
-      "preview": { "type": "iframe", "url": "https://lutileetlagreable.netlify.app/?intro=final" },
+      "preview": { "type": "image", "url": "/assets/editions-preview-final.webp" },
       "featuredAssets": ["lutile-et-lagreable", "monde-sous-respirateur", "probleme-avec-toi", "point-plus-bas", "patric-k-horn"]
     },
     {
-      "id": "ideas",
-      "name": "Idées",
+      "id": "media",
+      "name": "Média",
       "color": "#f0d000",
       "description": ["La recherche racontée pour séduire, intriguer et transmettre", "Articles · cargos · atlas visuels"]
     },
@@ -91,15 +91,15 @@
       "relations": [{ "type": "derived-from", "targetId": "reseaux-multi-echelles" }]
     },
 
-    { "id": "lutile-et-lagreable", "territory": "editions", "title": "Le Roman", "type": "Présentation", "status": "public", "updatedAt": "2026-10-02", "url": "https://lutileetlagreable.netlify.app/roman", "relations": [{ "type": "uses", "targetId": "deux-reseaux-vivants" }] },
-    { "id": "monde-sous-respirateur", "territory": "editions", "title": "Le monde sous respirateur", "type": "Épisode 01", "status": "public", "updatedAt": "2026-10-01", "url": "https://lutileetlagreable.netlify.app/feuilleton/01-le-monde-sous-respirateur", "relations": [{ "type": "part-of", "targetId": "lutile-et-lagreable" }] },
-    { "id": "probleme-avec-toi", "territory": "editions", "title": "On a un problème avec toi, gros", "type": "Épisode 02", "status": "public", "updatedAt": "2026-09-30", "url": "https://lutileetlagreable.netlify.app/feuilleton/02-on-a-un-probleme-avec-toi-gros", "relations": [{ "type": "part-of", "targetId": "lutile-et-lagreable" }] },
-    { "id": "point-plus-bas", "territory": "editions", "title": "Le point le plus bas", "type": "Épisode 03", "status": "public", "updatedAt": "2026-09-29", "url": "https://lutileetlagreable.netlify.app/feuilleton/03-le-point-le-plus-bas", "relations": [{ "type": "part-of", "targetId": "lutile-et-lagreable" }] },
-    { "id": "patric-k-horn", "territory": "editions", "title": "Patric K Horn", "type": "Auteur", "status": "public", "updatedAt": "2026-09-28", "url": "https://lutileetlagreable.netlify.app/auteur", "relations": [{ "type": "related-to", "targetId": "lutile-et-lagreable" }] },
+    { "id": "lutile-et-lagreable", "territory": "editions", "title": "Le Roman", "type": "Présentation", "status": "public", "updatedAt": "2026-10-02", "url": "https://lutileetlagreable.netlify.app/roman", "preview": { "type": "image", "url": "/assets/editions-roman.webp" }, "relations": [{ "type": "uses", "targetId": "deux-reseaux-vivants" }] },
+    { "id": "monde-sous-respirateur", "territory": "editions", "title": "Le monde sous respirateur", "type": "Épisode 01", "status": "public", "updatedAt": "2026-10-01", "url": "https://lutileetlagreable.netlify.app/feuilleton/01-le-monde-sous-respirateur", "preview": { "type": "image", "url": "/assets/editions-episode-01.webp" }, "relations": [{ "type": "part-of", "targetId": "lutile-et-lagreable" }] },
+    { "id": "probleme-avec-toi", "territory": "editions", "title": "On a un problème avec toi, gros", "type": "Épisode 02", "status": "public", "updatedAt": "2026-09-30", "url": "https://lutileetlagreable.netlify.app/feuilleton/02-on-a-un-probleme-avec-toi-gros", "preview": { "type": "image", "url": "/assets/editions-episode-02.webp" }, "relations": [{ "type": "part-of", "targetId": "lutile-et-lagreable" }] },
+    { "id": "point-plus-bas", "territory": "editions", "title": "Le point le plus bas", "type": "Épisode 03", "status": "public", "updatedAt": "2026-09-29", "url": "https://lutileetlagreable.netlify.app/feuilleton/03-le-point-le-plus-bas", "preview": { "type": "image", "url": "/assets/editions-episode-03.webp" }, "relations": [{ "type": "part-of", "targetId": "lutile-et-lagreable" }] },
+    { "id": "patric-k-horn", "territory": "editions", "title": "Patric K Horn", "type": "Auteur", "status": "public", "updatedAt": "2026-09-28", "url": "https://lutileetlagreable.netlify.app/auteur", "preview": { "type": "image", "url": "/assets/editions-auteur.webp" }, "relations": [{ "type": "related-to", "targetId": "lutile-et-lagreable" }] },
 
-    { "id": "cargos", "territory": "ideas", "title": "Cargos", "type": "Série", "status": "preview", "updatedAt": "2026-10-01", "relations": [{ "type": "uses", "targetId": "atlas-coca" }] },
-    { "id": "atlas-coca", "territory": "ideas", "title": "Atlas DB Coca", "type": "Atlas SVG", "status": "preview", "updatedAt": "2026-09-30" },
-    { "id": "emergence-grand-public", "territory": "ideas", "title": "L'émergence, sans mode d'emploi", "type": "Article", "status": "preview", "updatedAt": "2026-09-29", "relations": [{ "type": "derived-from", "targetId": "reseaux-multi-echelles" }] },
+    { "id": "cargos", "territory": "media", "title": "Cargos", "type": "Série", "status": "preview", "updatedAt": "2026-10-01", "relations": [{ "type": "uses", "targetId": "atlas-coca" }] },
+    { "id": "atlas-coca", "territory": "media", "title": "Atlas DB Coca", "type": "Atlas SVG", "status": "preview", "updatedAt": "2026-09-30" },
+    { "id": "emergence-grand-public", "territory": "media", "title": "L'émergence, sans mode d'emploi", "type": "Article", "status": "preview", "updatedAt": "2026-09-29", "relations": [{ "type": "derived-from", "targetId": "reseaux-multi-echelles" }] },
 
     { "id": "zeus-series", "territory": "research", "title": "The Zeus Series", "type": "Research paper", "status": "public", "updatedAt": "2026-10-01", "url": "https://research.baam.pro/articles/serie_zeus_baam_research" },
     { "id": "negative-crystals", "territory": "research", "title": "Negative Crystals", "type": "Research note", "status": "public", "updatedAt": "2026-09-30", "url": "https://research.baam.pro/articles/cristaux_negatifs_baam_research" },

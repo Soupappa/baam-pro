@@ -2,7 +2,7 @@
   "meta": {
     "schemaVersion": 1,
     "source": "data/registry.source.json",
-    "sourceHash": "e81c5de0dfa32cce9fc15613a7d42051f727f87a8b9294f7d69b8f9fb44c6e93",
+    "sourceHash": "2ff5928b1036da5b26635c77f2e465afcd33b64d3f0bfcc2bb7d9ee87532fbf9",
     "compiledAt": "2026-10-05",
     "relationVocabulary": [
       "part-of",
@@ -46,9 +46,9 @@
       "url": "https://lutileetlagreable.netlify.app/"
     },
     {
-      "id": "ideas",
+      "id": "media",
       "kind": "territory",
-      "title": "Idées",
+      "title": "Média",
       "url": null
     },
     {
@@ -205,7 +205,7 @@
       "id": "cargos",
       "kind": "asset",
       "title": "Cargos",
-      "territory": "ideas",
+      "territory": "media",
       "type": "Série",
       "status": "preview",
       "updatedAt": "2026-10-01",
@@ -215,7 +215,7 @@
       "id": "atlas-coca",
       "kind": "asset",
       "title": "Atlas DB Coca",
-      "territory": "ideas",
+      "territory": "media",
       "type": "Atlas SVG",
       "status": "preview",
       "updatedAt": "2026-09-30",
@@ -225,7 +225,7 @@
       "id": "emergence-grand-public",
       "kind": "asset",
       "title": "L'émergence, sans mode d'emploi",
-      "territory": "ideas",
+      "territory": "media",
       "type": "Article",
       "status": "preview",
       "updatedAt": "2026-09-29",
@@ -542,7 +542,7 @@
       "generated": true
     },
     {
-      "from": "ideas",
+      "from": "media",
       "type": "part-of",
       "to": "baam-pro",
       "generated": true
@@ -718,7 +718,7 @@
     {
       "from": "cargos",
       "type": "part-of",
-      "to": "ideas",
+      "to": "media",
       "generated": true
     },
     {
@@ -730,7 +730,7 @@
     {
       "from": "atlas-coca",
       "type": "part-of",
-      "to": "ideas",
+      "to": "media",
       "generated": true
     },
     {
@@ -742,7 +742,7 @@
     {
       "from": "emergence-grand-public",
       "type": "part-of",
-      "to": "ideas",
+      "to": "media",
       "generated": true
     },
     {
