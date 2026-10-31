@@ -59,7 +59,7 @@ assert.strictEqual((indexHtml.match(/territory-card-static/g) || []).length, reg
 assert.strictEqual((indexHtml.match(/<li>/g) || []).length, registry.assets.length, 'chaque actif doit exister dans le HTML initial');
 assert.strictEqual(tools?.siteUrl, 'https://tools.baam.pro/', 'le territoire Tools doit pointer vers son portail public');
 assert.deepStrictEqual(tools?.featuredAssets, ['operateur-texte', 'animateur-logo', 'fonds-vivants', 'convertisseur']);
-assert.strictEqual(toolAssets.length, 15, 'les quinze contenus Tools doivent remonter dans la racine');
+assert.strictEqual(toolAssets.length, 16, 'les seize contenus Tools doivent remonter dans la racine');
 for (const id of ['animateur-logo', 'fonds-vivants', 'convertisseur']) {
   assert.ok(toolAssets.some((asset) => asset.id === id), `${id} doit remonter dans la racine`);
 }

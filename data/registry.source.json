@@ -47,10 +47,13 @@
       "preview": { "type": "image", "url": "/assets/research-preview.png" }
     },
     {
-      "id": "agence",
-      "name": "Agence",
+      "id": "solutions",
+      "name": "Solutions",
       "color": "#00bfd1",
-      "description": ["Implémentation IA située pour transformer les organisations", "Diagnostic · agents métiers · cartographies"]
+      "description": ["Solutions métier sur mesure, avec et sans IA", "Applications · sites · agents · automatisations"],
+      "siteUrl": "https://solutions.baam.pro/",
+      "preview": { "type": "iframe", "url": "https://solutions.baam.pro/" },
+      "featuredAssets": ["solutions-outil-metier-sur-mesure", "solutions-cas-reve-des-chats", "solutions-ia-sous-controle"]
     },
     {
       "id": "tools",
@@ -106,9 +109,9 @@
     { "id": "query-deformation", "territory": "research", "title": "Query as Deformation", "type": "Research paper", "status": "public", "updatedAt": "2026-09-29", "url": "https://research.baam.pro/articles/baam_query_deformation" },
     { "id": "reseaux-multi-echelles", "territory": "research", "title": "Réseaux multi-échelles", "type": "Piste", "status": "preview", "updatedAt": "2026-09-28" },
 
-    { "id": "implementation-ia", "territory": "agence", "title": "Implémentation IA située", "type": "Offre", "status": "preview", "updatedAt": "2026-10-01", "relations": [{ "type": "uses", "targetId": "agents-metiers" }] },
-    { "id": "cartographies-actives", "territory": "agence", "title": "Cartographies actives", "type": "Capacité", "status": "preview", "updatedAt": "2026-09-30" },
-    { "id": "agents-metiers", "territory": "agence", "title": "Agents métiers sous garde", "type": "Capacité", "status": "preview", "updatedAt": "2026-09-29" },
+    { "id": "implementation-ia", "territory": "solutions", "title": "Implémentation IA située", "type": "Offre", "status": "preview", "updatedAt": "2026-10-01", "relations": [{ "type": "uses", "targetId": "agents-metiers" }] },
+    { "id": "cartographies-actives", "territory": "solutions", "title": "Cartographies actives", "type": "Capacité", "status": "preview", "updatedAt": "2026-09-30" },
+    { "id": "agents-metiers", "territory": "solutions", "title": "Agents métiers sous garde", "type": "Capacité", "status": "preview", "updatedAt": "2026-09-29" },
 
     { "id": "atelier-svg", "territory": "tools", "title": "Atelier Publication SVG", "type": "Outil", "status": "preview", "updatedAt": "2026-10-01", "relations": [{ "type": "links-to", "targetId": "studio" }] },
     { "id": "clipforge", "territory": "tools", "title": "ClipForge", "type": "Outil", "status": "preview", "updatedAt": "2026-09-30" },

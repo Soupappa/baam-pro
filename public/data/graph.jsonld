@@ -27,7 +27,7 @@
           "@id": "https://research.baam.pro/"
         },
         {
-          "@id": "https://baam.pro/#territory-agence"
+          "@id": "https://solutions.baam.pro/"
         },
         {
           "@id": "https://tools.baam.pro/"
@@ -153,14 +153,23 @@
       ]
     },
     {
-      "@id": "https://baam.pro/#territory-agence",
+      "@id": "https://solutions.baam.pro/",
       "@type": "CollectionPage",
-      "name": "Agence",
-      "url": null,
+      "name": "Solutions",
+      "url": "https://solutions.baam.pro/",
       "isPartOf": {
         "@id": "https://baam.pro/"
       },
       "hasPart": [
+        {
+          "@id": "https://solutions.baam.pro/"
+        },
+        {
+          "@id": "https://solutions.baam.pro/blog/reve-des-chats/"
+        },
+        {
+          "@id": "https://solutions.baam.pro/blog/ia-sous-controle/"
+        },
         {
           "@id": "https://baam.pro/id/implementation-ia"
         },
@@ -181,6 +190,9 @@
         "@id": "https://baam.pro/"
       },
       "hasPart": [
+        {
+          "@id": "https://tools.baam.pro/baam-tools/splats/"
+        },
         {
           "@id": "https://tools.baam.pro/baam-tools/animateur-logo/"
         },
@@ -531,12 +543,72 @@
       ]
     },
     {
+      "@id": "https://solutions.baam.pro/",
+      "@type": "CreativeWork",
+      "name": "Outil métier sur mesure",
+      "dateModified": "2026-10-31",
+      "isPartOf": {
+        "@id": "https://solutions.baam.pro/"
+      },
+      "url": "https://solutions.baam.pro/",
+      "baam:related-to": [
+        {
+          "@id": "https://solutions.baam.pro/blog/reve-des-chats/"
+        }
+      ],
+      "baam:demonstrated-by": [
+        {
+          "@id": "https://solutions.baam.pro/blog/reve-des-chats/"
+        }
+      ],
+      "baam:contains": [
+        {
+          "@id": "https://solutions.baam.pro/blog/ia-sous-controle/"
+        }
+      ]
+    },
+    {
+      "@id": "https://solutions.baam.pro/blog/reve-des-chats/",
+      "@type": "CreativeWork",
+      "name": "Le Rêve des Chats — étude de cas",
+      "dateModified": "2026-10-31",
+      "isPartOf": {
+        "@id": "https://solutions.baam.pro/"
+      },
+      "url": "https://solutions.baam.pro/blog/reve-des-chats/",
+      "baam:related-to": [
+        {
+          "@id": "https://solutions.baam.pro/"
+        }
+      ],
+      "baam:demonstrates": [
+        {
+          "@id": "https://solutions.baam.pro/"
+        }
+      ]
+    },
+    {
+      "@id": "https://solutions.baam.pro/blog/ia-sous-controle/",
+      "@type": "CreativeWork",
+      "name": "L'IA sous contrôle humain",
+      "dateModified": "2026-10-31",
+      "isPartOf": {
+        "@id": "https://solutions.baam.pro/"
+      },
+      "url": "https://solutions.baam.pro/blog/ia-sous-controle/",
+      "baam:part-of": [
+        {
+          "@id": "https://solutions.baam.pro/"
+        }
+      ]
+    },
+    {
       "@id": "https://baam.pro/id/implementation-ia",
       "@type": "CreativeWork",
       "name": "Implémentation IA située",
-      "dateModified": "2026-10-01",
+      "dateModified": "2026-10-31",
       "isPartOf": {
-        "@id": "https://baam.pro/#territory-agence"
+        "@id": "https://solutions.baam.pro/"
       },
       "baam:uses": [
         {
@@ -548,25 +620,43 @@
       "@id": "https://baam.pro/id/cartographies-actives",
       "@type": "CreativeWork",
       "name": "Cartographies actives",
-      "dateModified": "2026-09-30",
+      "dateModified": "2026-10-31",
       "isPartOf": {
-        "@id": "https://baam.pro/#territory-agence"
+        "@id": "https://solutions.baam.pro/"
       }
     },
     {
       "@id": "https://baam.pro/id/agents-metiers",
       "@type": "CreativeWork",
       "name": "Agents métiers sous garde",
-      "dateModified": "2026-09-29",
+      "dateModified": "2026-10-31",
       "isPartOf": {
-        "@id": "https://baam.pro/#territory-agence"
+        "@id": "https://solutions.baam.pro/"
       },
       "baam:used-by": [
         {
-          "@id": "https://baam.pro/id/implementation-ia"
+          "@id": "https://baam.pro/id/normarchi"
         },
         {
-          "@id": "https://baam.pro/id/normarchi"
+          "@id": "https://baam.pro/id/implementation-ia"
+        }
+      ]
+    },
+    {
+      "@id": "https://tools.baam.pro/baam-tools/splats/",
+      "@type": "CreativeWork",
+      "name": "Splats",
+      "dateModified": "2026-10-31",
+      "isPartOf": {
+        "@id": "https://tools.baam.pro/"
+      },
+      "url": "https://tools.baam.pro/baam-tools/splats/",
+      "baam:related-to": [
+        {
+          "@id": "https://tools.baam.pro/baam-tools/animateur-logo/"
+        },
+        {
+          "@id": "https://tools.baam.pro/baam-tools/fonds-vivants/"
         }
       ]
     },
@@ -580,6 +670,9 @@
       },
       "url": "https://tools.baam.pro/baam-tools/animateur-logo/",
       "baam:related-to": [
+        {
+          "@id": "https://tools.baam.pro/baam-tools/splats/"
+        },
         {
           "@id": "https://tools.baam.pro/baam-tools/color-picker/"
         },
@@ -598,6 +691,9 @@
       },
       "url": "https://tools.baam.pro/baam-tools/fonds-vivants/",
       "baam:related-to": [
+        {
+          "@id": "https://tools.baam.pro/baam-tools/splats/"
+        },
         {
           "@id": "https://tools.baam.pro/baam-tools/color-picker/"
         },

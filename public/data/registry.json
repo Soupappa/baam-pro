@@ -2,8 +2,8 @@
   "meta": {
     "schemaVersion": 1,
     "source": "data/registry.source.json",
-    "sourceHash": "2ff5928b1036da5b26635c77f2e465afcd33b64d3f0bfcc2bb7d9ee87532fbf9",
-    "compiledAt": "2026-10-05",
+    "sourceHash": "f8829b3ddb9dd8d27872444a981caa9b069ed84bd17b402bbb01b41c7e0d99c8",
+    "compiledAt": "2026-10-31",
     "relationVocabulary": [
       "part-of",
       "derived-from",
@@ -17,7 +17,7 @@
     ],
     "counts": {
       "territories": 9,
-      "assets": 44
+      "assets": 48
     }
   },
   "root": {
@@ -137,18 +137,25 @@
       "relations": []
     },
     {
-      "id": "agence",
-      "name": "Agence",
+      "id": "solutions",
+      "name": "Solutions",
       "color": "#00bfd1",
       "description": [
-        "Implémentation IA située pour transformer les organisations",
-        "Diagnostic · agents métiers · cartographies"
+        "Solutions métier sur mesure, avec et sans IA",
+        "Applications · sites · agents · automatisations"
       ],
-      "siteUrl": null,
-      "previewUrl": null,
+      "siteUrl": "https://solutions.baam.pro/",
+      "previewUrl": "https://solutions.baam.pro/",
       "previewImage": null,
-      "featuredAssets": [],
+      "featuredAssets": [
+        "solutions-outil-metier-sur-mesure",
+        "solutions-cas-reve-des-chats",
+        "solutions-ia-sous-controle"
+      ],
       "assets": [
+        "solutions-outil-metier-sur-mesure",
+        "solutions-cas-reve-des-chats",
+        "solutions-ia-sous-controle",
         "implementation-ia",
         "cartographies-actives",
         "agents-metiers"
@@ -173,6 +180,7 @@
         "convertisseur"
       ],
       "assets": [
+        "splats",
         "animateur-logo",
         "fonds-vivants",
         "convertisseur",
@@ -640,14 +648,111 @@
       ]
     },
     {
-      "id": "implementation-ia",
-      "territory": "agence",
-      "title": "Implémentation IA située",
-      "summary": null,
-      "type": "Offre",
+      "id": "solutions-outil-metier-sur-mesure",
+      "territory": "solutions",
+      "title": "Outil métier sur mesure",
+      "summary": "Une application autonome construite autour du fonctionnement réel d'une organisation.",
+      "type": "service",
       "status": "preview",
-      "updatedAt": "2026-10-01",
-      "tags": [],
+      "updatedAt": "2026-10-31",
+      "tags": [
+        "sur-mesure",
+        "application métier",
+        "automatisation"
+      ],
+      "url": "https://solutions.baam.pro/",
+      "visual": null,
+      "preview": {
+        "type": "iframe",
+        "url": "https://solutions.baam.pro/"
+      },
+      "relations": [
+        {
+          "type": "related-to",
+          "target": "solutions-cas-reve-des-chats",
+          "generated": false
+        },
+        {
+          "type": "demonstrated-by",
+          "target": "solutions-cas-reve-des-chats",
+          "generated": true
+        },
+        {
+          "type": "contains",
+          "target": "solutions-ia-sous-controle",
+          "generated": true
+        }
+      ]
+    },
+    {
+      "id": "solutions-cas-reve-des-chats",
+      "territory": "solutions",
+      "title": "Le Rêve des Chats — étude de cas",
+      "summary": "Une pension féline passe d'un fonctionnement dispersé à une application métier autonome.",
+      "type": "case-study",
+      "status": "preview",
+      "updatedAt": "2026-10-31",
+      "tags": [
+        "commerce",
+        "application métier",
+        "hors ligne"
+      ],
+      "url": "https://solutions.baam.pro/blog/reve-des-chats/",
+      "visual": null,
+      "preview": {
+        "type": "iframe",
+        "url": "https://solutions.baam.pro/blog/reve-des-chats/"
+      },
+      "relations": [
+        {
+          "type": "related-to",
+          "target": "solutions-outil-metier-sur-mesure",
+          "generated": true
+        },
+        {
+          "type": "demonstrates",
+          "target": "solutions-outil-metier-sur-mesure",
+          "generated": false
+        }
+      ]
+    },
+    {
+      "id": "solutions-ia-sous-controle",
+      "territory": "solutions",
+      "title": "L'IA sous contrôle humain",
+      "summary": "Un socle métier qui fonctionne sans IA, complété par des propositions toujours validées par une personne.",
+      "type": "method",
+      "status": "preview",
+      "updatedAt": "2026-10-31",
+      "tags": [
+        "IA",
+        "validation humaine",
+        "déterministe"
+      ],
+      "url": "https://solutions.baam.pro/blog/ia-sous-controle/",
+      "visual": null,
+      "preview": null,
+      "relations": [
+        {
+          "type": "part-of",
+          "target": "solutions-outil-metier-sur-mesure",
+          "generated": false
+        }
+      ]
+    },
+    {
+      "id": "implementation-ia",
+      "territory": "solutions",
+      "title": "Implémentation IA située",
+      "summary": "Des fonctions IA intégrées à une solution métier et placées sous validation humaine.",
+      "type": "capability",
+      "status": "preview",
+      "updatedAt": "2026-10-31",
+      "tags": [
+        "IA",
+        "intégration",
+        "validation"
+      ],
       "url": null,
       "visual": null,
       "preview": null,
@@ -661,13 +766,17 @@
     },
     {
       "id": "cartographies-actives",
-      "territory": "agence",
+      "territory": "solutions",
       "title": "Cartographies actives",
-      "summary": null,
-      "type": "Capacité",
+      "summary": "Des vues lisibles des données, flux et règles qui structurent une activité.",
+      "type": "capability",
       "status": "preview",
-      "updatedAt": "2026-09-30",
-      "tags": [],
+      "updatedAt": "2026-10-31",
+      "tags": [
+        "données",
+        "flux",
+        "visualisation"
+      ],
       "url": null,
       "visual": null,
       "preview": null,
@@ -675,26 +784,59 @@
     },
     {
       "id": "agents-metiers",
-      "territory": "agence",
+      "territory": "solutions",
       "title": "Agents métiers sous garde",
-      "summary": null,
-      "type": "Capacité",
+      "summary": "Des agents spécialisés, branchés aux bons outils et limités par des validations explicites.",
+      "type": "capability",
       "status": "preview",
-      "updatedAt": "2026-09-29",
-      "tags": [],
+      "updatedAt": "2026-10-31",
+      "tags": [
+        "agents",
+        "outils",
+        "contrôle humain"
+      ],
       "url": null,
       "visual": null,
       "preview": null,
       "relations": [
         {
           "type": "used-by",
-          "target": "implementation-ia",
+          "target": "normarchi",
           "generated": true
         },
         {
           "type": "used-by",
-          "target": "normarchi",
+          "target": "implementation-ia",
           "generated": true
+        }
+      ]
+    },
+    {
+      "id": "splats",
+      "territory": "tools",
+      "title": "Splats",
+      "summary": "Faire naître des mots, une image, des formes 3D ou votre dessin à partir de milliers de taches gaussiennes, aux couleurs de votre choix, puis enchaîner une séquence et l’enregistrer en MP4 : 16:9, 9:16 ou carré.",
+      "type": "free-webtool",
+      "status": "public",
+      "updatedAt": "2026-10-31",
+      "tags": [
+        "animation",
+        "vidéo",
+        "design"
+      ],
+      "url": "https://tools.baam.pro/baam-tools/splats/",
+      "visual": null,
+      "preview": null,
+      "relations": [
+        {
+          "type": "related-to",
+          "target": "animateur-logo",
+          "generated": false
+        },
+        {
+          "type": "related-to",
+          "target": "fonds-vivants",
+          "generated": false
         }
       ]
     },
@@ -715,6 +857,11 @@
       "visual": null,
       "preview": null,
       "relations": [
+        {
+          "type": "related-to",
+          "target": "splats",
+          "generated": true
+        },
         {
           "type": "related-to",
           "target": "color-picker",
@@ -744,6 +891,11 @@
       "visual": null,
       "preview": null,
       "relations": [
+        {
+          "type": "related-to",
+          "target": "splats",
+          "generated": true
+        },
         {
           "type": "related-to",
           "target": "color-picker",

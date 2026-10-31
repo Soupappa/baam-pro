@@ -81,8 +81,8 @@
         <object class="territory-pattern territory-live-pattern pattern-media-live" data-pattern-engine="loop" data="/assets/idees-nappe-visqueuse.svg" type="image/svg+xml" tabindex="-1" aria-hidden="true"></object>`,
       research: `
         <object class="territory-pattern territory-live-pattern pattern-research-live" data-pattern-engine="loop" data="/assets/research-champ-pixels.svg" type="image/svg+xml" tabindex="-1" aria-hidden="true"></object>`,
-      agence: `
-        <object class="territory-pattern territory-live-pattern pattern-agence-live" data-pattern-engine="loop" data="/assets/agence-nappe-claque.svg" type="image/svg+xml" tabindex="-1" aria-hidden="true"></object>`,
+      solutions: `
+        <object class="territory-pattern territory-live-pattern pattern-solutions-live" data-pattern-engine="loop" data="/assets/agence-nappe-claque.svg" type="image/svg+xml" tabindex="-1" aria-hidden="true"></object>`,
       tools: `
         <object class="territory-pattern territory-live-pattern pattern-tools-live" data-pattern-engine="loop" data="/assets/tools-grille-figure8.svg" type="image/svg+xml" tabindex="-1" aria-hidden="true"></object>`,
       games: `

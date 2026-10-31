@@ -1,0 +1,158 @@
+{
+  "meta": {
+    "schemaVersion": 1,
+    "territory": "solutions",
+    "compiledAt": "2026-10-31",
+    "count": 6,
+    "relationVocabulary": [
+      "part-of",
+      "demonstrates",
+      "uses",
+      "related-to"
+    ]
+  },
+  "territory": {
+    "id": "solutions",
+    "name": "Solutions",
+    "url": "https://solutions.baam.pro/",
+    "localUrl": "http://127.0.0.1:8093/",
+    "accent": "#00bfd1",
+    "tagline": "Solutions métier sur mesure, avec et sans IA",
+    "description": "Applications, sites, agents et automatisations conçus autour du fonctionnement réel de chaque activité."
+  },
+  "assets": [
+    {
+      "id": "solutions-outil-metier-sur-mesure",
+      "title": "Outil métier sur mesure",
+      "summary": "Une application autonome construite autour du fonctionnement réel d'une organisation.",
+      "type": "service",
+      "status": "preview",
+      "territories": [
+        "solutions"
+      ],
+      "url": "https://solutions.baam.pro/",
+      "updatedAt": "2026-10-31",
+      "tags": [
+        "sur-mesure",
+        "application métier",
+        "automatisation"
+      ],
+      "preview": {
+        "type": "iframe",
+        "url": "https://solutions.baam.pro/"
+      },
+      "relations": [
+        {
+          "type": "related-to",
+          "target": "solutions-cas-reve-des-chats"
+        }
+      ]
+    },
+    {
+      "id": "solutions-cas-reve-des-chats",
+      "title": "Le Rêve des Chats — étude de cas",
+      "summary": "Une pension féline passe d'un fonctionnement dispersé à une application métier autonome.",
+      "type": "case-study",
+      "status": "preview",
+      "territories": [
+        "solutions"
+      ],
+      "url": "https://solutions.baam.pro/blog/reve-des-chats/",
+      "updatedAt": "2026-10-31",
+      "tags": [
+        "commerce",
+        "application métier",
+        "hors ligne"
+      ],
+      "preview": {
+        "type": "iframe",
+        "url": "https://solutions.baam.pro/blog/reve-des-chats/"
+      },
+      "relations": [
+        {
+          "type": "demonstrates",
+          "target": "solutions-outil-metier-sur-mesure"
+        }
+      ]
+    },
+    {
+      "id": "solutions-ia-sous-controle",
+      "title": "L'IA sous contrôle humain",
+      "summary": "Un socle métier qui fonctionne sans IA, complété par des propositions toujours validées par une personne.",
+      "type": "method",
+      "status": "preview",
+      "territories": [
+        "solutions"
+      ],
+      "url": "https://solutions.baam.pro/blog/ia-sous-controle/",
+      "updatedAt": "2026-10-31",
+      "tags": [
+        "IA",
+        "validation humaine",
+        "déterministe"
+      ],
+      "relations": [
+        {
+          "type": "part-of",
+          "target": "solutions-outil-metier-sur-mesure"
+        }
+      ]
+    },
+    {
+      "id": "implementation-ia",
+      "title": "Implémentation IA située",
+      "summary": "Des fonctions IA intégrées à une solution métier et placées sous validation humaine.",
+      "type": "capability",
+      "status": "preview",
+      "territories": [
+        "solutions"
+      ],
+      "updatedAt": "2026-10-31",
+      "tags": [
+        "IA",
+        "intégration",
+        "validation"
+      ],
+      "relations": [
+        {
+          "type": "uses",
+          "target": "agents-metiers"
+        }
+      ]
+    },
+    {
+      "id": "cartographies-actives",
+      "title": "Cartographies actives",
+      "summary": "Des vues lisibles des données, flux et règles qui structurent une activité.",
+      "type": "capability",
+      "status": "preview",
+      "territories": [
+        "solutions"
+      ],
+      "updatedAt": "2026-10-31",
+      "tags": [
+        "données",
+        "flux",
+        "visualisation"
+      ],
+      "relations": []
+    },
+    {
+      "id": "agents-metiers",
+      "title": "Agents métiers sous garde",
+      "summary": "Des agents spécialisés, branchés aux bons outils et limités par des validations explicites.",
+      "type": "capability",
+      "status": "preview",
+      "territories": [
+        "solutions"
+      ],
+      "updatedAt": "2026-10-31",
+      "tags": [
+        "agents",
+        "outils",
+        "contrôle humain"
+      ],
+      "relations": []
+    }
+  ]
+}

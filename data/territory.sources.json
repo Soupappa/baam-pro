@@ -16,5 +16,11 @@
     "file": "../site-tools-baam.pro/public/data/registry.json",
     "url": "https://tools.baam.pro/data/registry.json",
     "cache": "data/territories/tools.registry.json"
+  },
+  {
+    "territory": "solutions",
+    "file": "../site-solutions.baam.pro/dist/data/registry.json",
+    "url": "https://solutions.baam.pro/data/registry.json",
+    "cache": "data/territories/solutions.registry.json"
   }
 ]

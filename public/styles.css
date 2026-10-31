@@ -338,7 +338,7 @@ button { border: 0; }
 }
 .territory-card:hover .pattern-research-live { opacity: .96; }
 .territory-card.is-open .pattern-research-live { opacity: .82; }
-.pattern-agence-live {
+.pattern-solutions-live {
   inset: -8%;
   width: 116%;
   height: 116%;
@@ -346,8 +346,8 @@ button { border: 0; }
   opacity: .78;
   filter: invert(63%) sepia(96%) saturate(2250%) hue-rotate(141deg) brightness(93%) contrast(101%);
 }
-.territory-card:hover .pattern-agence-live { opacity: 1; }
-.territory-card.is-open .pattern-agence-live {
+.territory-card:hover .pattern-solutions-live { opacity: 1; }
+.territory-card.is-open .pattern-solutions-live {
   inset: -34% -8% 0;
   width: 116%;
   height: 142%;
@@ -461,7 +461,7 @@ button { border: 0; }
 .territory-card[data-territory="lab"].is-open .card-trigger,
 .territory-card[data-territory="media"].is-open .card-trigger,
 .territory-card[data-territory="research"].is-open .card-trigger,
-.territory-card[data-territory="agence"].is-open .card-trigger,
+.territory-card[data-territory="solutions"].is-open .card-trigger,
 .territory-card[data-territory="tools"].is-open .card-trigger,
 .territory-card[data-territory="games"].is-open .card-trigger,
 .territory-card[data-territory="apps"].is-open .card-trigger,

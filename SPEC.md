@@ -121,7 +121,7 @@ sous-domaines indépendants :
 | `editions.baam.pro` | Livres, textes longs et objets éditoriaux | Qu'est-ce que BAAM publie ? |
 | `ideas.baam.pro` *(nom public : Idées)* | Version grand public de la démarche intellectuelle : articles, Cargos, idées et formes visuelles destinées à séduire, intriguer et transmettre | Comment donner envie d'entrer dans les idées de BAAM ? |
 | `research.baam.pro` | Version formalisée de la recherche : cadres, méthodes, protocoles, sources et résultats reproductibles | Comment poser et transmettre un cadre vérifiable et réutilisable ? |
-| `agence.baam.pro` | Offres, interventions et cas d'implémentation IA | Qu'est-ce que BAAM peut faire avec ou pour une organisation ? |
+| `solutions.baam.pro` | Solutions métier, interventions et cas d'usage | Qu'est-ce que BAAM peut construire avec ou pour une organisation ? |
 | `tools.baam.pro` | Outils de fabrication, de publication et de production réutilisables | Avec quoi BAAM fabrique-t-il ? |
 | `games.baam.pro` | Jeux, simulations et systèmes ludiques | À quoi BAAM fait-il jouer ou réfléchir par le jeu ? |
 | `apps.baam.pro` | Applications métier, dont les outils spécialisés pour l'architecture et le pilotage | Qu'est-ce que BAAM permet de faire au travail ? |
@@ -175,7 +175,7 @@ Aucun troisième objet canonique n'est nécessaire pour rendre cet ensemble coh�
 ### 6.3 Territoire
 
 Un territoire est une vue éditoriale durable du graphe : Studio, Lab, Éditions,
-Idées, Research, Agence, Tools, Games ou Apps. Il sélectionne et met en scène certains nœuds selon
+Idées, Research, Solutions, Tools, Games ou Apps. Il sélectionne et met en scène certains nœuds selon
 sa fonction, mais ne les transforme pas en représentations d'un objet supérieur.
 
 Un territoire peut également être un **agrégateur récursif**. Lab, par exemple,
@@ -422,7 +422,7 @@ lab.baam.pro             → déploiement Lab
 editions.baam.pro        → déploiement Éditions
 ideas.baam.pro           → déploiement Ideas
 research.baam.pro        → déploiement Research
-agence.baam.pro          → déploiement Agence
+solutions.baam.pro       → déploiement Solutions
 tools.baam.pro           → déploiement Tools
 games.baam.pro           → déploiement Games
 apps.baam.pro            → déploiement Apps métier

@@ -2,8 +2,8 @@
   "meta": {
     "schemaVersion": 1,
     "source": "data/registry.source.json",
-    "sourceHash": "2ff5928b1036da5b26635c77f2e465afcd33b64d3f0bfcc2bb7d9ee87532fbf9",
-    "compiledAt": "2026-10-05",
+    "sourceHash": "f8829b3ddb9dd8d27872444a981caa9b069ed84bd17b402bbb01b41c7e0d99c8",
+    "compiledAt": "2026-10-31",
     "relationVocabulary": [
       "part-of",
       "derived-from",
@@ -17,7 +17,7 @@
     ],
     "counts": {
       "territories": 9,
-      "assets": 44
+      "assets": 48
     }
   },
   "nodes": [
@@ -58,10 +58,10 @@
       "url": "https://research.baam.pro/"
     },
     {
-      "id": "agence",
+      "id": "solutions",
       "kind": "territory",
-      "title": "Agence",
-      "url": null
+      "title": "Solutions",
+      "url": "https://solutions.baam.pro/"
     },
     {
       "id": "tools",
@@ -272,34 +272,74 @@
       "url": null
     },
     {
+      "id": "solutions-outil-metier-sur-mesure",
+      "kind": "asset",
+      "title": "Outil métier sur mesure",
+      "territory": "solutions",
+      "type": "service",
+      "status": "preview",
+      "updatedAt": "2026-10-31",
+      "url": "https://solutions.baam.pro/"
+    },
+    {
+      "id": "solutions-cas-reve-des-chats",
+      "kind": "asset",
+      "title": "Le Rêve des Chats — étude de cas",
+      "territory": "solutions",
+      "type": "case-study",
+      "status": "preview",
+      "updatedAt": "2026-10-31",
+      "url": "https://solutions.baam.pro/blog/reve-des-chats/"
+    },
+    {
+      "id": "solutions-ia-sous-controle",
+      "kind": "asset",
+      "title": "L'IA sous contrôle humain",
+      "territory": "solutions",
+      "type": "method",
+      "status": "preview",
+      "updatedAt": "2026-10-31",
+      "url": "https://solutions.baam.pro/blog/ia-sous-controle/"
+    },
+    {
       "id": "implementation-ia",
       "kind": "asset",
       "title": "Implémentation IA située",
-      "territory": "agence",
-      "type": "Offre",
+      "territory": "solutions",
+      "type": "capability",
       "status": "preview",
-      "updatedAt": "2026-10-01",
+      "updatedAt": "2026-10-31",
       "url": null
     },
     {
       "id": "cartographies-actives",
       "kind": "asset",
       "title": "Cartographies actives",
-      "territory": "agence",
-      "type": "Capacité",
+      "territory": "solutions",
+      "type": "capability",
       "status": "preview",
-      "updatedAt": "2026-09-30",
+      "updatedAt": "2026-10-31",
       "url": null
     },
     {
       "id": "agents-metiers",
       "kind": "asset",
       "title": "Agents métiers sous garde",
-      "territory": "agence",
-      "type": "Capacité",
+      "territory": "solutions",
+      "type": "capability",
       "status": "preview",
-      "updatedAt": "2026-09-29",
+      "updatedAt": "2026-10-31",
       "url": null
+    },
+    {
+      "id": "splats",
+      "kind": "asset",
+      "title": "Splats",
+      "territory": "tools",
+      "type": "free-webtool",
+      "status": "public",
+      "updatedAt": "2026-10-31",
+      "url": "https://tools.baam.pro/baam-tools/splats/"
     },
     {
       "id": "animateur-logo",
@@ -554,7 +594,7 @@
       "generated": true
     },
     {
-      "from": "agence",
+      "from": "solutions",
       "type": "part-of",
       "to": "baam-pro",
       "generated": true
@@ -788,9 +828,63 @@
       "generated": true
     },
     {
+      "from": "solutions-outil-metier-sur-mesure",
+      "type": "part-of",
+      "to": "solutions",
+      "generated": true
+    },
+    {
+      "from": "solutions-outil-metier-sur-mesure",
+      "type": "related-to",
+      "to": "solutions-cas-reve-des-chats",
+      "generated": false
+    },
+    {
+      "from": "solutions-outil-metier-sur-mesure",
+      "type": "demonstrated-by",
+      "to": "solutions-cas-reve-des-chats",
+      "generated": true
+    },
+    {
+      "from": "solutions-outil-metier-sur-mesure",
+      "type": "contains",
+      "to": "solutions-ia-sous-controle",
+      "generated": true
+    },
+    {
+      "from": "solutions-cas-reve-des-chats",
+      "type": "part-of",
+      "to": "solutions",
+      "generated": true
+    },
+    {
+      "from": "solutions-cas-reve-des-chats",
+      "type": "related-to",
+      "to": "solutions-outil-metier-sur-mesure",
+      "generated": true
+    },
+    {
+      "from": "solutions-cas-reve-des-chats",
+      "type": "demonstrates",
+      "to": "solutions-outil-metier-sur-mesure",
+      "generated": false
+    },
+    {
+      "from": "solutions-ia-sous-controle",
+      "type": "part-of",
+      "to": "solutions",
+      "generated": true
+    },
+    {
+      "from": "solutions-ia-sous-controle",
+      "type": "part-of",
+      "to": "solutions-outil-metier-sur-mesure",
+      "generated": false
+    },
+    {
       "from": "implementation-ia",
       "type": "part-of",
-      "to": "agence",
+      "to": "solutions",
       "generated": true
     },
     {
@@ -802,19 +896,13 @@
     {
       "from": "cartographies-actives",
       "type": "part-of",
-      "to": "agence",
+      "to": "solutions",
       "generated": true
     },
     {
       "from": "agents-metiers",
       "type": "part-of",
-      "to": "agence",
-      "generated": true
-    },
-    {
-      "from": "agents-metiers",
-      "type": "used-by",
-      "to": "implementation-ia",
+      "to": "solutions",
       "generated": true
     },
     {
@@ -824,9 +912,39 @@
       "generated": true
     },
     {
+      "from": "agents-metiers",
+      "type": "used-by",
+      "to": "implementation-ia",
+      "generated": true
+    },
+    {
+      "from": "splats",
+      "type": "part-of",
+      "to": "tools",
+      "generated": true
+    },
+    {
+      "from": "splats",
+      "type": "related-to",
+      "to": "animateur-logo",
+      "generated": false
+    },
+    {
+      "from": "splats",
+      "type": "related-to",
+      "to": "fonds-vivants",
+      "generated": false
+    },
+    {
       "from": "animateur-logo",
       "type": "part-of",
       "to": "tools",
+      "generated": true
+    },
+    {
+      "from": "animateur-logo",
+      "type": "related-to",
+      "to": "splats",
       "generated": true
     },
     {
@@ -845,6 +963,12 @@
       "from": "fonds-vivants",
       "type": "part-of",
       "to": "tools",
+      "generated": true
+    },
+    {
+      "from": "fonds-vivants",
+      "type": "related-to",
+      "to": "splats",
       "generated": true
     },
     {
