@@ -63,11 +63,10 @@ button { border: 0; }
 }
 
 .brand {
-  text-decoration: none;
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-  font-size: clamp(2rem, 3.5vw, 3.35rem);
+  /* signe BAAM partagé (baam-signe.js) : BAAM. au repos, un clic lance la roulette des neuf univers */
+  font-size: clamp(2.2rem, 3.8vw, 3.6rem);
   line-height: 1;
-  letter-spacing: -0.035em;
+  color: var(--ink);
 }
 .brand span { color: #00d95f; }
 
