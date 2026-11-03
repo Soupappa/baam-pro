@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
+Disallow: /marque/
 
 Sitemap: https://baam.pro/sitemap.xml

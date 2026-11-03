@@ -2,7 +2,7 @@
   "meta": {
     "schemaVersion": 1,
     "source": "data/registry.source.json",
-    "sourceHash": "f8829b3ddb9dd8d27872444a981caa9b069ed84bd17b402bbb01b41c7e0d99c8",
+    "sourceHash": "9b8741c7657b03c619c8af46d77a342e494e32b86b09f3d51aa0ad626b37d6a3",
     "compiledAt": "2026-10-31",
     "relationVocabulary": [
       "part-of",
@@ -30,7 +30,7 @@
     {
       "id": "studio",
       "name": "Studio",
-      "color": "#00d95f",
+      "color": "#00F058",
       "description": [
         "Création d’animations vectorielles — variations infinies sans appel IA",
         "Déformation sensorielle · BAAM Engine · logos ©"

@@ -1,0 +1,23 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@400;500;700&family=DM+Mono:wght@400;500&display=swap");
+
+:root {
+  --baam-nuit: #070707;
+  --baam-encre: #0b0b0a;
+  --baam-papier: #f5f5f0;
+  --baam-blanc: #ffffff;
+  --baam-gris: #9a9a94;
+  --baam-studio: #00F058;
+  --baam-solutions: #00BFD1;
+  --baam-research: #244CFF;
+  --baam-lab: #F00098;
+  --baam-tools: #753CFF;
+  --baam-apps: #00A98F;
+  --baam-games: #FF4268;
+  --baam-media: #F0D000;
+  --baam-editions: #FF762E;
+  --baam-f-marque: "Bebas Neue", Impact, sans-serif;
+  --baam-f-texte: "DM Sans", system-ui, sans-serif;
+  --baam-f-mono: "DM Mono", ui-monospace, monospace;
+  --baam-point: .19em;
+  --baam-ecart: .085em;
+}

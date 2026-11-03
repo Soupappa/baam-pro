@@ -446,7 +446,7 @@
         const to = positions.get(relation.target);
         if (!to || asset.id > relation.target) return;
         const targetTerritory = territories.get(assets.get(relation.target)?.territory);
-        root.appendChild(line(from.x, from.y, to.x, to.y, 'relation-line', targetTerritory?.color || '#00d95f'));
+        root.appendChild(line(from.x, from.y, to.x, to.y, 'relation-line', targetTerritory?.color || '#00F058'));
       });
     });
 
@@ -486,7 +486,7 @@
     });
 
     const rootGroup = el('g', { transform: `translate(${center.x} ${center.y})`, class: 'root-node' });
-    rootGroup.appendChild(el('circle', { r: 54, fill: '#00d95f', 'fill-opacity': '.08', stroke: '#00d95f', 'stroke-opacity': '.32', class: 'root-pulse' }));
+    rootGroup.appendChild(el('circle', { r: 54, fill: '#00F058', 'fill-opacity': '.08', stroke: '#00F058', 'stroke-opacity': '.32', class: 'root-pulse' }));
     rootGroup.appendChild(el('circle', { r: 38, fill: '#ffffff', stroke: '#0b0b0a', 'stroke-width': '2' }));
     rootGroup.appendChild(el('text', { x: 0, y: 7, 'text-anchor': 'middle', fill: '#0b0b0a', class: 'root-a' }, 'BAAM'));
     root.appendChild(rootGroup);

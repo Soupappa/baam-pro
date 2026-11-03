@@ -11,7 +11,7 @@
     {
       "id": "studio",
       "name": "Studio",
-      "color": "#00d95f",
+      "color": "#00F058",
       "description": ["Création d’animations vectorielles — variations infinies sans appel IA", "Déformation sensorielle · BAAM Engine · logos ©"],
       "siteUrl": "https://studio.baam.pro/",
       "preview": { "type": "iframe", "url": "https://studio.baam.pro/" },
